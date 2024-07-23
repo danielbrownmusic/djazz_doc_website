@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorials :: Hugo Relearn Theme</title>
+    <link>http://localhost:1313/2_tutorials/index.html</link>
+    <description></description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/2_tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Playing a MIDI Score</title>
+      <link>http://localhost:1313/2_tutorials/1_play_midi_score/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2_tutorials/1_play_midi_score/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recording and playing back audio</title>
+      <link>http://localhost:1313/2_tutorials/2_record_audio/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2_tutorials/2_record_audio/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recording and playing back MIDI</title>
+      <link>http://localhost:1313/2_tutorials/3_record_midi/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2_tutorials/3_record_midi/index.html</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
