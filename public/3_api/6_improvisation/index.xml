@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Improvisation with the Factor Oracle :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/3_api/6_improvisation/index.html</link>
+    <link>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/index.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/3_api/6_improvisation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Description of the Factor Oracle</title>
-      <link>http://localhost:1313/3_api/6_improvisation/1_factor_oracle/index.html</link>
+      <link>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/1_factor_oracle/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/6_improvisation/1_factor_oracle/index.html</guid>
+      <guid>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/1_factor_oracle/index.html</guid>
       <description>La plus grande étape a été de terminer l’objet factor oracle qui est généralisé pour différents types de données, et l’objet factor_oracle_player pour improviser avec lui.</description>
     </item>
     <item>
       <title>The Factor Oracle Player</title>
-      <link>http://localhost:1313/3_api/6_improvisation/2_factor_oracle_player/index.html</link>
+      <link>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/6_improvisation/2_factor_oracle_player/index.html</guid>
+      <guid>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player/index.html</guid>
       <description>Le “factor oracle player” qui prend les étiquettes une par une, qui peuvent être de n’importe quelle forme (mais dans le programme actuel, c’est un dictionnaire avec deux entrées : la racine de l’accord et l’étiquette de l’accord), et utilise un factor oracle pour produire un battement qui correspond à l’étiquette.</description>
     </item>
     <item>
       <title>Syncopation</title>
-      <link>http://localhost:1313/3_api/6_improvisation/3_syncopation/index.html</link>
+      <link>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/3_syncopation/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/6_improvisation/3_syncopation/index.html</guid>
+      <guid>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/3_syncopation/index.html</guid>
       <description></description>
     </item>
     <item>
       <title>Analyzer</title>
-      <link>http://localhost:1313/3_api/6_improvisation/analyzer/index.html</link>
+      <link>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/analyzer/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/6_improvisation/analyzer/index.html</guid>
+      <guid>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/analyzer/index.html</guid>
       <description></description>
     </item>
     <item>
       <title>Listener</title>
-      <link>http://localhost:1313/3_api/6_improvisation/listener/index.html</link>
+      <link>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/listener/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/6_improvisation/listener/index.html</guid>
+      <guid>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/listener/index.html</guid>
       <description></description>
     </item>
   </channel>

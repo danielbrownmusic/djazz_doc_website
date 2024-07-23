@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Factor Oracle Player :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/3_api/6_improvisation/2_factor_oracle_player/index.html</link>
+    <link>https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player/index.html</link>
     <description>Le “factor oracle player” qui prend les étiquettes une par une, qui peuvent être de n’importe quelle forme (mais dans le programme actuel, c’est un dictionnaire avec deux entrées : la racine de l’accord et l’étiquette de l’accord), et utilise un factor oracle pour produire un battement qui correspond à l’étiquette.</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/3_api/6_improvisation/2_factor_oracle_player/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://danielbrownmusic.github.io/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
