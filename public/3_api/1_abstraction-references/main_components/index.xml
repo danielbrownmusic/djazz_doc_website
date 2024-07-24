@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Main Components :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/3_api/1_abstraction-references/main_components/index.html</link>
+    <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/index.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/3_api/1_abstraction-references/main_components/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>djazz</title>
-      <link>http://localhost:1313/3_api/1_abstraction-references/main_components/djazz/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/1_abstraction-references/main_components/djazz/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz/index.html</guid>
       <description></description>
     </item>
     <item>
       <title>djazz view</title>
-      <link>http://localhost:1313/3_api/1_abstraction-references/main_components/djazz_view/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/1_abstraction-references/main_components/djazz_view/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view/index.html</guid>
       <description></description>
     </item>
     <item>
       <title>djazz view control</title>
-      <link>http://localhost:1313/3_api/1_abstraction-references/main_components/djazz_view_control/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view_control/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/1_abstraction-references/main_components/djazz_view_control/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view_control/index.html</guid>
       <description></description>
     </item>
     <item>
       <title>djazz control</title>
-      <link>http://localhost:1313/3_api/1_abstraction-references/main_components/djazz_control/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_control/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/1_abstraction-references/main_components/djazz_control/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_control/index.html</guid>
       <description></description>
     </item>
   </channel>

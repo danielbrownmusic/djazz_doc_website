@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/3_api/1_abstraction-references/tools/index.html</link>
+    <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/tools/index.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/3_api/1_abstraction-references/tools/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>make song file</title>
-      <link>http://localhost:1313/3_api/1_abstraction-references/tools/make_song_file/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/tools/make_song_file/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/1_abstraction-references/tools/make_song_file/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/tools/make_song_file/index.html</guid>
       <description></description>
     </item>
   </channel>
