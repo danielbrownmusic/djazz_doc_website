@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Main Window :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/djazz_doc_website/1_manual/2_main_window/index.html</link>
+    <link>http://localhost:1313/djazz_doc_website/1_manual/2_main_window.html</link>
     <description>1. SONG LOADING Open a new song 2. BEAT INPUT Manual Metronome From another machine 3.</description>
     <generator>Hugo</generator>
     <language>en</language>

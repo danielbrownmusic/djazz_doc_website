@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Manual :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/djazz_doc_website/1_manual/index.html</link>
+    <link>http://localhost:1313/djazz_doc_website/1_manual.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/djazz_doc_website/1_manual/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installation</title>
-      <link>http://localhost:1313/djazz_doc_website/1_manual/1_installation/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/1_manual/1_installation.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/1_manual/1_installation/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/1_manual/1_installation.html</guid>
       <description>Djazz needs no special installation. Download the djazz folder here. Open Max.</description>
     </item>
     <item>
       <title>Main Window</title>
-      <link>http://localhost:1313/djazz_doc_website/1_manual/2_main_window/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/1_manual/2_main_window.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/1_manual/2_main_window/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/1_manual/2_main_window.html</guid>
       <description>1. SONG LOADING Open a new song 2. BEAT INPUT Manual Metronome From another machine 3.</description>
     </item>
     <item>
       <title>MIDI Window</title>
-      <link>http://localhost:1313/djazz_doc_website/1_manual/3_midi_window/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/1_manual/3_midi_window.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/1_manual/3_midi_window/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/1_manual/3_midi_window.html</guid>
       <description>MIDI In View When clicked and illuminated, the record button arms the buffer for recording.</description>
     </item>
     <item>
       <title>Audio Window</title>
-      <link>http://localhost:1313/djazz_doc_website/1_manual/4_audio_window/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/1_manual/4_audio_window.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/1_manual/4_audio_window/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/1_manual/4_audio_window.html</guid>
       <description>7. AUDIO UI Audio Live Input – see MIDI Live Input Recording – see MIDI Live Input Saving a file – see MIDI Live Input Loading a file – see MIDI Live Input Note: to save and load an audio file, you actually save and load a folder.</description>
     </item>
     <item>
       <title>External Controllers</title>
-      <link>http://localhost:1313/djazz_doc_website/1_manual/5_external-controllers/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/1_manual/5_external-controllers.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/1_manual/5_external-controllers/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/1_manual/5_external-controllers.html</guid>
       <description>INPUT/OUTPUT DEVICES Connect/disconnect a device Presets for Launchpads Grid View Parameter controls The preset editor window Create a preset Select Midi Input Select parameter Select color Edit a preset Save a preset Load a preset Devices tested Launchpad Mini Launchpad Pro MK3 </description>
     </item>
     <item>
       <title>Tools</title>
-      <link>http://localhost:1313/djazz_doc_website/1_manual/6_tools/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/1_manual/6_tools.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/1_manual/6_tools/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/1_manual/6_tools.html</guid>
       <description>Il existe également une structure de données pour les “données de la grille”, afin de faciliter le chargement, l’enregistrement et la recherche de rythmes : patchers/data_structures/grid_data/grid_data.</description>
     </item>
   </channel>

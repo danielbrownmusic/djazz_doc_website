@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Description of the Factor Oracle :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/1_factor_oracle/index.html</link>
+    <link>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/1_factor_oracle.html</link>
     <description>La plus grande étape a été de terminer l’objet factor oracle qui est généralisé pour différents types de données, et l’objet factor_oracle_player pour improviser avec lui.</description>
     <generator>Hugo</generator>
     <language>en</language>

@@ -2,100 +2,100 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Other Components :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/index.html</link>
+    <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Audio Beat Generator</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_beat_generator/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_beat_generator.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_beat_generator/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_beat_generator.html</guid>
       <description></description>
     </item>
     <item>
       <title>Audio Record</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_record/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_record.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_record/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_record.html</guid>
       <description></description>
     </item>
     <item>
       <title>Beat Clock</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_clock/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_clock.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_clock/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_clock.html</guid>
       <description></description>
     </item>
     <item>
       <title>Beat Generator</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_generator/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_generator.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_generator/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_generator.html</guid>
       <description></description>
     </item>
     <item>
       <title>Factor Oracle</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle.html</guid>
       <description></description>
     </item>
     <item>
       <title>Factor Oracle Player</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle_player/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle_player.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle_player/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle_player.html</guid>
       <description></description>
     </item>
     <item>
       <title>Improviser</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/improviser/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/improviser.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/improviser/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/improviser.html</guid>
       <description></description>
     </item>
     <item>
       <title>Listener</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/listener/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/listener.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/listener/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/listener.html</guid>
       <description></description>
     </item>
     <item>
       <title>Master Control</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/master_control/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/master_control.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/master_control/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/master_control.html</guid>
       <description></description>
     </item>
     <item>
       <title>MIDI Beat Generator</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_beat_generator/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_beat_generator.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_beat_generator/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_beat_generator.html</guid>
       <description></description>
     </item>
     <item>
       <title>MIDI Record</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_record/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_record.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_record/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_record.html</guid>
       <description></description>
     </item>
     <item>
       <title>Score Loader</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/score_loader/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/score_loader.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/score_loader/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/score_loader.html</guid>
       <description></description>
     </item>
     <item>
       <title>UDP Send to VJazz</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/to_vjazz/index.html</link>
+      <link>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/to_vjazz.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/to_vjazz/index.html</guid>
+      <guid>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/to_vjazz.html</guid>
       <description></description>
     </item>
   </channel>

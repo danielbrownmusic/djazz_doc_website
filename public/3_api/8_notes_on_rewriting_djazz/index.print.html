@@ -13,7 +13,7 @@
     <meta name="twitter:title" content="Notes on databases in Max :: Hugo Relearn Theme">
     <meta name="twitter:description" content="The goals in rewriting Djazz are as follows.
 •	prepare the software for distribution as a standalone •	design an architecture that is extensible: ⁃	Changes can be made in one area without creating bugs in other areas (dependence and modularity) ⁃	new functionality can be added without changing the existing code base ⁃	new functionality is easy to integrate.">
-    <meta property="og:url" content="http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/index.html">
+    <meta property="og:url" content="http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz.html">
     <meta property="og:site_name" content="Hugo Relearn Theme">
     <meta property="og:title" content="Notes on databases in Max :: Hugo Relearn Theme">
     <meta property="og:description" content="The goals in rewriting Djazz are as follows.
@@ -27,26 +27,26 @@
     <meta itemprop="wordCount" content="94">
     <meta itemprop="image" content="http://localhost:1313/djazz_doc_website/images/hero.png">
     <title>Notes on databases in Max :: Hugo Relearn Theme</title>
-    <link href="http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/index.html" rel="canonical" type="text/html" title="Notes on databases in Max :: Hugo Relearn Theme">
+    <link href="http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz.html" rel="canonical" type="text/html" title="Notes on databases in Max :: Hugo Relearn Theme">
     <link href="../../3_api/8_notes_on_rewriting_djazz/index.xml" rel="alternate" type="application/rss+xml" title="Notes on databases in Max :: Hugo Relearn Theme">
-    <link href="../../css/fontawesome-all.min.css?1721808408" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1721808408" rel="stylesheet"></noscript>
-    <link href="../../css/nucleus.css?1721808408" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1721808408" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1721808408" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar.min.css?1721808408" rel="stylesheet">
-    <link href="../../css/fonts.css?1721808408" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1721808408" rel="stylesheet"></noscript>
-    <link href="../../css/theme.css?1721808408" rel="stylesheet">
-    <link href="../../css/theme-relearn-auto.css?1721808408" rel="stylesheet" id="R-variant-style">
-    <link href="../../css/chroma-relearn-auto.css?1721808408" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="../../css/variant.css?1721808408" rel="stylesheet">
-    <link href="../../css/print.css?1721808408" rel="stylesheet" media="print">
-    <link href="../../css/format-print.css?1721808408" rel="stylesheet">
-    <script src="../../js/variant.js?1721808408"></script>
+    <link href="../../css/fontawesome-all.min.css?1721809648" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1721809648" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1721809648" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1721809648" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1721809648" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1721809648" rel="stylesheet">
+    <link href="../../css/fonts.css?1721809648" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1721809648" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1721809648" rel="stylesheet">
+    <link href="../../css/theme-relearn-auto.css?1721809648" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/chroma-relearn-auto.css?1721809648" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../../css/variant.css?1721809648" rel="stylesheet">
+    <link href="../../css/print.css?1721809648" rel="stylesheet" media="print">
+    <link href="../../css/format-print.css?1721809648" rel="stylesheet">
+    <script src="../../js/variant.js?1721809648"></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.relBasePath='..\/..';
-      window.relearn.relBaseUri='..\/..';
+      window.relearn.relBasePath='..';
+      window.relearn.relBaseUri='..';
       window.relearn.absBaseUri='http:\/\/localhost:1313\/djazz_doc_website';
-      window.index_js_url="../../index.search.js?1721808408";
+      window.index_js_url="../../index.search.js?1721809648";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -65,7 +65,7 @@
       }
     </style>
   </head>
-  <body class="mobile-support print disableInlineCopyToClipboard" data-url="../../3_api/8_notes_on_rewriting_djazz/index.html">
+  <body class="mobile-support print disableInlineCopyToClipboard" data-url="../../3_api/8_notes_on_rewriting_djazz.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar">
@@ -76,13 +76,13 @@
             </div>
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../3_api/index.html"><span itemprop="name">API</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="../../3_api.html"><span itemprop="name">API</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Notes on databases in Max</span><meta itemprop="position" content="2"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
-            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../3_api/7_going_further/listeners-and-analyzers/index.html" title="Listeners and Real-time Analyzers (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../3_api/7_going_further/listeners-and-analyzers.html" title="Listeners and Real-time Analyzers (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
             </div>
-            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max/index.html" title="Dicts in Max and javascript (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="../../3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max.html" title="Dicts in Max and javascript (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
             </div>
           </div>
         </div>
@@ -140,8 +140,8 @@ Max patchers basically are dictionaries, though, for objects in them with script
         </div>
       </main>
     </div>
-    <script src="../../js/clipboard.min.js?1721808408" defer></script>
-    <script src="../../js/perfect-scrollbar.min.js?1721808408" defer></script>
-    <script src="../../js/theme.js?1721808408" defer></script>
+    <script src="../../js/clipboard.min.js?1721809648" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1721809648" defer></script>
+    <script src="../../js/theme.js?1721809648" defer></script>
   </body>
 </html>

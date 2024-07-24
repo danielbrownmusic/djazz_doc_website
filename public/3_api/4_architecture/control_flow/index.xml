@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>control flow :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/djazz_doc_website/3_api/4_architecture/control_flow/index.html</link>
+    <link>http://localhost:1313/djazz_doc_website/3_api/4_architecture/control_flow.html</link>
     <description>Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.</description>
     <generator>Hugo</generator>
     <language>en</language>
