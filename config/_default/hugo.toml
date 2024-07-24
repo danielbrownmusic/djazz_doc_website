@@ -15,7 +15,7 @@ canonifyURLs = true
 # so your site can be also served from the file system; if you don't want that,
 # set disableExplicitIndexURLs=true in the [params] section
 
-uglyURLs = false    # true -> basic/index.html -> basic.html
+uglyURLs = true    # true -> basic/index.html -> basic.html
 
 # the directory where Hugo reads the themes from; this is specific to your
 # installation and most certainly needs be deleted or changed

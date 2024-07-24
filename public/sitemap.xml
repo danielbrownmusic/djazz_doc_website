@@ -1,198 +1,198 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/1_manual/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/1_manual.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/2_tutorials/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/2_tutorials.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/2_externals/antescofo/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/2_externals/antescofo.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_beat_generator/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_beat_generator.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/1_factor_oracle/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/1_factor_oracle.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/7_going_further/dynamic_object_creation_and_destruction/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/7_going_further/dynamic_object_creation_and_destruction.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/1_manual/1_installation/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/1_manual/1_installation.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture/component_descriptions/master_control/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture/component_descriptions/master_control.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/tools/make_song_file/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/tools/make_song_file.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/1_manual/6_tools/make_song_file/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/1_manual/6_tools/make_song_file.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/5_external_controls_and_views/1_parameters/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/5_external_controls_and_views/1_parameters.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/2_tutorials/1_play_midi_score/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/2_tutorials/1_play_midi_score.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_record/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/audio_record.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture/control_flow/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture/control_flow.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/5_external_controls_and_views/2_dicts/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/5_external_controls_and_views/2_dicts.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/2_externals/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/2_externals.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/7_going_further/factor_oracle_creation/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/7_going_further/factor_oracle_creation.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/1_manual/2_main_window/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/1_manual/2_main_window.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/1_manual/6_tools/make_score_file/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/1_manual/6_tools/make_score_file.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/2_externals/midifile/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/2_externals/midifile.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/2_tutorials/2_record_audio/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/2_tutorials/2_record_audio.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_clock/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_clock.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/3_file_formats_used/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/3_file_formats_used.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/7_going_further/listeners-and-analyzers/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/7_going_further/listeners-and-analyzers.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/1_manual/3_midi_window/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/1_manual/3_midi_window.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture/overview_of_mvcvc/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture/overview_of_mvcvc.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/2_tutorials/3_record_midi/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/2_tutorials/3_record_midi.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/2_externals/supervp/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/2_externals/supervp.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/3_syncopation/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/3_syncopation.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/tools/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/tools.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/analyzer/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/analyzer.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/1_manual/4_audio_window/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/1_manual/4_audio_window.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_generator/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/beat_generator.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view_control/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view_control.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture/pattr_usage/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture/pattr_usage.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/4_architecture.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/1_manual/5_external-controllers/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/1_manual/5_external-controllers.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/5_external_controls_and_views/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/5_external_controls_and_views.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/listener/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/listener.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle_player/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle_player.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/1_manual/6_tools/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/1_manual/6_tools.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/7_going_further/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/7_going_further.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/improviser/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/improviser.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/listener/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/listener.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/8_notes_on_rewriting_djazz.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/master_control/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/master_control.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_beat_generator/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_beat_generator.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_record/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/midi_record.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_control/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_control.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/score_loader/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/score_loader.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/to_vjazz/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/3_api/1_abstraction-references/components/to_vjazz.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/categories/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/categories.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/djazz_doc_website/index.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/djazz_doc_website/tags/index.html</loc>
+    <loc>http://localhost:1313/djazz_doc_website/tags.html</loc>
   </url>
 </urlset>
