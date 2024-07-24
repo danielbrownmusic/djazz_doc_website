@@ -5,7 +5,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Manual",
-    "uri": "/1_manual.html"
+    "uri": "/djazz_doc_website/1_manual.html"
   },
   {
     "breadcrumb": "",
@@ -13,7 +13,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tutorials",
-    "uri": "/2_tutorials.html"
+    "uri": "/djazz_doc_website/2_tutorials.html"
   },
   {
     "breadcrumb": "",
@@ -21,7 +21,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "API",
-    "uri": "/3_api.html"
+    "uri": "/djazz_doc_website/3_api.html"
   },
   {
     "breadcrumb": "API \u003e externals",
@@ -29,7 +29,7 @@ var relearn_search_index = [
     "description": " Antescofo is used in two places: Master control, to calculate the tempo (SCORE NAME) MIDI beat reader, to sequence and send out midi notes in the proper tempo and rhythm (SCORE NAME) ",
     "tags": [],
     "title": "antescofo",
-    "uri": "/3_api/2_externals/antescofo.html"
+    "uri": "/djazz_doc_website/3_api/2_externals/antescofo.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -37,7 +37,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Audio Beat Generator",
-    "uri": "/3_api/1_abstraction-references/components/audio_beat_generator.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/audio_beat_generator.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
@@ -45,7 +45,7 @@ var relearn_search_index = [
     "description": "La plus grande étape a été de terminer l’objet factor oracle qui est généralisé pour différents types de données, et l’objet factor_oracle_player pour improviser avec lui.",
     "tags": [],
     "title": "Description of the Factor Oracle",
-    "uri": "/3_api/6_improvisation/1_factor_oracle.html"
+    "uri": "/djazz_doc_website/3_api/6_improvisation/1_factor_oracle.html"
   },
   {
     "breadcrumb": "API \u003e Notes on databases in Max",
@@ -53,7 +53,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Dicts in Max and javascript",
-    "uri": "/3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max.html"
+    "uri": "/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -61,7 +61,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz",
-    "uri": "/3_api/1_abstraction-references/main_components/djazz.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz.html"
   },
   {
     "breadcrumb": "API \u003e Going further",
@@ -69,7 +69,7 @@ var relearn_search_index = [
     "description": "Dynamic creation and destruction of objects: arrays and dicts Hierarchies Saving and reloading architecture Objects in djazz can be created and destroyed, so you can set up variable numbers of different types of players, and different midi and audio outputs.",
     "tags": [],
     "title": "Dynamic Object Creation and Destruction",
-    "uri": "/3_api/7_going_further/dynamic_object_creation_and_destruction.html"
+    "uri": "/djazz_doc_website/3_api/7_going_further/dynamic_object_creation_and_destruction.html"
   },
   {
     "breadcrumb": "API",
@@ -77,7 +77,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Index of important abstractions",
-    "uri": "/3_api/1_abstraction-references.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references.html"
   },
   {
     "breadcrumb": "Manual",
@@ -85,7 +85,7 @@ var relearn_search_index = [
     "description": "Djazz needs no special installation. Download the djazz folder here. Open Max.",
     "tags": [],
     "title": "Installation",
-    "uri": "/1_manual/1_installation.html"
+    "uri": "/djazz_doc_website/1_manual/1_installation.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -93,7 +93,7 @@ var relearn_search_index = [
     "description": "Description of Components in Model:\nMaster Control Master Clock - outputs a beat number when it receives a bang - increments its beat number with each output, but also keeps track of position in a song form and adjusts the beat in accordance if looped.",
     "tags": [],
     "title": "main components",
-    "uri": "/3_api/4_architecture/component_descriptions/master_control.html"
+    "uri": "/djazz_doc_website/3_api/4_architecture/component_descriptions/master_control.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions",
@@ -101,7 +101,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Main Components",
-    "uri": "/3_api/1_abstraction-references/main_components.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Tools",
@@ -109,7 +109,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "make song file",
-    "uri": "/3_api/1_abstraction-references/tools/make_song_file.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/tools/make_song_file.html"
   },
   {
     "breadcrumb": "Manual \u003e Tools",
@@ -117,7 +117,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Making a Song File",
-    "uri": "/1_manual/6_tools/make_song_file.html"
+    "uri": "/djazz_doc_website/1_manual/6_tools/make_song_file.html"
   },
   {
     "breadcrumb": "API \u003e Notes on databases in Max",
@@ -125,7 +125,7 @@ var relearn_search_index = [
     "description": "Dicts, like colls, are persistent and global, so use them only as read-only.",
     "tags": [],
     "title": "Notes on dicts",
-    "uri": "/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts.html"
+    "uri": "/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts.html"
   },
   {
     "breadcrumb": "API \u003e External controls and views",
@@ -133,7 +133,7 @@ var relearn_search_index = [
     "description": "Attaching External Devices Parameters Parameter Listeners External devices with views as well as controls Launchpads Mapping editors Dictionary readers and writers in javascript",
     "tags": [],
     "title": "Parameters",
-    "uri": "/3_api/5_external_controls_and_views/1_parameters.html"
+    "uri": "/djazz_doc_website/3_api/5_external_controls_and_views/1_parameters.html"
   },
   {
     "breadcrumb": "Tutorials",
@@ -141,7 +141,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Playing a MIDI Score",
-    "uri": "/2_tutorials/1_play_midi_score.html"
+    "uri": "/djazz_doc_website/2_tutorials/1_play_midi_score.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -149,7 +149,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Audio Record",
-    "uri": "/3_api/1_abstraction-references/components/audio_record.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/audio_record.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -157,7 +157,7 @@ var relearn_search_index = [
     "description": "Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.",
     "tags": [],
     "title": "control flow",
-    "uri": "/3_api/4_architecture/control_flow.html"
+    "uri": "/djazz_doc_website/3_api/4_architecture/control_flow.html"
   },
   {
     "breadcrumb": "API \u003e External controls and views",
@@ -165,7 +165,7 @@ var relearn_search_index = [
     "description": "Dictionaries in Javascript and pure Max Gotchas\nDictionary readers and writers Dictionaries are used in different ways, for representing songs, architecture, and as another example for the launchpad, to keep track of how buttons are mapped to parameters and how parameters are mapped to lights.",
     "tags": [],
     "title": "Dicts",
-    "uri": "/3_api/5_external_controls_and_views/2_dicts.html"
+    "uri": "/djazz_doc_website/3_api/5_external_controls_and_views/2_dicts.html"
   },
   {
     "breadcrumb": "API",
@@ -173,7 +173,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "externals",
-    "uri": "/3_api/2_externals.html"
+    "uri": "/djazz_doc_website/3_api/2_externals.html"
   },
   {
     "breadcrumb": "API \u003e Going further",
@@ -181,7 +181,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Factor Oracle Labeling",
-    "uri": "/3_api/7_going_further/factor_oracle_creation.html"
+    "uri": "/djazz_doc_website/3_api/7_going_further/factor_oracle_creation.html"
   },
   {
     "breadcrumb": "Manual",
@@ -189,7 +189,7 @@ var relearn_search_index = [
     "description": "1. SONG LOADING Open a new song 2. BEAT INPUT Manual Metronome From another machine 3.",
     "tags": [],
     "title": "Main Window",
-    "uri": "/1_manual/2_main_window.html"
+    "uri": "/djazz_doc_website/1_manual/2_main_window.html"
   },
   {
     "breadcrumb": "Manual \u003e Tools",
@@ -197,7 +197,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Making a Score File",
-    "uri": "/1_manual/6_tools/make_score_file.html"
+    "uri": "/djazz_doc_website/1_manual/6_tools/make_score_file.html"
   },
   {
     "breadcrumb": "API \u003e externals",
@@ -205,7 +205,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "midifile",
-    "uri": "/3_api/2_externals/midifile.html"
+    "uri": "/djazz_doc_website/3_api/2_externals/midifile.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions",
@@ -213,7 +213,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Other Components",
-    "uri": "/3_api/1_abstraction-references/components.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components.html"
   },
   {
     "breadcrumb": "Tutorials",
@@ -221,7 +221,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Recording and playing back audio",
-    "uri": "/2_tutorials/2_record_audio.html"
+    "uri": "/djazz_doc_website/2_tutorials/2_record_audio.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
@@ -229,7 +229,7 @@ var relearn_search_index = [
     "description": "Le “factor oracle player” qui prend les étiquettes une par une, qui peuvent être de n’importe quelle forme (mais dans le programme actuel, c’est un dictionnaire avec deux entrées : la racine de l’accord et l’étiquette de l’accord), et utilise un factor oracle pour produire un battement qui correspond à l’étiquette.",
     "tags": [],
     "title": "The Factor Oracle Player",
-    "uri": "/3_api/6_improvisation/2_factor_oracle_player.html"
+    "uri": "/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -237,7 +237,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Beat Clock",
-    "uri": "/3_api/1_abstraction-references/components/beat_clock.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/beat_clock.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -245,7 +245,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz view",
-    "uri": "/3_api/1_abstraction-references/main_components/djazz_view.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view.html"
   },
   {
     "breadcrumb": "API",
@@ -253,7 +253,7 @@ var relearn_search_index = [
     "description": "File formats used json song file score/track files for MIDI audio: wav and json",
     "tags": [],
     "title": "File formats used",
-    "uri": "/3_api/3_file_formats_used.html"
+    "uri": "/djazz_doc_website/3_api/3_file_formats_used.html"
   },
   {
     "breadcrumb": "API \u003e Going further",
@@ -261,7 +261,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Listeners and Real-time Analyzers",
-    "uri": "/3_api/7_going_further/listeners-and-analyzers.html"
+    "uri": "/djazz_doc_website/3_api/7_going_further/listeners-and-analyzers.html"
   },
   {
     "breadcrumb": "Manual",
@@ -269,7 +269,7 @@ var relearn_search_index = [
     "description": "MIDI In View When clicked and illuminated, the record button arms the buffer for recording.",
     "tags": [],
     "title": "MIDI Window",
-    "uri": "/1_manual/3_midi_window.html"
+    "uri": "/djazz_doc_website/1_manual/3_midi_window.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -277,7 +277,7 @@ var relearn_search_index = [
     "description": "1. Architecture Model/Control/View Control/View MVC:\nDjazz uses the Model-View-Control design pattern.",
     "tags": [],
     "title": "Overview of MVVCC (Model-View-View Controller-View) Architecture",
-    "uri": "/3_api/4_architecture/overview_of_mvcvc.html"
+    "uri": "/djazz_doc_website/3_api/4_architecture/overview_of_mvcvc.html"
   },
   {
     "breadcrumb": "Tutorials",
@@ -285,7 +285,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Recording and playing back MIDI",
-    "uri": "/2_tutorials/3_record_midi.html"
+    "uri": "/djazz_doc_website/2_tutorials/3_record_midi.html"
   },
   {
     "breadcrumb": "API \u003e externals",
@@ -293,7 +293,7 @@ var relearn_search_index = [
     "description": " SuperVP is used to play audio beats ",
     "tags": [],
     "title": "supervp",
-    "uri": "/3_api/2_externals/supervp.html"
+    "uri": "/djazz_doc_website/3_api/2_externals/supervp.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
@@ -301,7 +301,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Syncopation",
-    "uri": "/3_api/6_improvisation/3_syncopation.html"
+    "uri": "/djazz_doc_website/3_api/6_improvisation/3_syncopation.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions",
@@ -309,7 +309,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tools",
-    "uri": "/3_api/1_abstraction-references/tools.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/tools.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
@@ -317,7 +317,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Analyzer",
-    "uri": "/3_api/6_improvisation/analyzer.html"
+    "uri": "/djazz_doc_website/3_api/6_improvisation/analyzer.html"
   },
   {
     "breadcrumb": "Manual",
@@ -325,7 +325,7 @@ var relearn_search_index = [
     "description": "7. AUDIO UI Audio Live Input – see MIDI Live Input Recording – see MIDI Live Input Saving a file – see MIDI Live Input Loading a file – see MIDI Live Input Note: to save and load an audio file, you actually save and load a folder.",
     "tags": [],
     "title": "Audio Window",
-    "uri": "/1_manual/4_audio_window.html"
+    "uri": "/djazz_doc_website/1_manual/4_audio_window.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -333,7 +333,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Beat Generator",
-    "uri": "/3_api/1_abstraction-references/components/beat_generator.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/beat_generator.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -341,7 +341,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz view control",
-    "uri": "/3_api/1_abstraction-references/main_components/djazz_view_control.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view_control.html"
   },
   {
     "breadcrumb": "API",
@@ -349,7 +349,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Improvisation with the Factor Oracle",
-    "uri": "/3_api/6_improvisation.html"
+    "uri": "/djazz_doc_website/3_api/6_improvisation.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -357,7 +357,7 @@ var relearn_search_index = [
     "description": "Pattr translation in control and view control\nInterface - not much to say.",
     "tags": [],
     "title": "Pattr usage",
-    "uri": "/3_api/4_architecture/pattr_usage.html"
+    "uri": "/djazz_doc_website/3_api/4_architecture/pattr_usage.html"
   },
   {
     "breadcrumb": "API",
@@ -365,7 +365,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "System Architecture",
-    "uri": "/3_api/4_architecture.html"
+    "uri": "/djazz_doc_website/3_api/4_architecture.html"
   },
   {
     "breadcrumb": "Manual",
@@ -373,7 +373,7 @@ var relearn_search_index = [
     "description": "INPUT/OUTPUT DEVICES Connect/disconnect a device Presets for Launchpads Grid View Parameter controls The preset editor window Create a preset Select Midi Input Select parameter Select color Edit a preset Save a preset Load a preset Devices tested Launchpad Mini Launchpad Pro MK3 ",
     "tags": [],
     "title": "External Controllers",
-    "uri": "/1_manual/5_external-controllers.html"
+    "uri": "/djazz_doc_website/1_manual/5_external-controllers.html"
   },
   {
     "breadcrumb": "API",
@@ -381,7 +381,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "External controls and views",
-    "uri": "/3_api/5_external_controls_and_views.html"
+    "uri": "/djazz_doc_website/3_api/5_external_controls_and_views.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -389,7 +389,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Factor Oracle",
-    "uri": "/3_api/1_abstraction-references/components/factor_oracle.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
@@ -397,7 +397,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Listener",
-    "uri": "/3_api/6_improvisation/listener.html"
+    "uri": "/djazz_doc_website/3_api/6_improvisation/listener.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -405,7 +405,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Factor Oracle Player",
-    "uri": "/3_api/1_abstraction-references/components/factor_oracle_player.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle_player.html"
   },
   {
     "breadcrumb": "Manual",
@@ -413,7 +413,7 @@ var relearn_search_index = [
     "description": "Il existe également une structure de données pour les “données de la grille”, afin de faciliter le chargement, l’enregistrement et la recherche de rythmes : patchers/data_structures/grid_data/grid_data.",
     "tags": [],
     "title": "Tools",
-    "uri": "/1_manual/6_tools.html"
+    "uri": "/djazz_doc_website/1_manual/6_tools.html"
   },
   {
     "breadcrumb": "API",
@@ -421,7 +421,7 @@ var relearn_search_index = [
     "description": "Dynamic creation and destruction of objects: arrays and dicts Hierarchies Saving and reloading architecture Objects in djazz can be created and destroyed, so you can set up variable numbers of different types of players, and different midi and audio outputs.",
     "tags": [],
     "title": "Going further",
-    "uri": "/3_api/7_going_further.html"
+    "uri": "/djazz_doc_website/3_api/7_going_further.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -429,7 +429,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Improviser",
-    "uri": "/3_api/1_abstraction-references/components/improviser.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/improviser.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -437,7 +437,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Listener",
-    "uri": "/3_api/1_abstraction-references/components/listener.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/listener.html"
   },
   {
     "breadcrumb": "API",
@@ -445,7 +445,7 @@ var relearn_search_index = [
     "description": "The goals in rewriting Djazz are as follows.\n•\tprepare the software for distribution as a standalone •\tdesign an architecture that is extensible: ⁃\tChanges can be made in one area without creating bugs in other areas (dependence and modularity) ⁃\tnew functionality can be added without changing the existing code base ⁃\tnew functionality is easy to integrate.",
     "tags": [],
     "title": "Notes on databases in Max",
-    "uri": "/3_api/8_notes_on_rewriting_djazz.html"
+    "uri": "/djazz_doc_website/3_api/8_notes_on_rewriting_djazz.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -453,7 +453,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Master Control",
-    "uri": "/3_api/1_abstraction-references/components/master_control.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/master_control.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -461,7 +461,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "MIDI Beat Generator",
-    "uri": "/3_api/1_abstraction-references/components/midi_beat_generator.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/midi_beat_generator.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -469,7 +469,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "MIDI Record",
-    "uri": "/3_api/1_abstraction-references/components/midi_record.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/midi_record.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -477,7 +477,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz control",
-    "uri": "/3_api/1_abstraction-references/main_components/djazz_control.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_control.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -485,7 +485,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Score Loader",
-    "uri": "/3_api/1_abstraction-references/components/score_loader.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/score_loader.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -493,7 +493,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "UDP Send to VJazz",
-    "uri": "/3_api/1_abstraction-references/components/to_vjazz.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/to_vjazz.html"
   },
   {
     "breadcrumb": "",
@@ -501,7 +501,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Categories",
-    "uri": "/categories.html"
+    "uri": "/djazz_doc_website/categories.html"
   },
   {
     "breadcrumb": "",
@@ -509,7 +509,7 @@ var relearn_search_index = [
     "description": "Software for musical co-creativity.",
     "tags": [],
     "title": "Djazz",
-    "uri": "/index.html"
+    "uri": "/djazz_doc_website/index.html"
   },
   {
     "breadcrumb": "",
@@ -517,6 +517,6 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tags",
-    "uri": "/tags.html"
+    "uri": "/djazz_doc_website/tags.html"
   }
 ]
