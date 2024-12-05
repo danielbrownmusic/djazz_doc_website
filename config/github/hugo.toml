@@ -1,3 +1,2 @@
 baseURL = 'https://www.danielbrownmusic.com/djazz_doc_website/'
-relativeURLs = true
 canonifyURLs = true
