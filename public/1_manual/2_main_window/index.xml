@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Main Window :: Hugo Relearn Theme</title>
-    <link>//localhost:1313/1_manual/2_main_window.html</link>
+    <link>http://localhost:1313/1_manual/2_main_window.html</link>
     <description>1. MIDI/AUDIO INTERFACE SELECTOR Clicking on the button labeled “MIDI” or “Audio” will open the MIDI or Audio interface window, respectively.</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/1_manual/2_main_window/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/1_manual/2_main_window/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

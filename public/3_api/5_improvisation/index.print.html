@@ -8,37 +8,37 @@
     <meta name="description" content="">
     <meta name="author" content="Daniel Brown">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="//localhost:1313/images/hero.png">
+    <meta name="twitter:image" content="http://localhost:1313/images/hero.png">
     <meta name="twitter:title" content="Improvisation with the Factor Oracle :: Hugo Relearn Theme">
-    <meta property="og:url" content="//localhost:1313/3_api/5_improvisation.html">
+    <meta property="og:url" content="http://localhost:1313/3_api/5_improvisation.html">
     <meta property="og:site_name" content="Hugo Relearn Theme">
     <meta property="og:title" content="Improvisation with the Factor Oracle :: Hugo Relearn Theme">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="//localhost:1313/images/hero.png">
+    <meta property="og:image" content="http://localhost:1313/images/hero.png">
     <meta itemprop="name" content="Improvisation with the Factor Oracle :: Hugo Relearn Theme">
-    <meta itemprop="image" content="//localhost:1313/images/hero.png">
+    <meta itemprop="image" content="http://localhost:1313/images/hero.png">
     <title>Improvisation with the Factor Oracle :: Hugo Relearn Theme</title>
-    <link href="//localhost:1313/3_api/5_improvisation.html" rel="canonical" type="text/html" title="Improvisation with the Factor Oracle :: Hugo Relearn Theme">
+    <link href="http://localhost:1313/3_api/5_improvisation.html" rel="canonical" type="text/html" title="Improvisation with the Factor Oracle :: Hugo Relearn Theme">
     <link href="../../3_api/5_improvisation/index.xml" rel="alternate" type="application/rss+xml" title="Improvisation with the Factor Oracle :: Hugo Relearn Theme">
-    <link href="../../css/fontawesome-all.min.css?1732896377" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1732896377" rel="stylesheet"></noscript>
-    <link href="../../css/nucleus.css?1732896377" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1732896377" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1732896377" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar.min.css?1732896377" rel="stylesheet">
-    <link href="../../css/fonts.css?1732896377" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1732896377" rel="stylesheet"></noscript>
-    <link href="../../css/theme.css?1732896377" rel="stylesheet">
-    <link href="../../css/theme-relearn-auto.css?1732896377" rel="stylesheet" id="R-variant-style">
-    <link href="../../css/chroma-relearn-auto.css?1732896377" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="../../css/variant.css?1732896377" rel="stylesheet">
-    <link href="../../css/print.css?1732896377" rel="stylesheet" media="print">
-    <link href="../../css/format-print.css?1732896377" rel="stylesheet">
-    <script src="../../js/variant.js?1732896377"></script>
+    <link href="../../css/fontawesome-all.min.css?1733394425" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1733394425" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1733394425" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1733394425" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1733394425" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1733394425" rel="stylesheet">
+    <link href="../../css/fonts.css?1733394425" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1733394425" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1733394425" rel="stylesheet">
+    <link href="../../css/theme-relearn-auto.css?1733394425" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/chroma-relearn-auto.css?1733394425" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../../css/variant.css?1733394425" rel="stylesheet">
+    <link href="../../css/print.css?1733394425" rel="stylesheet" media="print">
+    <link href="../../css/format-print.css?1733394425" rel="stylesheet">
+    <script src="../../js/variant.js?1733394425"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..';
       window.relearn.relBaseUri='..';
-      window.relearn.absBaseUri='\/\/localhost:1313';
-      window.index_js_url="../../index.search.js?1732896377";
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.index_js_url="../../index.search.js?1733394425";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -101,6 +101,15 @@
 
 <h1 id="general-description">General Description</h1>
 
+<p>Input is passed to patchers two ways: synchronously and asynchronously, depending on the type of input data.
+Synchoronous data consists of the beat number, the current tempo (since this can fluctuate), and any data to be used by the analyzer.
+This data is passed serially through patch cords which send data serially.</p>
+<p>The generator uses the beat number when improvise mode is not on; it uses this to play the next beat or a different beat if one has been
+selected by the user.
+In improvise mode, the beat number is not considered. The label produced by the analyzer is used, as described above.</p>
+<p>Asynchoronous data is anything changed by the user using the GUI. A lot of this data is well known to audio interface users: track volume,
+MIDI and audio effects like pitch transposition, for instance. The factor oracle player has two asynchronous controls: max-continuity and
+pitch-transposition.</p>
 
 <pre class="mermaid align-left zoomable">
 graph TB;
@@ -113,44 +122,169 @@ graph TB;
 
 <pre class="mermaid align-left zoomable">
 flowchart TB;
-    A[Master Clock] 
-	subgraph B[Generator]
-		F --&gt; G
+gIn(( ))
+g1[Generator 1]
+g2[Generator 2]
+g3[Generator 3]
+g4[Generator 4]
+g5[Generator 5]
+
+mbPlayer[MIDI Beat Player]
+
+t1[MIDI\nTrack 1]
+t2[MIDI\nTrack 2]
+t3[MIDI\nTrack 3]
+t4[MIDI\nTrack 4]
+t5[MIDI\nTrack 5]
+
+gOut((( )))
+
+gIn --&gt; g1 --&gt; mbPlayer
+gIn --&gt; g2 --&gt; mbPlayer
+gIn --&gt; g3 --&gt; mbPlayer
+gIn --&gt; g4 --&gt; mbPlayer
+gIn --&gt; g5 --&gt; mbPlayer
+
+mbPlayer --&gt; t1 --&gt; gOut
+mbPlayer --&gt; t2 --&gt; gOut
+mbPlayer --&gt; t3 --&gt; gOut
+mbPlayer --&gt; t4 --&gt; gOut
+mbPlayer --&gt; t5 --&gt; gOut
+
+</pre>
+<h2 id="midi-generator">MIDI Generator</h2>
+
+<pre class="mermaid align-left zoomable">
+flowchart TB;
+subgraph MidiBeatGenerator
+direction TB
+		MidiBeatGeneratorIn(( ))
+		BeatReader[Beat Reader]
+		Looper[Beat Number Looper]
+		BeatReader[MIDI Beat Reader]
+		MidiBeatGeneratorOut((( )))
+		MidiBeatGeneratorIn --&gt; BeatGenerator --&gt; Looper --&gt; BeatReader --&gt; MidiBeatGeneratorOut
+end
+</pre>
+<h2 id="beat-generator">Beat Generator</h2>
+
+<pre class="mermaid align-left zoomable">
+flowchart TB;
+subgraph BeatGenerator[Beat Generator]
+direction TB
+	BeatGeneratorIn(( ))
+	BeatGeneratorSwitch{ }
+	subgraph ScorePlayer[Score Player]
+	direction TB
+		ScorePlayerSwitch[switch]
+		MasterClockFollower[Master Clock\nFollower]
+		ScorePlayerOut[out]
+		subgraph InternalClockFollower[Internal Clock Follower]
+		direction TB
+			InternalClockFollowerSpeed[Speed Control]
+			BeatClock[Beat Clock]
+			InternalClockFollowerSpeed --&gt; BeatClock
+		end
+		ScorePlayerSwitch --&gt; MasterClockFollower
+		ScorePlayerSwitch --&gt; InternalClockFollower
+	MasterClockFollower --&gt; ScorePlayerOut
+	InternalClockFollower --&gt; ScorePlayerOut
 	end
-	C[MIDI Out]
-	A--&gt;|tempo, beat number, label| B
-</pre>
+	subgraph Improviser[Improviser]
+	direction TB
+		ImproviserSpeed[Speed Control]
+		FOP[Factor Oracle Player]
+		ImproviserSpeed --&gt; FOP
+	end
 
-<pre class="mermaid align-center zoomable">
-classDiagram
+	BeatGeneratorOut((( )))
 
+	BeatGeneratorIn		--&gt; BeatGeneratorSwitch
+	BeatGeneratorSwitch --&gt; ScorePlayer
+	BeatGeneratorSwitch --&gt; Improviser
+	ScorePlayer 		--&gt; BeatGeneratorOut
+	Improviser 			--&gt; BeatGeneratorOut
+end
 	
-	generator *-- score_player
-	generator *-- improviser
-	improviser *-- factor_oracle_player 
-
-	factor_oracle_player : int max-continuity
-	factor_oracle_player : int pitch-transposition 
-	factor_oracle_player *-- factor_oracle 
-
 </pre>
-<p>Each generator contains</p>
-<p>The factor oracle (&ldquo;factor_oracle.maxpat&rdquo;)</p>
-<p>The factor oracle player (&ldquo;factor_oracle_player.maxpat&rdquo;) creates the improvisation. As its name suggests, it contains and makes use of the
-&ldquo;factor_oracle&rdquo; Max abstraction.</p>
-<p>The analyzer uses the same set of symbols as the factor oracle. It is used both offline, to create a file of labeled beats
-for a song, and online, to convert the data at the beginning of each beat into a symbol to be passed to the factor oracle player.
+<p>The beat generator can play in two modes: score player and improviser. Each of these also contain two modes: play at the tempo given by the tap,
+or play at a different speed: double speed, quadruple speed, half speed, and one and a half speed.  This speed change is controlled
+by an object&ndash;the &ldquo;Speed Control&rdquo; that, when messages are passed to the generator, modifies the timing of their distribution to the generator&rsquo;s internal objects.
+Even though both the score player and the improviser use the Speed Control, the result is different, because the Score Player receives
+beat <em>number</em> messages and the Improviser receives beat <em>label</em> messages.</p>
+<p>The Score Player contains two subpatchers, a &ldquo;Master Clock Follower&rdquo; and an &ldquo;Internal Clock Follower.&rdquo; In Score Player mode,
+if the Speed Control is active, beat numbers are sent to the Internal Clock Follower, which outputs beat numbers at a different tempo than
+the input tap. The musical result is an interesting version of &ldquo;playing out:&rdquo; beats are played at a different rate, meaning their
+internal harmony, given by each beat&rsquo;s chord label, no longer aligns with that of the other tracks:</p>
+<table>
+<thead>
+<tr>
+<th>Master Clock Input:</th>
+<th>Am7</th>
+<th></th>
+<th>D7</th>
+<th></th>
+<th>Gmaj7</th>
+<th></th>
+<th>Cmaj7</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Internal Clock Follower Output:</td>
+<td>Am7</td>
+<td>D7</td>
+<td>Gmaj7</td>
+<td>Cmaj7</td>
+<td>Am7</td>
+<td>D7</td>
+<td>Gmaj7</td>
+<td>Cmaj7</td>
+</tr>
+</tbody>
+</table>
+<p>The Internal Clock Follower contains its own Beat Clock object. It is passed the same asynchronous messages as the Master Beat Clock,
+concerning the song beat data like the end beat, the current section beats, and whether the current chapter is being looped.
+If the Speed Control is inactive, the beat number messages given by the Master Beat Clock are simply passed through.</p>
+<p>In the Improviser, it is the beat label messages are passed. Beat labels are passed in at the master tempo. When a label is received, it is saved in
+a message object and a bang is sent to the Speed Control. If active, the speed control at its modified tempo, which trigger the saved
+label to be passed to the factor oracle player. The result is that the factor oracle player outputs beats that conform to
+the harmony of the given beat, even though they are at a different tempo:</p>
+<table>
+<thead>
+<tr>
+<th>Master Clock Input:</th>
+<th>Am7</th>
+<th></th>
+<th>D7</th>
+<th></th>
+<th>Gmaj7</th>
+<th></th>
+<th>Cmaj7</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Improviser Output:</td>
+<td>Am7</td>
+<td>Am7</td>
+<td>D7</td>
+<td>D7</td>
+<td>Gmaj7</td>
+<td>Gmaj7</td>
+<td>Cmaj7</td>
+<td>Cmaj7</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-improviser">The Improviser</h2>
+<h3 id="the-factor-oracle-factor_oraclemaxpat">The factor oracle (&ldquo;factor_oracle.maxpat&rdquo;)</h3>
+<p>The factor oracle player creates the improvisation. As its name suggests, it contains and makes use of the &ldquo;factor_oracle&rdquo; Max abstraction.</p>
+<p>The analyzer uses the same set of symbols as the factor oracle. It is used both offline, to create a file of labeled beats for a song, and online, to convert the data at the beginning of each beat into a symbol to be passed to the factor oracle player.
 This symbol is then used as the query to the factor oracle to produce the next beat.</p>
-<p>The analyzer</p>
-<p>Input is passed to patchers two ways: synchronously and asynchronously, depending on the type of input data.
-Synchoronous data consists of the beat number, the current tempo (since this can fluctuate), and any data to be used by the analyzer.
-This data is passed serially through patch cords which send data serially.</p>
-<p>The generator uses the beat number when improvise mode is not on; it uses this to play the next beat or a different beat if one has been
-selected by the user.
-In improvise mode, the beat number is not considered. The label produced by the analyzer is used, as described above.</p>
-<p>Asynchoronous data is anything changed by the user using the GUI. A lot of this data is well known to audio interface users: track volume,
-MIDI and audio effects like pitch transposition, for instance. The factor oracle player has two asynchronous controls: max-continuity and
-pitch-transposition.</p>
+<h2 id="the-analyzer">The analyzer</h2>
 <p>Definition:</p>
 <p>A beat is a collection of notes that occurs between two timepoints. These timepoints are considered to occur at regular intervals.
 Thus a piece of music that has a pulse can be considered a sequence of beats.</p>
@@ -257,22 +391,22 @@ ascertaining the “correctness” of an analysis via listening to the resulting
         </div>
       </main>
     </div>
-    <script src="../../js/clipboard.min.js?1732896377" defer></script>
-    <script src="../../js/perfect-scrollbar.min.js?1732896377" defer></script>
-    <script src="../../js/d3/d3-color.min.js?1732896377" defer></script>
-    <script src="../../js/d3/d3-dispatch.min.js?1732896377" defer></script>
-    <script src="../../js/d3/d3-drag.min.js?1732896377" defer></script>
-    <script src="../../js/d3/d3-ease.min.js?1732896377" defer></script>
-    <script src="../../js/d3/d3-interpolate.min.js?1732896377" defer></script>
-    <script src="../../js/d3/d3-selection.min.js?1732896377" defer></script>
-    <script src="../../js/d3/d3-timer.min.js?1732896377" defer></script>
-    <script src="../../js/d3/d3-transition.min.js?1732896377" defer></script>
-    <script src="../../js/d3/d3-zoom.min.js?1732896377" defer></script>
-    <script src="../../js/js-yaml.min.js?1732896377" defer></script>
-    <script src="../../js/mermaid.min.js?1732896377" defer></script>
+    <script src="../../js/clipboard.min.js?1733394425" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-color.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-dispatch.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-drag.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-ease.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-interpolate.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-selection.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-timer.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-transition.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-zoom.min.js?1733394425" defer></script>
+    <script src="../../js/js-yaml.min.js?1733394425" defer></script>
+    <script src="../../js/mermaid.min.js?1733394425" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
-    <script src="../../js/theme.js?1732896377" defer></script>
+    <script src="../../js/theme.js?1733394425" defer></script>
   </body>
 </html>

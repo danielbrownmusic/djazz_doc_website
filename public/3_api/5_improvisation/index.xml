@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Improvisation with the Factor Oracle :: Hugo Relearn Theme</title>
-    <link>//localhost:1313/3_api/5_improvisation.html</link>
+    <link>http://localhost:1313/3_api/5_improvisation.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="//localhost:1313/3_api/5_improvisation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/3_api/5_improvisation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>General Description</title>
-      <link>//localhost:1313/3_api/5_improvisation/0_general_description.html</link>
+      <link>http://localhost:1313/3_api/5_improvisation/0_general_description.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/3_api/5_improvisation/0_general_description.html</guid>
-      <description>graph TB; A[Master Clock] B[Audio] C[MIDI] A--&gt;|tempo, beat number, label| B A--&gt;|tempo, beat number, label| C flowchart TB; A[Master Clock] subgraph B[Generator] F --&gt; G end C[MIDI Out] A--&gt;|tempo, beat number, label| B classDiagram generator *-- score_player generator *-- improviser improviser *-- factor_oracle_player factor_oracle_player : int max-continuity factor_oracle_player : int pitch-transposition factor_oracle_player *-- factor_oracle Each generator contains</description>
+      <guid>http://localhost:1313/3_api/5_improvisation/0_general_description.html</guid>
+      <description>Input is passed to patchers two ways: synchronously and asynchronously, depending on the type of input data.</description>
     </item>
     <item>
       <title>Description of the Factor Oracle</title>
-      <link>//localhost:1313/3_api/5_improvisation/1_factor_oracle.html</link>
+      <link>http://localhost:1313/3_api/5_improvisation/1_factor_oracle.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/3_api/5_improvisation/1_factor_oracle.html</guid>
+      <guid>http://localhost:1313/3_api/5_improvisation/1_factor_oracle.html</guid>
       <description>The oracle factor patch is here: patchers/data_structures/factor_oracle/factor_oracle.maxpat&#xA;To use different comparison functions, you need to write a Max patch that performs the label comparison.</description>
     </item>
     <item>
       <title>The Factor Oracle Player</title>
-      <link>//localhost:1313/3_api/5_improvisation/2_factor_oracle_player.html</link>
+      <link>http://localhost:1313/3_api/5_improvisation/2_factor_oracle_player.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/3_api/5_improvisation/2_factor_oracle_player.html</guid>
+      <guid>http://localhost:1313/3_api/5_improvisation/2_factor_oracle_player.html</guid>
       <description>patchers/factor_oracle_player/factor_oracle_player.maxpat&#xA;The “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it’s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label.</description>
     </item>
     <item>
       <title>The Analyzer</title>
-      <link>//localhost:1313/3_api/5_improvisation/3_analyzer.html</link>
+      <link>http://localhost:1313/3_api/5_improvisation/3_analyzer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/3_api/5_improvisation/3_analyzer.html</guid>
+      <guid>http://localhost:1313/3_api/5_improvisation/3_analyzer.html</guid>
       <description>booboo</description>
     </item>
   </channel>

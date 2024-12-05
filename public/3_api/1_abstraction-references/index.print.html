@@ -8,37 +8,37 @@
     <meta name="description" content="">
     <meta name="author" content="Daniel Brown">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="//localhost:1313/images/hero.png">
+    <meta name="twitter:image" content="http://localhost:1313/images/hero.png">
     <meta name="twitter:title" content="Index of important abstractions :: Hugo Relearn Theme">
-    <meta property="og:url" content="//localhost:1313/3_api/1_abstraction-references.html">
+    <meta property="og:url" content="http://localhost:1313/3_api/1_abstraction-references.html">
     <meta property="og:site_name" content="Hugo Relearn Theme">
     <meta property="og:title" content="Index of important abstractions :: Hugo Relearn Theme">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="//localhost:1313/images/hero.png">
+    <meta property="og:image" content="http://localhost:1313/images/hero.png">
     <meta itemprop="name" content="Index of important abstractions :: Hugo Relearn Theme">
-    <meta itemprop="image" content="//localhost:1313/images/hero.png">
+    <meta itemprop="image" content="http://localhost:1313/images/hero.png">
     <title>Index of important abstractions :: Hugo Relearn Theme</title>
-    <link href="//localhost:1313/3_api/1_abstraction-references.html" rel="canonical" type="text/html" title="Index of important abstractions :: Hugo Relearn Theme">
+    <link href="http://localhost:1313/3_api/1_abstraction-references.html" rel="canonical" type="text/html" title="Index of important abstractions :: Hugo Relearn Theme">
     <link href="../../3_api/1_abstraction-references/index.xml" rel="alternate" type="application/rss+xml" title="Index of important abstractions :: Hugo Relearn Theme">
-    <link href="../../css/fontawesome-all.min.css?1732896377" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1732896377" rel="stylesheet"></noscript>
-    <link href="../../css/nucleus.css?1732896377" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1732896377" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1732896377" rel="stylesheet"></noscript>
-    <link href="../../css/perfect-scrollbar.min.css?1732896377" rel="stylesheet">
-    <link href="../../css/fonts.css?1732896377" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1732896377" rel="stylesheet"></noscript>
-    <link href="../../css/theme.css?1732896377" rel="stylesheet">
-    <link href="../../css/theme-relearn-auto.css?1732896377" rel="stylesheet" id="R-variant-style">
-    <link href="../../css/chroma-relearn-auto.css?1732896377" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="../../css/variant.css?1732896377" rel="stylesheet">
-    <link href="../../css/print.css?1732896377" rel="stylesheet" media="print">
-    <link href="../../css/format-print.css?1732896377" rel="stylesheet">
-    <script src="../../js/variant.js?1732896377"></script>
+    <link href="../../css/fontawesome-all.min.css?1733394425" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fontawesome-all.min.css?1733394425" rel="stylesheet"></noscript>
+    <link href="../../css/nucleus.css?1733394425" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1733394425" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/auto-complete.css?1733394425" rel="stylesheet"></noscript>
+    <link href="../../css/perfect-scrollbar.min.css?1733394425" rel="stylesheet">
+    <link href="../../css/fonts.css?1733394425" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="../../css/fonts.css?1733394425" rel="stylesheet"></noscript>
+    <link href="../../css/theme.css?1733394425" rel="stylesheet">
+    <link href="../../css/theme-relearn-auto.css?1733394425" rel="stylesheet" id="R-variant-style">
+    <link href="../../css/chroma-relearn-auto.css?1733394425" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="../../css/variant.css?1733394425" rel="stylesheet">
+    <link href="../../css/print.css?1733394425" rel="stylesheet" media="print">
+    <link href="../../css/format-print.css?1733394425" rel="stylesheet">
+    <script src="../../js/variant.js?1733394425"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..';
       window.relearn.relBaseUri='..';
-      window.relearn.absBaseUri='\/\/localhost:1313';
-      window.index_js_url="../../index.search.js?1732896377";
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.index_js_url="../../index.search.js?1733394425";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -114,6 +114,69 @@
 
 <h1 id="djazz">djazz</h1>
 
+
+<pre class="mermaid align-left zoomable">
+flowchart TB;
+
+AudioIn1((Audio\nIn L))
+AudioIn2((Audio\nIn R))
+MidiIn((MIDI In))
+TapIn((Tap\nIn))
+PattrIn((Pattr\nIn))
+DataIn((File\nData\nIn))
+PresetIn((Presets In))
+
+Master[Master Control]
+Audio[Djazz Audio]
+Midi[Djazz MIDI]
+PattrStorage[PattrStorage]
+
+click Master &#34;./../components/master_control.html&#34; &#34;Master Control&#34;
+click Audio &#34;audio.html&#34; &#34;Master Control&#34;
+click Midi &#34;midi.html&#34; &#34;Master Control&#34;
+
+
+AudioOut1(((Audio\nOut 1L)))
+AudioOut2(((Audio\nOut 1R)))
+AudioOut3(((Audio\nOut 2L)))
+AudioOut4(((Audio\nOut 2R)))
+AudioOut5(((Audio\nOut 3L)))
+AudioOut6(((Audio\nOut 3R)))
+MidiOut(((MIDI Out)))
+PattrOut(((Pattr Out)))
+
+
+AudioIn1---&gt;Audio
+AudioIn2---&gt;Audio
+
+TapIn--&gt;Master
+
+PattrIn--&gt;Master
+PattrIn--&gt;Audio
+PattrIn--&gt;Midi
+
+DataIn--&gt;Audio
+DataIn--&gt;Midi
+DataIn--&gt;Master
+
+Master--&gt;Audio
+Master--&gt;Midi
+
+MidiIn--&gt;Midi
+
+Audio--&gt;AudioOut1
+Audio--&gt;AudioOut2
+Audio--&gt;AudioOut3
+Audio--&gt;AudioOut4
+Audio--&gt;AudioOut5
+Audio--&gt;AudioOut6
+
+Midi--&gt;MidiOut
+
+PresetIn--&gt;PattrStorage
+PattrStorage--&gt;PattrOut
+
+</pre>
 
             <footer class="footline">
             </footer>
@@ -261,6 +324,33 @@
 <h1 id="master-control">Master Control</h1>
 
 
+<pre class="mermaid align-left zoomable">
+flowchart TB;
+TapIn(( Bang In))
+PattrIn(( Pattr In ))
+SongDataIn((Song Data\nIn))
+
+
+GetTempo[Get Tempo]
+Clock[Beat Clock]
+GetLabel[Get Label]
+Out((( )))
+
+TapIn-- bang --&gt;GetTempo
+PattrIn -- initial tempo --&gt; GetTempo
+PattrIn -- start beat,\nend beat,\nloop-section beats,\nloop section active --&gt; GetTempo
+
+
+GetTempo-- bang --&gt;Clock
+GetTempo-- Tempo --&gt;Out
+Clock-- beat number --&gt;GetLabel
+Clock-- Beat Number --&gt;Out
+GetLabel-- Label --&gt;Out
+
+SongDataIn-- Song Data ----&gt; GetLabel
+
+</pre>
+
             <footer class="footline">
             </footer>
           </article>
@@ -339,8 +429,22 @@
         </div>
       </main>
     </div>
-    <script src="../../js/clipboard.min.js?1732896377" defer></script>
-    <script src="../../js/perfect-scrollbar.min.js?1732896377" defer></script>
-    <script src="../../js/theme.js?1732896377" defer></script>
+    <script src="../../js/clipboard.min.js?1733394425" defer></script>
+    <script src="../../js/perfect-scrollbar.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-color.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-dispatch.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-drag.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-ease.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-interpolate.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-selection.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-timer.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-transition.min.js?1733394425" defer></script>
+    <script src="../../js/d3/d3-zoom.min.js?1733394425" defer></script>
+    <script src="../../js/js-yaml.min.js?1733394425" defer></script>
+    <script src="../../js/mermaid.min.js?1733394425" defer></script>
+    <script>
+      window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
+    </script>
+    <script src="../../js/theme.js?1733394425" defer></script>
   </body>
 </html>
