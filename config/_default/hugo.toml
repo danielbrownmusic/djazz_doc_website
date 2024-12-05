@@ -10,7 +10,6 @@ baseURL = 'http://localhost:1313'
 # to false
 
 relativeURLs = false # -> rewrite all site-relative URLs (those with a leading slash) to be relative to the current content
-canonifyURLs = true
 
 # if you set uglyURLs to false, this theme will append 'index.html' to any page bundle link
 # so your site can be also served from the file system; if you don't want that,
