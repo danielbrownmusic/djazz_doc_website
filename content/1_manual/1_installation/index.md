@@ -13,6 +13,6 @@ Select <b>File Preferences</b> from the dropdown menu that appears.
 In the File Preferences window that appears, select "choose path."
 
 In the file browser menu that appears, select the "djazz" folder you have just downloaded.
-![pic1](images/01.png)
+![pic1](/images/01.png)
 
 Djazz uses [externals](3_API/2_externals) that are included in the Djazz folder. Thye do not require extra installation.
