@@ -21,28 +21,28 @@
     <meta property="og:image" content="http://localhost:1313/images/hero.png">
     <meta itemprop="name" content="MIDI Window :: Hugo Relearn Theme">
     <meta itemprop="description" content="MIDI In View When clicked and illuminated, the record button arms the buffer for recording.">
-    <meta itemprop="wordCount" content="299">
+    <meta itemprop="wordCount" content="518">
     <meta itemprop="image" content="http://localhost:1313/images/hero.png">
     <title>MIDI Window :: Hugo Relearn Theme</title>
     <link href="/1_manual/3_midi_window/index.xml" rel="alternate" type="application/rss+xml" title="MIDI Window :: Hugo Relearn Theme">
     <link href="/1_manual/3_midi_window/index.print.html" rel="alternate" type="text/html" title="MIDI Window :: Hugo Relearn Theme">
-    <link href="/css/fontawesome-all.min.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1733395496" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1733395496" rel="stylesheet">
-    <link href="/css/fonts.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1733395496" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1733395496" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1733395496" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1733395496" rel="stylesheet">
-    <link href="/css/print.css?1733395496" rel="stylesheet" media="print">
-    <script src="/js/variant.js?1733395496"></script>
+    <link href="/css/fontawesome-all.min.css?1733431473" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733431473" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1733431473" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733431473" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733431473" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1733431473" rel="stylesheet">
+    <link href="/css/fonts.css?1733431473" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733431473" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1733431473" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1733431473" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1733431473" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1733431473" rel="stylesheet">
+    <link href="/css/print.css?1733431473" rel="stylesheet" media="print">
+    <script src="/js/variant.js?1733431473"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..';
       window.relearn.relBaseUri='..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
-      window.index_js_url="/index.search.js?1733395496";
+      window.index_js_url="/index.search.js?1733431473";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -77,6 +77,8 @@
     <li>
       <ul>
         <li><a href="#midi-in-view">MIDI In View</a></li>
+        <li><a href="#recording-midi">Recording MIDI</a></li>
+        <li><a href="#sending-midi-output-to-another-machine">Sending MIDI output to another machine</a></li>
         <li><a href="#scores-view">Scores View</a></li>
         <li><a href="#score-playerloader-window">Score Player/Loader Window</a></li>
         <li><a href="#score-loader">Score Loader</a></li>
@@ -87,6 +89,14 @@
         <li><a href="#jam-improvise">&ldquo;Jam&rdquo; (Improvise)</a></li>
         <li><a href="#jam-button">&ldquo;Jam&rdquo; Button</a></li>
         <li><a href="#continuity">Continuity</a></li>
+        <li><a href="#midi-out">MIDI Out</a></li>
+        <li><a href="#solo-button">Solo Button</a></li>
+        <li><a href="#active-button">Active Button</a></li>
+        <li><a href="#volume-dial">Volume Dial</a></li>
+        <li><a href="#volume-meter">Volume Meter</a></li>
+        <li><a href="#channel-select">Channel Select</a></li>
+        <li><a href="#port-select">Port Select</a></li>
+        <li><a href="#global-port-select">Global Port Select</a></li>
       </ul>
     </li>
   </ul>
@@ -129,49 +139,66 @@
 <h1 id="midi-window">MIDI Window</h1>
 
 <h3 id="midi-in-view">MIDI In View</h3>
-<p><a href="#R-image-4e9f1face3c797a33858835de34e9539" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/live_input.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e9f1face3c797a33858835de34e9539"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/live_input.png"></a>
+<p><a href="#R-image-08ee1744acfec1720566af3f6bca1ac6" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/live_input.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-08ee1744acfec1720566af3f6bca1ac6"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/live_input.png"></a>
 When clicked and illuminated, the record button arms the buffer for recording. It does not start recording until the first beat that advances the grid.</p>
+<h3 id="recording-midi">Recording MIDI</h3>
+<h3 id="sending-midi-output-to-another-machine">Sending MIDI output to another machine</h3>
 <h3 id="scores-view">Scores View</h3>
-<p><a href="#R-image-60f2ebaedc64e89ea135e392160f83fa" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/midi_scores_view.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-60f2ebaedc64e89ea135e392160f83fa"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/midi_scores_view.png"></a></p>
+<p><a href="#R-image-637c2ec07abf4bcb71fc2b139116aefd" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/midi_scores_view.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-637c2ec07abf4bcb71fc2b139116aefd"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/midi_scores_view.png"></a></p>
 <h3 id="score-playerloader-window">Score Player/Loader Window</h3>
-<p><a href="#R-image-6167fb81bdd01a8031f5e125fa192f96" class="lightbox-link"><img alt="MIDI Score Effect and load window" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/midi_score.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-6167fb81bdd01a8031f5e125fa192f96"><img alt="MIDI Score Effect and load window" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/midi_score.png"></a></p>
+<p><a href="#R-image-b96370694938523c640beabc5e331ed5" class="lightbox-link"><img alt="MIDI Score Effect and load window" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/midi_score.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b96370694938523c640beabc5e331ed5"><img alt="MIDI Score Effect and load window" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/midi_score.png"></a></p>
 <h3 id="score-loader">Score Loader</h3>
-<p><a href="#R-image-e5f0780319a5c627b71ac525dede840d" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/score_load.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e5f0780319a5c627b71ac525dede840d"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/score_load.png"></a></p>
+<p><a href="#R-image-ee104484a459f0b4932b9e7e18b211f5" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/score_load.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ee104484a459f0b4932b9e7e18b211f5"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/score_load.png"></a></p>
 <h3 id="pitch-transposition">Pitch Transposition</h3>
-<p><a href="#R-image-b53ed6d485ac78a7ab44ea83e934f226" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_pitch_transposition.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b53ed6d485ac78a7ab44ea83e934f226"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_pitch_transposition.png"></a></p>
+<p><a href="#R-image-addea74299435a27202856c54334f74e" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_pitch_transposition.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-addea74299435a27202856c54334f74e"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_pitch_transposition.png"></a></p>
 <h4 id="changes-the-pitch-of-the-midi-output">Changes the pitch of the MIDI output</h4>
 <h3 id="octave-transposition">Octave Transposition</h3>
-<p><a href="#R-image-c4dd38b66c2e3e12588a48efa5a5e2d8" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_octave_transposition.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c4dd38b66c2e3e12588a48efa5a5e2d8"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_octave_transposition.png"></a></p>
+<p><a href="#R-image-9c68b091cbf830d5c1b93a3dc2d85b8b" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_octave_transposition.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9c68b091cbf830d5c1b93a3dc2d85b8b"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_octave_transposition.png"></a></p>
 <h4 id="changes-the-octave-of-the-midi-output">Changes the octave of the MIDI output</h4>
 <h3 id="speed">Speed</h3>
-<p><a href="#R-image-538dc761e72440516f2e87c3c5e159f6" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_speed.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-538dc761e72440516f2e87c3c5e159f6"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_speed.png"></a></p>
+<p><a href="#R-image-ffc2232b4a5a9272bcba9292abf02256" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_speed.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ffc2232b4a5a9272bcba9292abf02256"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_speed.png"></a></p>
 <h4 id="changes-the-speed-of-the-midi-output">Changes the speed of the MIDI output</h4>
 <h3 id="loop">Loop</h3>
-<p><a href="#R-image-060d78cd10b6d4e55ffb0a432c762eab" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_loop.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-060d78cd10b6d4e55ffb0a432c762eab"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_loop.png"></a></p>
+<p><a href="#R-image-32f157bef5f0f99146391d2abb2ceedb" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_loop.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-32f157bef5f0f99146391d2abb2ceedb"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_loop.png"></a></p>
 <h4 id="loops-the-previous-ini-beats-of-the-midi-output">Loops the previous <i>n</i> beats of the MIDI output</h4>
 <h3 id="jam-improvise">&ldquo;Jam&rdquo; (Improvise)</h3>
-<p><a href="#R-image-afec3175b516207e9c4d417832b0a259" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_jam_full.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-afec3175b516207e9c4d417832b0a259"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_jam_full.png"></a></p>
+<p><a href="#R-image-87e9635ad1a85af945740e6b8b29570d" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_jam_full.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-87e9635ad1a85af945740e6b8b29570d"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_jam_full.png"></a></p>
 <h3 id="jam-button">&ldquo;Jam&rdquo; Button</h3>
-<p><a href="#R-image-2c0e93cd8fc8563e6103b3bb4c3fba59" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_jam.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2c0e93cd8fc8563e6103b3bb4c3fba59"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_jam.png"></a>
+<p><a href="#R-image-489b682e9ea9d807b5cae1177d9c2ae8" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_jam.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-489b682e9ea9d807b5cae1177d9c2ae8"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_jam.png"></a>
 Turns the improviser on. When this is on, the MIDI track(s) is/are not played back straight, but beats are chosen based on the harmony and the next two controls, continuity and potch range:</p>
 <h3 id="continuity">Continuity</h3>
-<p><a href="#R-image-5f02d82786ad08a35a5fb12feec0c255" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_continuity.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5f02d82786ad08a35a5fb12feec0c255"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_continuity.png"></a>
+<p><a href="#R-image-1d3ec77a606b93979c0b60104b873cbe" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_continuity.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d3ec77a606b93979c0b60104b873cbe"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_continuity.png"></a>
 This determines the length in beats that sections of the score will be played back in sequence. Once this many beats has been played in sequence, the improviser will jump to a new section of the score. <p>
 The maximum coninuity is 255 beats. When the &ldquo;MAX&rdquo; button is on, this will be the continuity&ndash;i.e., the score will be played back without improvising, i.e. jumping around through it (given that the score is &lt; 255 beats long. If you&rsquo;re using this with a score that&rsquo;s longer than 255 beats and you just want to play the score straight, there&rsquo;s no reason to be even using the improviser.)</p>
-<p><a href="#R-image-a00a7b54dd812b27a05b8cc2a9bcb99a" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_pitch_range.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a00a7b54dd812b27a05b8cc2a9bcb99a"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_pitch_range.png"></a>
+<p><a href="#R-image-26df6f67222e3948b3dbadf80c20dcd8" class="lightbox-link"><img alt="pic" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_pitch_range.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-26df6f67222e3948b3dbadf80c20dcd8"><img alt="pic" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/3_midi_window/images/track_effect_pitch_range.png"></a>
 The improviser tries to match beats that have the same harmony as the current beat. By adjusting the pitch range, it will look for beats with a similar chord type but with roots above or below the current chord root. A pitch range of <i>n</i> will look for chords between (and including) <i>n</i> semitones below and <i>n</i> semitones above the current chord root. Set to zero, it will match the chord root exactly. Beats with different roots will be transposed to the proper harmony.</p>
+<h3 id="midi-out">MIDI Out</h3>
+<h3 id="solo-button">Solo Button</h3>
+<p>When illuminated, this will &ldquo;solo&rdquo; the MIDI track. If a single track is soloed, it is the only track that you will hear. If several MIDI tracks are soloed, only these tracks will be audible. If no tracks are soloed, all the tracks will be audible.</p>
+<h3 id="active-button">Active Button</h3>
+<p>If not illuminated, the MIDI track will not be audible, and its volume in the volume meter will be gray. When illuminated, the MIDI track will be audible.</p>
+<h3 id="volume-dial">Volume Dial</h3>
+<p>Changes the volume of the MIDI track. If you click just above the dial, the dial will reset to its default value of 80.</p>
+<h3 id="volume-meter">Volume Meter</h3>
+<p>Shows the level of the MIDI output. When a track is inactive, this will be grey. When active, the output will be green, orange, and red, depending on the volume level.</p>
+<h3 id="channel-select">Channel Select</h3>
+<p>Allows the user to change the MIDI channel of track. Options are 1 through 16.</p>
+<h3 id="port-select">Port Select</h3>
+<p>Allows the user to select the output port of the MIDI track. These are usually Max&rsquo;s internal MIDI playback (which will be called something like &ldquo;DAC synth&rdquo;), and outputs to other applications (called &ldquo;from Max 1&rdquo; and &ldquo;from Max 2&rdquo;).</p>
+<h3 id="global-port-select">Global Port Select</h3>
+<p>This changes the output port of all the MIDI channels.</p>
 
             <footer class="footline">
             </footer>
@@ -199,12 +226,12 @@ The improviser tries to match beats that have the same harmony as the current be
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/js/auto-complete.js?1733395496" defer></script>
-        <script src="/js/lunr/lunr.min.js?1733395496" defer></script>
-        <script src="/js/lunr/lunr.stemmer.support.min.js?1733395496" defer></script>
-        <script src="/js/lunr/lunr.multi.min.js?1733395496" defer></script>
-        <script src="/js/lunr/lunr.en.min.js?1733395496" defer></script>
-        <script src="/js/search.js?1733395496" defer></script>
+        <script src="/js/auto-complete.js?1733431473" defer></script>
+        <script src="/js/lunr/lunr.min.js?1733431473" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1733431473" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1733431473" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1733431473" defer></script>
+        <script src="/js/search.js?1733431473" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -218,9 +245,10 @@ The improviser tries to match beats that have the same harmony as the current be
           <li data-nav-id="/1_manual/3_midi_window.html" class="active"><a class="padding" href="/1_manual/3_midi_window.html">MIDI Window<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/1_manual/4_audio_window.html" class=""><a class="padding" href="/1_manual/4_audio_window.html">Audio Window<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/1_manual/5_external-controllers.html" class=""><a class="padding" href="/1_manual/5_external-controllers.html">External Controllers<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/1_manual/6_tools.html" class="alwaysopen"><input type="checkbox" id="R-section-50bd791b5bcb8984bfa7107fb2298946" aria-controls="R-subsections-50bd791b5bcb8984bfa7107fb2298946" checked><label for="R-section-50bd791b5bcb8984bfa7107fb2298946"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Tools</span></label><a class="padding" href="/1_manual/6_tools.html">Tools<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-50bd791b5bcb8984bfa7107fb2298946" class="morespace collapsible-menu">
+          <li data-nav-id="/1_manual/6_tools.html" class="alwaysopen"><input type="checkbox" id="R-section-50bd791b5bcb8984bfa7107fb2298946" aria-controls="R-subsections-50bd791b5bcb8984bfa7107fb2298946" checked><label for="R-section-50bd791b5bcb8984bfa7107fb2298946"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Tools</span></label><a class="padding" href="/1_manual/6_tools.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">65.</b> Tools<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-50bd791b5bcb8984bfa7107fb2298946" class="morespace collapsible-menu">
           <li data-nav-id="/1_manual/6_tools/make_song_file.html" class=""><a class="padding" href="/1_manual/6_tools/make_song_file.html">Making a Song File<i class="fa-fw fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/1_manual/6_tools/make_score_file.html" class=""><a class="padding" href="/1_manual/6_tools/make_score_file.html">Making a Score File<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/1_manual/6_tools/make_score_file.html" class=""><a class="padding" href="/1_manual/6_tools/make_score_file.html">Making a Score File<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/1_manual/7_preloaded_resources.html" class=""><a class="padding" href="/1_manual/7_preloaded_resources.html">Preloaded Songs<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/2_tutorials.html" class="alwaysopen"><input type="checkbox" id="R-section-a813c75b6e1c91a03e4c14df28a78b87" aria-controls="R-subsections-a813c75b6e1c91a03e4c14df28a78b87" checked><label for="R-section-a813c75b6e1c91a03e4c14df28a78b87"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Tutorials</span></label><a class="padding" href="/2_tutorials.html"><b style="display: inline-block; font-weight: 200; padding-left: .3rem; text-align: left; width: 1.1rem;">2.</b> Tutorials<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-a813c75b6e1c91a03e4c14df28a78b87" class="morespace collapsible-menu">
           <li data-nav-id="/2_tutorials/1_play_midi_score.html" class=""><a class="padding" href="/2_tutorials/1_play_midi_score.html">Playing a MIDI Score<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/2_tutorials/2_record_audio.html" class=""><a class="padding" href="/2_tutorials/2_record_audio.html">Recording and playing back audio<i class="fa-fw fas fa-check read-icon"></i></a></li>
@@ -259,12 +287,20 @@ The improviser tries to match beats that have the same harmony as the current be
           <li data-nav-id="/3_api/5_improvisation.html" class="alwaysopen"><input type="checkbox" id="R-section-a5f5365ae453b23d7a3ba7167da05ff3" aria-controls="R-subsections-a5f5365ae453b23d7a3ba7167da05ff3" checked><label for="R-section-a5f5365ae453b23d7a3ba7167da05ff3"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Improvisation with the Factor Oracle</span></label><a class="padding" href="/3_api/5_improvisation.html">Improvisation with the Factor Oracle<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-a5f5365ae453b23d7a3ba7167da05ff3" class="morespace collapsible-menu">
           <li data-nav-id="/3_api/5_improvisation/0_general_description.html" class=""><a class="padding" href="/3_api/5_improvisation/0_general_description.html">General Description<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/3_api/5_improvisation/1_factor_oracle.html" class=""><a class="padding" href="/3_api/5_improvisation/1_factor_oracle.html">Description of the Factor Oracle<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/3_api/5_improvisation/_d_improv/_d_1_factor_oracle.html" class=""><a class="padding" href="/3_api/5_improvisation/_d_improv/_d_1_factor_oracle.html">Description of the Factor Oracle<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/3_api/5_improvisation/2_factor_oracle_player.html" class=""><a class="padding" href="/3_api/5_improvisation/2_factor_oracle_player.html">The Factor Oracle Player<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/3_api/5_improvisation/_d_improv/_d_2_factor_oracle_player.html" class=""><a class="padding" href="/3_api/5_improvisation/_d_improv/_d_2_factor_oracle_player.html">The Factor Oracle Player<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/3_api/5_improvisation/_d_improv/_d_3_syncopation.html" class=""><a class="padding" href="/3_api/5_improvisation/_d_improv/_d_3_syncopation.html">Syncopation<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/3_api/5_improvisation/_d_improv/_d_4_analyzer.html" class=""><a class="padding" href="/3_api/5_improvisation/_d_improv/_d_4_analyzer.html">Analyzer<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/3_api/5_improvisation/_d_improv/_d_5_listener.html" class=""><a class="padding" href="/3_api/5_improvisation/_d_improv/_d_5_listener.html">Listener<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/3_api/5_improvisation/3_analyzer.html" class=""><a class="padding" href="/3_api/5_improvisation/3_analyzer.html">The Analyzer<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/3_api/6_architecture.html" class="alwaysopen"><input type="checkbox" id="R-section-c068588df7641bbc6f35a050a776c9ab" aria-controls="R-subsections-c068588df7641bbc6f35a050a776c9ab" checked><label for="R-section-c068588df7641bbc6f35a050a776c9ab"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu System Architecture</span></label><a class="padding" href="/3_api/6_architecture.html">System Architecture<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-c068588df7641bbc6f35a050a776c9ab" class="morespace collapsible-menu">
           <li data-nav-id="/3_api/6_architecture/component_descriptions/master_control.html" class=""><a class="padding" href="/3_api/6_architecture/component_descriptions/master_control.html">main components<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/3_api/6_architecture/_d/_d_control_flow.html" class=""><a class="padding" href="/3_api/6_architecture/_d/_d_control_flow.html">control flow<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/3_api/6_architecture/control_flow.html" class=""><a class="padding" href="/3_api/6_architecture/control_flow.html">control flow<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/3_api/6_architecture/_d/_d_overview_of_mvcvc.html" class=""><a class="padding" href="/3_api/6_architecture/_d/_d_overview_of_mvcvc.html">Overview of MVVCC (Model-View-View Controller-View) Architecture<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/3_api/6_architecture/overview_of_mvcv.html" class=""><a class="padding" href="/3_api/6_architecture/overview_of_mvcv.html">Overview of MVVCC (Model-View-View Controller-View) Architecture<i class="fa-fw fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/3_api/6_architecture/_d/_d_pattr_usage.html" class=""><a class="padding" href="/3_api/6_architecture/_d/_d_pattr_usage.html">Pattr usage<i class="fa-fw fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/3_api/6_architecture/pattr_usage.html" class=""><a class="padding" href="/3_api/6_architecture/pattr_usage.html">Pattr usage<i class="fa-fw fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/3_api/7_going_further.html" class="alwaysopen"><input type="checkbox" id="R-section-f2ec5ddfe6677fabdd6072923a75ddcc" aria-controls="R-subsections-f2ec5ddfe6677fabdd6072923a75ddcc" checked><label for="R-section-f2ec5ddfe6677fabdd6072923a75ddcc"><i class="fa-fw fas fa-chevron-down"></i><i class="fa-fw fas fa-chevron-right"></i><span class="a11y-only">Submenu Going further</span></label><a class="padding" href="/3_api/7_going_further.html">Going further<i class="fa-fw fas fa-check read-icon"></i></a><ul id="R-subsections-f2ec5ddfe6677fabdd6072923a75ddcc" class="morespace collapsible-menu">
           <li data-nav-id="/3_api/7_going_further/dynamic_object_creation_and_destruction.html" class=""><a class="padding" href="/3_api/7_going_further/dynamic_object_creation_and_destruction.html">Dynamic Object Creation and Destruction<i class="fa-fw fas fa-check read-icon"></i></a></li>
@@ -379,13 +415,13 @@ The improviser tries to match beats that have the same harmony as the current be
                 setTimeout( githubButtonsInit, 400 );
               });
             </script>
-            <script async src="/js/github-buttons.js?1733395496"></script>
+            <script async src="/js/github-buttons.js?1733431473"></script>
           </div>
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1733395496" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1733395496" defer></script>
-    <script src="/js/theme.js?1733395496" defer></script>
+    <script src="/js/clipboard.min.js?1733431473" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1733431473" defer></script>
+    <script src="/js/theme.js?1733431473" defer></script>
   </body>
 </html>

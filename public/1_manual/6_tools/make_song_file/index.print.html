@@ -5,40 +5,45 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.129.0">
     <meta name="generator" content="Relearn 6.0.0+tip">
-    <meta name="description" content="">
+    <meta name="description" content="Djazz uses a song file to play a song, whether you are plaing back scores or using live MIDI or audio.">
     <meta name="author" content="Daniel Brown">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="http://localhost:1313/images/hero.png">
     <meta name="twitter:title" content="Making a Song File :: Hugo Relearn Theme">
+    <meta name="twitter:description" content="Djazz uses a song file to play a song, whether you are plaing back scores or using live MIDI or audio.">
     <meta property="og:url" content="http://localhost:1313/1_manual/6_tools/make_song_file.html">
     <meta property="og:site_name" content="Hugo Relearn Theme">
     <meta property="og:title" content="Making a Song File :: Hugo Relearn Theme">
+    <meta property="og:description" content="Djazz uses a song file to play a song, whether you are plaing back scores or using live MIDI or audio.">
     <meta property="og:locale" content="en">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Manual">
     <meta property="og:image" content="http://localhost:1313/images/hero.png">
     <meta itemprop="name" content="Making a Song File :: Hugo Relearn Theme">
+    <meta itemprop="description" content="Djazz uses a song file to play a song, whether you are plaing back scores or using live MIDI or audio.">
+    <meta itemprop="wordCount" content="568">
     <meta itemprop="image" content="http://localhost:1313/images/hero.png">
     <title>Making a Song File :: Hugo Relearn Theme</title>
     <link href="http://localhost:1313/1_manual/6_tools/make_song_file.html" rel="canonical" type="text/html" title="Making a Song File :: Hugo Relearn Theme">
     <link href="/1_manual/6_tools/make_song_file/index.xml" rel="alternate" type="application/rss+xml" title="Making a Song File :: Hugo Relearn Theme">
-    <link href="/css/fontawesome-all.min.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1733395496" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1733395496" rel="stylesheet">
-    <link href="/css/fonts.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1733395496" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1733395496" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1733395496" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1733395496" rel="stylesheet">
-    <link href="/css/print.css?1733395496" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1733395496" rel="stylesheet">
-    <script src="/js/variant.js?1733395496"></script>
+    <link href="/css/fontawesome-all.min.css?1733431473" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733431473" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1733431473" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733431473" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733431473" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1733431473" rel="stylesheet">
+    <link href="/css/fonts.css?1733431473" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733431473" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1733431473" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1733431473" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1733431473" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1733431473" rel="stylesheet">
+    <link href="/css/print.css?1733431473" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1733431473" rel="stylesheet">
+    <script src="/js/variant.js?1733431473"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
-      window.index_js_url="/index.search.js?1733395496";
+      window.index_js_url="/index.search.js?1733431473";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -89,6 +94,48 @@
 
 <h1 id="making-a-song-file">Making a Song File</h1>
 
+<p>Djazz uses a <em>song file</em> to play a song, whether you are plaing back scores or using live MIDI or audio. Where a <em>score file</em> contains the notes in each beat of the song, a <em>song file</em> contains all the metadata for each beat: its label, its position in the song, and what chapter of the song it is in.
+Djazz uses labels that represent chords. In this way, a <em>song file</em> is like a chord chart.</p>
+<p>To create a <em>song file</em> for a new song you want to play with Djazz, the <strong>make_song_file</strong> Max patcher is provided for you in the <em>tools</em> folder.</p>
+<p><a href="#R-image-d638708270307be6876f5d8381bc5205" class="lightbox-link"><img alt="make-song-file-tool" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/6_tools/make_song_file/images/make-song-file-tool.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d638708270307be6876f5d8381bc5205"><img alt="make-song-file-tool" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/6_tools/make_song_file/images/make-song-file-tool.png"></a></p>
+<h3 id="song-name">SONG NAME</h3>
+<p>Enter the name of the given song; this will be displayed when the song file is loaded, and will also appear in the song dropdown menu if it is placed in the <em>djazz_user/scores/</em> folder</p>
+<h3 id="beats">BEATS</h3>
+<p>Enter here the total number of beats in the song.</p>
+<h3 id="tempo">TEMPO</h3>
+<p>Enter the song tempo. This tempo will be loaded into Djazz&rsquo;s metronome when the song is loaded, and is also the tempo that will be expected if <a href="/1_manual/1_installation.html">manual tap entry is performed</a></p>
+<h3 id="time-signature">TIME SIGNATURE</h3>
+<p>Enter the number of beats per measure, i.e. the top number in the time signature. The duration of the beats, i.e. the bottom number in the time signature (4 for quarter note, 8 for eighth note, etc.) does not matter; do not include it.</p>
+<h3 id="chapter-start-bars">CHAPTER START BARS</h3>
+<p>If the song is divided into chapters, enter here the bar (i.e. measure) numbers at which the chapters begin.
+For instance, if a song contains four chapters of 16, 16, 32, and 64 bars, in that order, the chapter start bars will be 1, 17, 33, and 65. Enter these numbers without commas</p>
+<p>Putting all this together, here&rsquo;s what you would enter for a song in 4/4 time, with chapters of duration as above: 16, 16, 32, and 32 bars. The number of beats is the total number of bars multiplied by the time signature; in this case (16 + 16 + 32 + 64) * 4 = 128 * 4 = 516</p>
+<p><a href="#R-image-97c9cd60992e1efcb19a291c2b7f8b58" class="lightbox-link"><img alt="make-song-file-tool-example" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/6_tools/make_song_file/images/beats-tempo-timesig-chapterstartbars.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-97c9cd60992e1efcb19a291c2b7f8b58"><img alt="make-song-file-tool-example" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/6_tools/make_song_file/images/beats-tempo-timesig-chapterstartbars.png"></a></p>
+<h3 id="beat-labels">BEAT LABELS</h3>
+<p>Beat labels are input in a text-based format. They can be entered directly into the tool&rsquo;s window, or cut and pasted from a text editor.</p>
+<p>A chord label has two parts, the <em>root</em> and the <em>quality</em>. The way of entering labels is as follows:</p>
+<p>  (&lt; <em>chord root</em> &gt;   &lt; <em>chord quality</em> &gt;   &lt; <em>number of consecutive beats</em> &gt;)</p>
+<p>&lt; <em>chord root</em> &gt; can be the symbol C, C#, Db, D, D#, Eb, E, F, F#, Gb, G, G#, Ab, A, A#, Bb, or B.</p>
+<p>&lt; <em>chord quality</em> &gt; can be any symbol that does not contain an underscore (&quot;_&quot;) or a semicolon(&quot;;&quot;).</p>
+<p>The improvisation algorithm
+functions in part by matching these symbols with the symbols on the beats in score files, so if you want it to work correctly, keep the format of these symbols the same. For instance, the preloaded songs in Djazz use the following symbols:</p>
+<p>  <em>maj7, min7, 7, dim7, maj6, min6</em></p>
+<p>But you can define any symbols you want:</p>
+<p>  <em>dom7#9b9#11, maj6add9, min6withanextraweirdnoteatthetop</em>, etc.</p>
+<p>&lt; <em>number of consecutive beats</em> &gt; is how many beats this particular label is repeated.</p>
+<p>So for instance, the chord sequence</p>
+<p>  Amaj7   Amaj7   Dmin7   Amaj7<br>
+  Amaj7   Dmin7   E7       Amaj7</p>
+<p>would be entered as</p>
+<p><a href="#R-image-a164fe587a9b8476fe013b124845425f" class="lightbox-link"><img alt="chord-labels-1" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/6_tools/make_song_file/images/make-song-file-tool-beat-labels-example-1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a164fe587a9b8476fe013b124845425f"><img alt="chord-labels-1" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/6_tools/make_song_file/images/make-song-file-tool-beat-labels-example-1.png"></a></p>
+<p>It could also be entered as</p>
+<p><a href="#R-image-589839cf4901956aa0ddf4089200c6cc" class="lightbox-link"><img alt="chord-labels-2" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/6_tools/make_song_file/images/make-song-file-tool-beat-labels-example-2.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-589839cf4901956aa0ddf4089200c6cc"><img alt="chord-labels-2" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/6_tools/make_song_file/images/make-song-file-tool-beat-labels-example-2.png"></a></p>
+<p>if this is easier to read.<br>
+Indentation and carriage returns are ignored by the tool.</p>
 
             <footer class="footline">
             </footer>
@@ -97,8 +144,8 @@
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1733395496" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1733395496" defer></script>
-    <script src="/js/theme.js?1733395496" defer></script>
+    <script src="/js/clipboard.min.js?1733431473" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1733431473" defer></script>
+    <script src="/js/theme.js?1733431473" defer></script>
   </body>
 </html>

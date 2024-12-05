@@ -22,3 +22,17 @@ weight = 50
 #### Launchpad Mini
 #### Launchpad Pro MK3
 
+## INPUT/OUTPUT DEVICES
+### Connect/disconnect a device
+### Make a new preset
+#### Controller presets
+#### View presets
+### Save a preset
+### Load a preset
+
+### Devices
+#### Launchpad Pro MK3
+##### Make a new preset
+###### Controller presets
+###### View presets
+###### Chapters and bars

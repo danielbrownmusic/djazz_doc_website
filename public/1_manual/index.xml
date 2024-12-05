@@ -40,14 +40,14 @@
       <link>http://localhost:1313/1_manual/5_external-controllers.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1_manual/5_external-controllers.html</guid>
-      <description>INPUT/OUTPUT DEVICES Connect/disconnect a device Presets for Launchpads Grid View Parameter controls The preset editor window Create a preset Select Midi Input Select parameter Select color Edit a preset Save a preset Load a preset Devices tested Launchpad Mini Launchpad Pro MK3 </description>
+      <description>INPUT/OUTPUT DEVICES Connect/disconnect a device Presets for Launchpads Grid View Parameter controls The preset editor window Create a preset Select Midi Input Select parameter Select color Edit a preset Save a preset Load a preset Devices tested Launchpad Mini Launchpad Pro MK3 INPUT/OUTPUT DEVICES Connect/disconnect a device Make a new preset Controller presets View presets Save a preset Load a preset Devices Launchpad Pro MK3 Make a new preset Controller presets View presets Chapters and bars </description>
     </item>
     <item>
       <title>Tools</title>
       <link>http://localhost:1313/1_manual/6_tools.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1_manual/6_tools.html</guid>
-      <description>Il existe également une structure de données pour les “données de la grille”, afin de faciliter le chargement, l’enregistrement et la recherche de rythmes : patchers/data_structures/grid_data/grid_data.</description>
+      <description>Djazz comes with many preloaded songs, but you can also load your own songs to play and improvise on.</description>
     </item>
   </channel>
 </rss>

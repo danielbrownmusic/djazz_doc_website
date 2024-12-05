@@ -113,3 +113,16 @@ This shows the current playback tempo. When the metronome is playing, this will 
 ### Current beat
 ### Current beat label
 
+## LOADING AND SAVING
+#### Open a new song
+#### Open a saved song
+#### Save a song
+#### Make Djazz song files
+##### Djazz file
+##### Score files
+
+## TAP INPUT
+### Manual
+expects the starting tempo
+### Metronome
+### From another machine

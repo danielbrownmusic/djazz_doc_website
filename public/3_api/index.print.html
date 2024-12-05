@@ -21,24 +21,24 @@
     <title>API :: Hugo Relearn Theme</title>
     <link href="http://localhost:1313/3_api.html" rel="canonical" type="text/html" title="API :: Hugo Relearn Theme">
     <link href="/3_api/index.xml" rel="alternate" type="application/rss+xml" title="API :: Hugo Relearn Theme">
-    <link href="/css/fontawesome-all.min.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1733395496" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1733395496" rel="stylesheet">
-    <link href="/css/fonts.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1733395496" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1733395496" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1733395496" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1733395496" rel="stylesheet">
-    <link href="/css/print.css?1733395496" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1733395496" rel="stylesheet">
-    <script src="/js/variant.js?1733395496"></script>
+    <link href="/css/fontawesome-all.min.css?1733429984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733429984" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1733429984" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733429984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733429984" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1733429984" rel="stylesheet">
+    <link href="/css/fonts.css?1733429984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733429984" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1733429984" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1733429984" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1733429984" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1733429984" rel="stylesheet">
+    <link href="/css/print.css?1733429984" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1733429984" rel="stylesheet">
+    <script src="/js/variant.js?1733429984"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='.';
       window.relearn.relBaseUri='.';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
-      window.index_js_url="/index.search.js?1733395496";
+      window.index_js_url="/index.search.js?1733429984";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -363,6 +363,13 @@ GetLabel-- Label --&gt;Out
 SongDataIn-- Song Data ----&gt; GetLabel
 
 </pre>
+<p>Master Control
+Master Clock
+- outputs a beat number when it receives a bang
+- increments its beat number with each output, but also keeps track of position in a song form and adjusts the beat in accordance if looped.
+- keeps track of tempo if tempo is manually input and fluctuates. This uses antescofo.
+- reads from song dict to get label
+- sends tempo, beat, and chord label, immediately in succession and in that order, to midi and audio generators. This order is important,  so that the generators can calculate the correct information to play at the beginning of each beat.</p>
 
             <footer class="footline">
             </footer>
@@ -870,6 +877,28 @@ ascertaining the “correctness” of an analysis via listening to the resulting
             <header class="headline">
             </header>
 
+<h1 id="description-of-the-factor-oracle">Description of the Factor Oracle</h1>
+
+<p>The biggest step was to complete the factor oracle object, which is generalized for different data types, and the factor_oracle_player object for improvising with it.</p>
+<ol>
+<li>The oracle factor patch is here:</li>
+</ol>
+<p>patchers/data_structures/factor_oracle/factor_oracle.maxpat</p>
+<ol start="2">
+<li>To use different comparison functions, you need to write a Max patch that performs the label comparison. Then you can change the comparison function in the oracle factor patch by passing it the “comparison” message and the name of the comparison patch. So far, I&rsquo;ve written two comparison patches:</li>
+</ol>
+<p>patchers/data_structures/factor_oracle/compare/fo.compare.equal_chords.maxpat</p>
+<p>patchers/data_structures/factor_oracle/compare/fo.compare.equal_chords_in_3_semitone_range.maxpat</p>
+<p>Both work, but I haven&rsquo;t yet integrated the second - i.e. it finds a rhythm with a chord in a range of 3 semitones (up or down), but after doing so, the program still doesn&rsquo;t preform the pitch change on the MIDI or audio output.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
 <h1 id="the-factor-oracle-player">The Factor Oracle Player</h1>
 
 <p>patchers/factor_oracle_player/factor_oracle_player.maxpat</p>
@@ -880,6 +909,65 @@ ascertaining the “correctness” of an analysis via listening to the resulting
 <p>When the “NEW” button is pressed, it reads the current antescofo partition from memory (converting it into a Max dict object), then runs the factor oracle player to generate a different succession of rhythms for each requested channel, mapping these rhythms to different (unused) channels, and combining everything again into a Max dict.</p>
 <p>The factor oracle player works the same way for audio improvisers, but it doesn&rsquo;t write any scores. It sends data to supervp objects to play from the audio buffer (recorded or loaded):</p>
 <p>patchers/improvise_oracles/djazz_audio_oracle_players.maxpat</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="the-factor-oracle-player">The Factor Oracle Player</h1>
+
+<ol start="7">
+<li>The “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it&rsquo;s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label. It works in the same way as the LISP version: you define the maximum continuity and it tries to match it. When the maximum continuity is reached, it takes a suffix link and searches for a matching label. If no matching label is found, it chooses a random state:</li>
+</ol>
+<p>patchers/factor_oracle_player/factor_oracle_player.maxpat</p>
+<ol start="8">
+<li>The implementation of the factorial oracle player is almost complete. As for writing new improvised antescofo partitions from old ones, the unfinished patch is here:</li>
+</ol>
+<p>patchers/improvise_antescofo/djazz.improvise_antescofo.maxpat</p>
+<p>When the “NEW” button is pressed, it reads the current antescofo partition from memory (converting it into a Max dict object) (this is done with Javascript), then runs the factor oracle player to generate a different succession of rhythms for each requested channel, mapping these rhythms to different (unused) channels, and combining everything again into a Max dict.
+The content of the original channels is not modified, as you requested; only the new content of the new channels is added.</p>
+<p>What is NOT done is to write the new Max dict into an antescofo partition. This has to be done in Javascript, as the note times have to be sorted and the new delta times calculated, which would be difficult to do in Max. It won&rsquo;t take long to finish, I just haven&rsquo;t done it yet; I can do it next Monday.</p>
+<ol start="9">
+<li>The factor oracle player works the same way for audio improvisers, but it doesn&rsquo;t write any scores (so no Javascript here): it simply sends data to supervp objects to play from the audio buffer (recorded or loaded):</li>
+</ol>
+<p>patchers/improvise_oracles/djazz_audio_oracle_players.maxpat</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="syncopation">Syncopation</h1>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="analyzer">Analyzer</h1>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="listener">Listener</h1>
+
 
             <footer class="footline">
             </footer>
@@ -904,6 +992,7 @@ ascertaining the “correctness” of an analysis via listening to the resulting
 
 <h1 id="system-architecture">System Architecture</h1>
 
+<p>Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.</p>
 
             <footer class="footline">
             </footer>
@@ -952,6 +1041,24 @@ The architecture: several players which function independently. There is a maste
             <header class="headline">
             </header>
 
+<h1 id="control-flow">control flow</h1>
+
+<p>Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.</p>
+<p>Djazz plays music in two ways: by selecting sections from scores, and by calculating improvisations using the factor oracle algorithm. The factor oracle algorithm can be modified with pattern-matching methods. The input to the factor oracle come from scores and real-time input, either audio or MIDI, and is output as audio or MIDI. It uses Antescofo to generate notes both from scores and generated as improvisations in tempo.</p>
+<p>Djazz improvises on songs using template files, which are lists of beats with labels representing positions in the songs.  Notes are in different files: scores and audio tags in the databases used by the factor oracle.</p>
+<p>The song templates pass the label to the factor oracle know given time.  For songs whose formal structure includes verses or sections, this larger structure is also included in the template. It can also improvise over a “free” structure by using a trivial template, just a short list of beats that loops.</p>
+<p>Djazz is played by inputting a tap—manually, from a built-in metronome, or from another application. The tap triggers a beat, which triggers notes to be output from the factor oracle or the score, which triggers note data to be output from antescofo, which triggers sound to be output by the audio or midi outputs. [SLIDE]</p>
+<p>You can see this control flow. The tap comes in on the left and comes out as sound from the midi bank on the right. The intermediate translations from tap to beat occur in the objects along the way.
+The architecture: several players which function independently. There is a master control for synchronising timing and for broadcasting global commands.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
 <h1 id="overview-of-mvvcc-model-view-view-controller-view-architecture">Overview of MVVCC (Model-View-View Controller-View) Architecture</h1>
 
 <pre><code>1. Architecture
@@ -963,6 +1070,93 @@ The architecture: several players which function independently. There is a maste
 <p>The model is controlled entirely by passing named pattrs in the message format <variable-name> <variable-value>. These parameters are received in the leftmost inlet.</p>
 <p>The control is</p>
 <p>The view is</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="overview-of-mvvcc-model-view-view-controller-view-architecture">Overview of MVVCC (Model-View-View Controller-View) Architecture</h1>
+
+<pre><code>1. Architecture
+	Model/Control/View Control/View
+</code></pre>
+<p>MVC:</p>
+<p>Djazz uses the Model-View-Control design pattern.</p>
+<p>The model consists of the objects that do the processing. At the top level, there are various players and the master control described in the previous section.</p>
+<p>The model is controlled entirely by passing named pattrs in the message format <variable-name> <variable-value>. These parameters are received in the leftmost inlet.</p>
+<p>The control is</p>
+<p>The view is</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="pattr-usage">Pattr usage</h1>
+
+<p>Pattr translation in control and view control</p>
+<p>Interface - not much to say. Just graphical controls.
+Sends and receives pattrs to and from control. Infinite loop is avoided via pattrstorage output mode set to 5.</p>
+<p>The CONTROL PATTRS and DATA PATTRS (dicts) are saved.
+On loading, the data pattrs must be fully loaded first; their priorities are set to 1.
+The control pattrs are independent so their priorities are all 0.</p>
+<p>Every parameter is stored in a pattr object.</p>
+<p>As an example, here is a midi player object, which contains, among other components, a beat clock. The beat clock itself contains several components. Here we see one of them, « loop_section » and the pattr objects it contains. [SLIDE]</p>
+<p>The pattrhub object invokes them, so a message “step 2” will set the step pattr object in beat_clock to 2.</p>
+<p>Pattrs act hierarchically. The beat clock is named “beat_clock” [SLIDE], so the step variable can be invoked by sending the beat clock the message “beat_clock::step 2.” This double-colon format continues as the pattr object is nested in deeper levels of a hierarchy.</p>
+<p>The control consists of bpatchers. No bpatchers are in the model. These handle all the user interface logic like buttons and file selection. To change a parameter in the model, a pattr object must exist in the view with the same name as the corresponding one in the model. These names don’t conflict because they are in different sub patchers.</p>
+<p>A pattrstorage object in the control keeps track of pattern changes. When the outputmode attribute is non-zero, it will send the names and values of changed parameters out its outlet.  Hence, to communicate parameter changes to the model, the pattrstorage output is sent out the control and into a pattrthub object at the top level of the model, which then broadcasts the changes to the proper places.</p>
+<p>Note: with this method, the interior pattrhub objects end up not being used at all, but it’s still good to leave them in so that these objects can be reused and are not dependent on being called this way.</p>
+<p>The hierarchical nature of the model, though, means that the parameter names sent from the control must have the same hierarchical structure as those in the model. Thus to control the “midi_player_1::beat_clock::loop_length” parameter, there must be a control bpatcher called “midi_player_1” that contains a bpatcher “beat_clock” that contains a pattr “loop_length.”</p>
+<pre><code>For smaller systems, this could be a good method: the control and the model are parallel hierarchies.
+</code></pre>
+<p>There are three problems with this method, though. The separation of model and control is supposed to give you the freedom to design the control without worrying about how things are being processed inside the model.</p>
+<ol>
+<li>
+<p>The control architecture is completely linked to the model architecture, which becomes very constraining, especially as the control logic in a complicated system probably does not reflect the way things are processed.</p>
+</li>
+<li>
+<p>You don’t necessarily want to control all the pattrs in the model. Some you might find unnecessary. This is not a big problem, but there is another related one:</p>
+</li>
+<li>
+<p>Some pattrs in the model are not actually independent of each other at runtime.    Objects were created independently, but their functions in the system are dependent on each other or other objects</p>
+</li>
+</ol>
+<p>It’s useful to design objects by thinking of their function independently of other objects, even though in the system they will not be independent.</p>
+<p>For example:</p>
+<p>There is an object that outputs a given number of bangs at a given tempo: it has two pattrs, “tempo” and “count”: the number of bangs to output.</p>
+<p>There is another object that changes the system tempo.</p>
+<p>The tempo object can be used to adjust the tempo by itself. But it is also used to control a parameter called “speed.”
+Speed makes the musical output play twice as fast (double time), or in triplets, etc. Changing the speed to two means both doubling the tempo and setting the number of bangs to two.</p>
+<p>Thus the mapping from control pattrs to model pattrs is not one-to-one. We can imagine more complicated networks of dependencies among model parameters that we don’t want to reflect in the control.</p>
+<p>It’s useful to design these two objects separately because they can then be tested and maybe reused later. We end up with a model that is “feature-rich,” and the job is now to decide which features we want to use, and how they will be reflected in the control.</p>
+<p>Note: In terms of domain-driven design, it’s important not to spend too much time building objects that do lots of things that we may not ultimately care about using. We’re not building a library, we’re building an application. On the other hand, building separate small objects that handle specific independent functions is a useful way to make building blocks for our application. So there’s a trade-off: designing for the application with an eye for the kind of independent and reusable objects that will make up a library.</p>
+<p>To address these three problems, Djazz uses the following method:</p>
+<p>For each important object that is made up of smaller components containing pattrs, like the “midi player,” there is a parameter bank. [SLIDE] This bank consists only of the surface pattrs that the control will call.</p>
+<p>The midi player and the parameter bank are wrapped in a larger object, and parameters from the bank are passed to the midi player through a translator object.</p>
+<p>This translator handles the three problems above. It translates the surface parameters to their corresponding hierarchically named pattrs, which is very easy. In this object, too, are placed the objects that translate control variables into dependent model variables, like f(speed)—&gt;[bang_count, tempo].
+Finally, unused variables simply aren’t called. But to be absolutely sure that uncalled variables don’t give us trouble, by storing state that have forgotten about, or by accidentally being called, due to sharing names accidentally with a control variable, we can turn off their visibility to the pattrstorage system, which means they can never be called. There is a javascript object I wrote which will turn off all the pattrs in an object. The first argument tells it what the visibility is, the second weather to recursively change the visibility in sub patchers. [EXAMPLE]</p>
+<pre><code>Now, in the control bpatcher, there is a similar parameter bank. Now the architectures of the control and the model are separate, and we are free to design the control as we want. As long as our controls send a message to the parameter bank with the right name, it will be sent to the model. [SLIDE] Now we can set up the controls as we like, and all the control logic—button operation, etc.—is completely independent of anything that happens in the model, and vice versa.
+</code></pre>
+<p>Because the pattrstorage object is inside the view, the namespace “view” is not included in parameter names.</p>
+<p>The model outputs midi and audio, but it also outputs pattrs to any view that wants to receive them. It does this the same way as the control: a pattrstorage object is at the top level of the model patcher, and when a pattr value is updated, it outputs the pattr name and value.
+There are two types of pattrs that the model outputs: those that are specifically for a view, and the parameters that were sent from the control.
+[SLIDE]
+Because the control is the view, this flow of pattrs becomes a loop. [SLIDE] The control/view pattrstorage sends values to the model’s pattrhub, and the model pattrstorage send values to the control/view’s pattrhub</p>
+<p>To avoid an infinite loop, we make use the pattrstorage’s outputmode attribute.</p>
+<p>In the model, the output mode is 2: any changed values are sent out.
+But in the view, the output mode is 6: values that are changed by objects in the pattr system are not sent out. That is, only values that are changed by user interaction are sent out. Thus the values received by pattrhub are set but not passed on. The loop is broken. [SLIDE]</p>
+<p>The control flow is clear
+All of the state is centralised in the parameter banks
+The state can be read in in real time by the client windows (easy to debug)
+The state can be saved as preset files and reloaded.</p>
 
             <footer class="footline">
             </footer>
@@ -1232,22 +1426,22 @@ Max patchers basically are dictionaries, though, for objects in them with script
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1733395496" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-color.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1733395496" defer></script>
-    <script src="/js/js-yaml.min.js?1733395496" defer></script>
-    <script src="/js/mermaid.min.js?1733395496" defer></script>
+    <script src="/js/clipboard.min.js?1733429984" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-color.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1733429984" defer></script>
+    <script src="/js/js-yaml.min.js?1733429984" defer></script>
+    <script src="/js/mermaid.min.js?1733429984" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
-    <script src="/js/theme.js?1733395496" defer></script>
+    <script src="/js/theme.js?1733429984" defer></script>
   </body>
 </html>

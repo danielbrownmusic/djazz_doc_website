@@ -47,7 +47,7 @@
       <link>http://localhost:1313/3_api/6_architecture.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/3_api/6_architecture.html</guid>
-      <description></description>
+      <description>Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.</description>
     </item>
     <item>
       <title>Going further</title>

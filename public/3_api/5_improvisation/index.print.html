@@ -21,24 +21,24 @@
     <title>Improvisation with the Factor Oracle :: Hugo Relearn Theme</title>
     <link href="http://localhost:1313/3_api/5_improvisation.html" rel="canonical" type="text/html" title="Improvisation with the Factor Oracle :: Hugo Relearn Theme">
     <link href="/3_api/5_improvisation/index.xml" rel="alternate" type="application/rss+xml" title="Improvisation with the Factor Oracle :: Hugo Relearn Theme">
-    <link href="/css/fontawesome-all.min.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1733395496" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1733395496" rel="stylesheet">
-    <link href="/css/fonts.css?1733395496" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733395496" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1733395496" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1733395496" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1733395496" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1733395496" rel="stylesheet">
-    <link href="/css/print.css?1733395496" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1733395496" rel="stylesheet">
-    <script src="/js/variant.js?1733395496"></script>
+    <link href="/css/fontawesome-all.min.css?1733429984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733429984" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1733429984" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733429984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733429984" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1733429984" rel="stylesheet">
+    <link href="/css/fonts.css?1733429984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733429984" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1733429984" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1733429984" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1733429984" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1733429984" rel="stylesheet">
+    <link href="/css/print.css?1733429984" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1733429984" rel="stylesheet">
+    <script src="/js/variant.js?1733429984"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..';
       window.relearn.relBaseUri='..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
-      window.index_js_url="/index.search.js?1733395496";
+      window.index_js_url="/index.search.js?1733429984";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -360,6 +360,28 @@ ascertaining the “correctness” of an analysis via listening to the resulting
             <header class="headline">
             </header>
 
+<h1 id="description-of-the-factor-oracle">Description of the Factor Oracle</h1>
+
+<p>The biggest step was to complete the factor oracle object, which is generalized for different data types, and the factor_oracle_player object for improvising with it.</p>
+<ol>
+<li>The oracle factor patch is here:</li>
+</ol>
+<p>patchers/data_structures/factor_oracle/factor_oracle.maxpat</p>
+<ol start="2">
+<li>To use different comparison functions, you need to write a Max patch that performs the label comparison. Then you can change the comparison function in the oracle factor patch by passing it the “comparison” message and the name of the comparison patch. So far, I&rsquo;ve written two comparison patches:</li>
+</ol>
+<p>patchers/data_structures/factor_oracle/compare/fo.compare.equal_chords.maxpat</p>
+<p>patchers/data_structures/factor_oracle/compare/fo.compare.equal_chords_in_3_semitone_range.maxpat</p>
+<p>Both work, but I haven&rsquo;t yet integrated the second - i.e. it finds a rhythm with a chord in a range of 3 semitones (up or down), but after doing so, the program still doesn&rsquo;t preform the pitch change on the MIDI or audio output.</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
 <h1 id="the-factor-oracle-player">The Factor Oracle Player</h1>
 
 <p>patchers/factor_oracle_player/factor_oracle_player.maxpat</p>
@@ -370,6 +392,65 @@ ascertaining the “correctness” of an analysis via listening to the resulting
 <p>When the “NEW” button is pressed, it reads the current antescofo partition from memory (converting it into a Max dict object), then runs the factor oracle player to generate a different succession of rhythms for each requested channel, mapping these rhythms to different (unused) channels, and combining everything again into a Max dict.</p>
 <p>The factor oracle player works the same way for audio improvisers, but it doesn&rsquo;t write any scores. It sends data to supervp objects to play from the audio buffer (recorded or loaded):</p>
 <p>patchers/improvise_oracles/djazz_audio_oracle_players.maxpat</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="the-factor-oracle-player">The Factor Oracle Player</h1>
+
+<ol start="7">
+<li>The “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it&rsquo;s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label. It works in the same way as the LISP version: you define the maximum continuity and it tries to match it. When the maximum continuity is reached, it takes a suffix link and searches for a matching label. If no matching label is found, it chooses a random state:</li>
+</ol>
+<p>patchers/factor_oracle_player/factor_oracle_player.maxpat</p>
+<ol start="8">
+<li>The implementation of the factorial oracle player is almost complete. As for writing new improvised antescofo partitions from old ones, the unfinished patch is here:</li>
+</ol>
+<p>patchers/improvise_antescofo/djazz.improvise_antescofo.maxpat</p>
+<p>When the “NEW” button is pressed, it reads the current antescofo partition from memory (converting it into a Max dict object) (this is done with Javascript), then runs the factor oracle player to generate a different succession of rhythms for each requested channel, mapping these rhythms to different (unused) channels, and combining everything again into a Max dict.
+The content of the original channels is not modified, as you requested; only the new content of the new channels is added.</p>
+<p>What is NOT done is to write the new Max dict into an antescofo partition. This has to be done in Javascript, as the note times have to be sorted and the new delta times calculated, which would be difficult to do in Max. It won&rsquo;t take long to finish, I just haven&rsquo;t done it yet; I can do it next Monday.</p>
+<ol start="9">
+<li>The factor oracle player works the same way for audio improvisers, but it doesn&rsquo;t write any scores (so no Javascript here): it simply sends data to supervp objects to play from the audio buffer (recorded or loaded):</li>
+</ol>
+<p>patchers/improvise_oracles/djazz_audio_oracle_players.maxpat</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="syncopation">Syncopation</h1>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="analyzer">Analyzer</h1>
+
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="listener">Listener</h1>
+
 
             <footer class="footline">
             </footer>
@@ -391,22 +472,22 @@ ascertaining the “correctness” of an analysis via listening to the resulting
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1733395496" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-color.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1733395496" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1733395496" defer></script>
-    <script src="/js/js-yaml.min.js?1733395496" defer></script>
-    <script src="/js/mermaid.min.js?1733395496" defer></script>
+    <script src="/js/clipboard.min.js?1733429984" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-color.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1733429984" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1733429984" defer></script>
+    <script src="/js/js-yaml.min.js?1733429984" defer></script>
+    <script src="/js/mermaid.min.js?1733429984" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
-    <script src="/js/theme.js?1733395496" defer></script>
+    <script src="/js/theme.js?1733429984" defer></script>
   </body>
 </html>

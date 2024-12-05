@@ -22,6 +22,9 @@
     <loc>http://localhost:1313/3_api/5_improvisation/1_factor_oracle.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_1_factor_oracle.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max.html</loc>
   </url>
   <url>
@@ -46,9 +49,6 @@
     <loc>http://localhost:1313/3_api/1_abstraction-references/tools/make_song_file.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/1_manual/6_tools/make_song_file.html</loc>
-  </url>
-  <url>
     <loc>http://localhost:1313/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts.html</loc>
   </url>
   <url>
@@ -59,6 +59,9 @@
   </url>
   <url>
     <loc>http://localhost:1313/3_api/1_abstraction-references/components/audio_record.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/3_api/6_architecture/_d/_d_control_flow.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/3_api/6_architecture/control_flow.html</loc>
@@ -76,9 +79,6 @@
     <loc>http://localhost:1313/1_manual/2_main_window.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/1_manual/6_tools/make_score_file.html</loc>
-  </url>
-  <url>
     <loc>http://localhost:1313/3_api/2_externals/midifile.html</loc>
   </url>
   <url>
@@ -89,6 +89,9 @@
   </url>
   <url>
     <loc>http://localhost:1313/3_api/5_improvisation/2_factor_oracle_player.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_2_factor_oracle_player.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/3_api/1_abstraction-references/components/beat_clock.html</loc>
@@ -106,6 +109,9 @@
     <loc>http://localhost:1313/1_manual/3_midi_window.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/3_api/6_architecture/_d/_d_overview_of_mvcvc.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/3_api/6_architecture/overview_of_mvcv.html</loc>
   </url>
   <url>
@@ -115,7 +121,13 @@
     <loc>http://localhost:1313/3_api/2_externals/supervp.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_3_syncopation.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/3_api/1_abstraction-references/tools.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_4_analyzer.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/1_manual/4_audio_window.html</loc>
@@ -130,6 +142,9 @@
     <loc>http://localhost:1313/3_api/4_external_controls_and_views.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/3_api/6_architecture/_d/_d_pattr_usage.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/3_api/6_architecture/pattr_usage.html</loc>
   </url>
   <url>
@@ -140,6 +155,9 @@
   </url>
   <url>
     <loc>http://localhost:1313/3_api/5_improvisation.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_5_listener.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/3_api/5_improvisation/3_analyzer.html</loc>

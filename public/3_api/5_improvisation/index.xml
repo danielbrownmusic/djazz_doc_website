@@ -22,11 +22,46 @@
       <description>The oracle factor patch is here: patchers/data_structures/factor_oracle/factor_oracle.maxpat&#xA;To use different comparison functions, you need to write a Max patch that performs the label comparison.</description>
     </item>
     <item>
+      <title>Description of the Factor Oracle</title>
+      <link>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_1_factor_oracle.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_1_factor_oracle.html</guid>
+      <description>The biggest step was to complete the factor oracle object, which is generalized for different data types, and the factor_oracle_player object for improvising with it.</description>
+    </item>
+    <item>
       <title>The Factor Oracle Player</title>
       <link>http://localhost:1313/3_api/5_improvisation/2_factor_oracle_player.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/3_api/5_improvisation/2_factor_oracle_player.html</guid>
       <description>patchers/factor_oracle_player/factor_oracle_player.maxpat&#xA;The “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it’s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label.</description>
+    </item>
+    <item>
+      <title>The Factor Oracle Player</title>
+      <link>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_2_factor_oracle_player.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_2_factor_oracle_player.html</guid>
+      <description>The “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it’s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label.</description>
+    </item>
+    <item>
+      <title>Syncopation</title>
+      <link>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_3_syncopation.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_3_syncopation.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Analyzer</title>
+      <link>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_4_analyzer.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_4_analyzer.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Listener</title>
+      <link>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_5_listener.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_5_listener.html</guid>
+      <description></description>
     </item>
     <item>
       <title>The Analyzer</title>

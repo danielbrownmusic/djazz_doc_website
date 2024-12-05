@@ -3,7 +3,7 @@
   <channel>
     <title>System Architecture :: Hugo Relearn Theme</title>
     <link>http://localhost:1313/3_api/6_architecture.html</link>
-    <description></description>
+    <description>Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/3_api/6_architecture/index.xml" rel="self" type="application/rss+xml" />
@@ -16,6 +16,13 @@
     </item>
     <item>
       <title>control flow</title>
+      <link>http://localhost:1313/3_api/6_architecture/_d/_d_control_flow.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3_api/6_architecture/_d/_d_control_flow.html</guid>
+      <description>Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.</description>
+    </item>
+    <item>
+      <title>control flow</title>
       <link>http://localhost:1313/3_api/6_architecture/control_flow.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/3_api/6_architecture/control_flow.html</guid>
@@ -23,10 +30,24 @@
     </item>
     <item>
       <title>Overview of MVVCC (Model-View-View Controller-View) Architecture</title>
+      <link>http://localhost:1313/3_api/6_architecture/_d/_d_overview_of_mvcvc.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3_api/6_architecture/_d/_d_overview_of_mvcvc.html</guid>
+      <description>1. Architecture Model/Control/View Control/View MVC:&#xA;Djazz uses the Model-View-Control design pattern.</description>
+    </item>
+    <item>
+      <title>Overview of MVVCC (Model-View-View Controller-View) Architecture</title>
       <link>http://localhost:1313/3_api/6_architecture/overview_of_mvcv.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/3_api/6_architecture/overview_of_mvcv.html</guid>
       <description>1. Architecture Model/Control/View Control/View MVC:&#xA;Djazz uses the Model-View-Control design pattern.</description>
+    </item>
+    <item>
+      <title>Pattr usage</title>
+      <link>http://localhost:1313/3_api/6_architecture/_d/_d_pattr_usage.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3_api/6_architecture/_d/_d_pattr_usage.html</guid>
+      <description>Pattr translation in control and view control&#xA;Interface - not much to say.</description>
     </item>
     <item>
       <title>Pattr usage</title>
