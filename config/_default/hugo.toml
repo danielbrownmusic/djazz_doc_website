@@ -2,13 +2,13 @@
 # change this to a value appropriate for you; if your site is served from a subdirectory
 # set it like "https://example.com/mysite/"
 
-baseURL = 'https://www.danielbrownmusic.com/djazz_doc_website/'
+#baseURL = 'https://www.danielbrownmusic.com/djazz_doc_website/'
 
 # required value to serve this page from a webserver AND the file system;
 # if you don't want to serve your page from the file system, you can also set this value
 # to false
 
-relativeURLs = true # true -> rewrite all site-relative URLs (those with a leading slash) to be relative to the current content
+relativeURLs = true # -> rewrite all site-relative URLs (those with a leading slash) to be relative to the current content
 canonifyURLs = true
 
 # if you set uglyURLs to false, this theme will append 'index.html' to any page bundle link

@@ -5,7 +5,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Manual",
-    "uri": "/djazz_doc_website/1_manual.html"
+    "uri": "/1_manual.html"
   },
   {
     "breadcrumb": "",
@@ -13,7 +13,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tutorials",
-    "uri": "/djazz_doc_website/2_tutorials.html"
+    "uri": "/2_tutorials.html"
   },
   {
     "breadcrumb": "",
@@ -21,7 +21,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "API",
-    "uri": "/djazz_doc_website/3_api.html"
+    "uri": "/3_api.html"
+  },
+  {
+    "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
+    "content": " graph TB; A[Master Clock] B[Audio] C[MIDI] A--\u003e|tempo, beat number, label| B A--\u003e|tempo, beat number, label| C flowchart TB; A[Master Clock] subgraph B[Generator] F --\u003e G end C[MIDI Out] A--\u003e|tempo, beat number, label| B classDiagram generator *-- score_player generator *-- improviser improviser *-- factor_oracle_player factor_oracle_player : int max-continuity factor_oracle_player : int pitch-transposition factor_oracle_player *-- factor_oracle Each generator contains\nThe factor oracle (“factor_oracle.maxpat”)\nThe factor oracle player (“factor_oracle_player.maxpat”) creates the improvisation. As its name suggests, it contains and makes use of the “factor_oracle” Max abstraction.\nThe analyzer uses the same set of symbols as the factor oracle. It is used both offline, to create a file of labeled beats for a song, and online, to convert the data at the beginning of each beat into a symbol to be passed to the factor oracle player. This symbol is then used as the query to the factor oracle to produce the next beat.\nThe analyzer\nInput is passed to patchers two ways: synchronously and asynchronously, depending on the type of input data. Synchoronous data consists of the beat number, the current tempo (since this can fluctuate), and any data to be used by the analyzer. This data is passed serially through patch cords which send data serially.\nThe generator uses the beat number when improvise mode is not on; it uses this to play the next beat or a different beat if one has been selected by the user. In improvise mode, the beat number is not considered. The label produced by the analyzer is used, as described above.\nAsynchoronous data is anything changed by the user using the GUI. A lot of this data is well known to audio interface users: track volume, MIDI and audio effects like pitch transposition, for instance. The factor oracle player has two asynchronous controls: max-continuity and pitch-transposition.\nDefinition:\nA beat is a collection of notes that occurs between two timepoints. These timepoints are considered to occur at regular intervals. Thus a piece of music that has a pulse can be considered a sequence of beats.\nAt each new beat, calculate a new beat’s worth of music to play. The calculation consists of finding a beat in the database that is the “best match” (or at least a “good match”) based on the data that exists at the beginning of the new beat.\nThis data can be based on any of the following:\nThe location in the song/musical piece. For example, “the A minor 7 chord that occurs at the beginning of measure 13.” A good match is a beat from the database that occurs over the same chord. This could be the same beat as in the original piece, or it could be a different beat that has the same chord, which is more interesting. This creates correct adherence to musical form, if such form exists in the piece.\nWhat we just played in the last beat. For example, an ascending scale in the previous beat could look for a melody that starts on the next note in the scale in the next beat. This creates continuity.\nWhat other listeners have played. This creates responsiveness.\nIn the current usage of Djazz, this match is based only on option 1: the chord symbol that occurs on the given beat. Matching is done by comparing labels. Each beat has a label which reflects the data described above. It is a string of symbols. The nature of this string is determined by the user. In the current usage of Djazz, this string represents the chord symbol, which consists of the chord root and its quality, separated by an underline. Chord roots are numbered from zero to eleven, with zero representing C; thus, C# (or Db) is 1, D is 2, etc. For example, “0_maj7” represents a C major seventh chord.\nA match can be made by exact comparison, or by “fuzzy” methods. In the current usage of Djazz, a chord represents a match if the quality is the same, but the root can be a small distance away from the desired one. The melody is then transposed to match the correct root.\nOffline analysis currently consists of adding the chord labels to each beat. The user inputs this using a graphical tool that takes chord information and stores it in a list of beats; that is, no analysis is done save for copying the “chord chart” into a data file. This data file, which also contains other data like the song tempo, time signature, section starting and ending beats, and song title, is loaded into Djazz when a song is played.\nOnline analysis, as a result, is just a case of reading the chord label from the dictionary when a beat number is generated. This is in fact done by the master clock: it sends out the tempo, chord label, beat number, in immediate succession each time a tap is input.\nThe methods here are general, and the current usage of Djazz can be changed to admit other types of music. This would involve using an extant system, devising a new one, or modifying an extant one to label beats. Optionally defining the definition of a match, if it is not defined as exact.\nThe following criteria must be met: The online analyzer uses the same set of labels as the offline analyzer, if an offline analyzer is used.\nAlso, the architecture is modular, which means that other methods of improvisation are possible. That means that another object can replace the factor oracle player within “improviser” as long as it adheres to the following criteria:\nIt receives a label at the beginning of each beat It produces a beat number, in response to the label, that represents the next beat to play. Djazz supplies a software framework for empirical inquiry into the suitability of a particular data encoding for music: ascertaining the “correctness” of an analysis via listening to the resulting synthesis.",
+    "description": "graph TB; A[Master Clock] B[Audio] C[MIDI] A--\u003e|tempo, beat number, label| B A--\u003e|tempo, beat number, label| C flowchart TB; A[Master Clock] subgraph B[Generator] F --\u003e G end C[MIDI Out] A--\u003e|tempo, beat number, label| B classDiagram generator *-- score_player generator *-- improviser improviser *-- factor_oracle_player factor_oracle_player : int max-continuity factor_oracle_player : int pitch-transposition factor_oracle_player *-- factor_oracle Each generator contains",
+    "tags": [],
+    "title": "General Description",
+    "uri": "/3_api/5_improvisation/0_general_description.html"
   },
   {
     "breadcrumb": "API \u003e externals",
@@ -29,7 +37,7 @@ var relearn_search_index = [
     "description": " Antescofo is used in two places: Master control, to calculate the tempo (SCORE NAME) MIDI beat reader, to sequence and send out midi notes in the proper tempo and rhythm (SCORE NAME) ",
     "tags": [],
     "title": "antescofo",
-    "uri": "/djazz_doc_website/3_api/2_externals/antescofo.html"
+    "uri": "/3_api/2_externals/antescofo.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -37,15 +45,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Audio Beat Generator",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/audio_beat_generator.html"
+    "uri": "/3_api/1_abstraction-references/components/audio_beat_generator.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
-    "content": "La plus grande étape a été de terminer l’objet factor oracle qui est généralisé pour différents types de données, et l’objet factor_oracle_player pour improviser avec lui.\nLe patch de l’oracle factor est ici : patchers/data_structures/factor_oracle/factor_oracle.maxpat\nPour utiliser différentes fonctions de comparaison, vous devez écrire un patch Max qui effectue la comparaison des étiquettes. Ensuite, vous pouvez changer la fonction de comparaison dans le patch factor oracle en lui passant le message “comparaison” et le nom du patch de comparaison. Jusqu’à présent, j’ai écrit deux patchs de comparaison : patchers/data_structures/factor_oracle/compare/fo.compare.equal_chords.maxpat\npatchers/data_structures/factor_oracle/compare/fo.compare.equal_chords_in_3_semitone_range.maxpat\nLes deux fonctionnent, mais je n’ai pas encore intégré la seconde - c’est-à-dire qu’elle trouve un rythme avec un accord dans une plage de 3 demi-tons (vers le haut ou vers le bas), mais après l’avoir fait, le programme ne préforme pas encore le changement de hauteur sur la sortie MIDI ou audio.",
-    "description": "La plus grande étape a été de terminer l’objet factor oracle qui est généralisé pour différents types de données, et l’objet factor_oracle_player pour improviser avec lui.",
+    "content": " The oracle factor patch is here: patchers/data_structures/factor_oracle/factor_oracle.maxpat\nTo use different comparison functions, you need to write a Max patch that performs the label comparison. Then you can change the comparison function in the oracle factor patch by passing it the “comparison” message and the name of the comparison patch. So far, I’ve written two comparison patches: ",
+    "description": "The oracle factor patch is here: patchers/data_structures/factor_oracle/factor_oracle.maxpat\nTo use different comparison functions, you need to write a Max patch that performs the label comparison.",
     "tags": [],
     "title": "Description of the Factor Oracle",
-    "uri": "/djazz_doc_website/3_api/6_improvisation/1_factor_oracle.html"
+    "uri": "/3_api/5_improvisation/1_factor_oracle.html"
   },
   {
     "breadcrumb": "API \u003e Notes on databases in Max",
@@ -53,7 +61,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Dicts in Max and javascript",
-    "uri": "/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max.html"
+    "uri": "/3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -61,7 +69,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz.html"
+    "uri": "/3_api/1_abstraction-references/main_components/djazz.html"
   },
   {
     "breadcrumb": "API \u003e Going further",
@@ -69,7 +77,7 @@ var relearn_search_index = [
     "description": "Dynamic creation and destruction of objects: arrays and dicts Hierarchies Saving and reloading architecture Objects in djazz can be created and destroyed, so you can set up variable numbers of different types of players, and different midi and audio outputs.",
     "tags": [],
     "title": "Dynamic Object Creation and Destruction",
-    "uri": "/djazz_doc_website/3_api/7_going_further/dynamic_object_creation_and_destruction.html"
+    "uri": "/3_api/7_going_further/dynamic_object_creation_and_destruction.html"
   },
   {
     "breadcrumb": "API",
@@ -77,7 +85,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Index of important abstractions",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references.html"
+    "uri": "/3_api/1_abstraction-references.html"
   },
   {
     "breadcrumb": "Manual",
@@ -85,7 +93,7 @@ var relearn_search_index = [
     "description": "Djazz needs no special installation. Download the djazz folder here. Open Max.",
     "tags": [],
     "title": "Installation",
-    "uri": "/djazz_doc_website/1_manual/1_installation.html"
+    "uri": "/1_manual/1_installation.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -93,7 +101,7 @@ var relearn_search_index = [
     "description": "Description of Components in Model:\nMaster Control Master Clock - outputs a beat number when it receives a bang - increments its beat number with each output, but also keeps track of position in a song form and adjusts the beat in accordance if looped.",
     "tags": [],
     "title": "main components",
-    "uri": "/djazz_doc_website/3_api/4_architecture/component_descriptions/master_control.html"
+    "uri": "/3_api/6_architecture/component_descriptions/master_control.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions",
@@ -101,7 +109,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Main Components",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components.html"
+    "uri": "/3_api/1_abstraction-references/main_components.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Tools",
@@ -109,7 +117,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "make song file",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/tools/make_song_file.html"
+    "uri": "/3_api/1_abstraction-references/tools/make_song_file.html"
   },
   {
     "breadcrumb": "Manual \u003e Tools",
@@ -117,7 +125,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Making a Song File",
-    "uri": "/djazz_doc_website/1_manual/6_tools/make_song_file.html"
+    "uri": "/1_manual/6_tools/make_song_file.html"
   },
   {
     "breadcrumb": "API \u003e Notes on databases in Max",
@@ -125,7 +133,7 @@ var relearn_search_index = [
     "description": "Dicts, like colls, are persistent and global, so use them only as read-only.",
     "tags": [],
     "title": "Notes on dicts",
-    "uri": "/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts.html"
+    "uri": "/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts.html"
   },
   {
     "breadcrumb": "API \u003e External controls and views",
@@ -133,7 +141,7 @@ var relearn_search_index = [
     "description": "Attaching External Devices Parameters Parameter Listeners External devices with views as well as controls Launchpads Mapping editors Dictionary readers and writers in javascript",
     "tags": [],
     "title": "Parameters",
-    "uri": "/djazz_doc_website/3_api/5_external_controls_and_views/1_parameters.html"
+    "uri": "/3_api/4_external_controls_and_views/1_parameters.html"
   },
   {
     "breadcrumb": "Tutorials",
@@ -141,7 +149,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Playing a MIDI Score",
-    "uri": "/djazz_doc_website/2_tutorials/1_play_midi_score.html"
+    "uri": "/2_tutorials/1_play_midi_score.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -149,15 +157,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Audio Record",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/audio_record.html"
+    "uri": "/3_api/1_abstraction-references/components/audio_record.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
-    "content": "Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.\nDjazz plays music in two ways: by selecting sections from scores, and by calculating improvisations using the factor oracle algorithm which is modified with pattern-matching methods. The input to the factor oracle come from scores and real-time input, either audio or MIDI, and is output as audio or MIDI. It is (being) written in Max with the factor-oracle and pattern-matching computation in Python. It uses Antescofo to generate notes both from scores and generated as improvisations in tempo. Djazz improvises on songs using template files, which are lists of beats representing positions in the songs. No other information is encoded in these templates: chord changes and notes are in different files: the scores used by Antescofo, and the databases used by the factor oracle. The song templates just let Antescofo and the factor oracle know which beat we’re on at a given time. For songs whose formal structure includes verses or sections, this larger structure is also included in the template. It can also improvise over a “free” structure by using a trivial template, just a short list of beats that loops. Djazz is played by inputting a tap—manually, from a built-in metronome, or from another application. The tap triggers a beat, which triggers notes to be output from the factor oracle or the score, which triggers note data to be output from antescofo, which triggers sound to be output by the audio or midi outputs. [SLIDE] You can see this control flow. The tap comes in on the left and comes out as sound from the midi bank on the right. The intermediate translations from tap to beat occur in the objects along the way. The architecture: several players which can be of different types (all the possible types to be determined). Each functions independently but there is a master control for synchronising timing and for broadcasting global commands. The control flow is represented functionally thus [SLIDE], where the “p’s” are vectors of parameters that change the way each translation is done. The control flow of these p’s are what I’m going to talk about. ",
+    "content": "Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.\nDjazz plays music in two ways: by selecting sections from scores, and by calculating improvisations using the factor oracle algorithm. The factor oracle algorithm can be modified with pattern-matching methods. The input to the factor oracle come from scores and real-time input, either audio or MIDI, and is output as audio or MIDI. It uses Antescofo to generate notes both from scores and generated as improvisations in tempo.\nDjazz improvises on songs using template files, which are lists of beats with labels representing positions in the songs. Notes are in different files: scores and audio tags in the databases used by the factor oracle.\nThe song templates pass the label to the factor oracle know given time. For songs whose formal structure includes verses or sections, this larger structure is also included in the template. It can also improvise over a “free” structure by using a trivial template, just a short list of beats that loops.\nDjazz is played by inputting a tap—manually, from a built-in metronome, or from another application. The tap triggers a beat, which triggers notes to be output from the factor oracle or the score, which triggers note data to be output from antescofo, which triggers sound to be output by the audio or midi outputs. [SLIDE]\nYou can see this control flow. The tap comes in on the left and comes out as sound from the midi bank on the right. The intermediate translations from tap to beat occur in the objects along the way. The architecture: several players which function independently. There is a master control for synchronising timing and for broadcasting global commands.",
     "description": "Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.",
     "tags": [],
     "title": "control flow",
-    "uri": "/djazz_doc_website/3_api/4_architecture/control_flow.html"
+    "uri": "/3_api/6_architecture/control_flow.html"
   },
   {
     "breadcrumb": "API \u003e External controls and views",
@@ -165,7 +173,7 @@ var relearn_search_index = [
     "description": "Dictionaries in Javascript and pure Max Gotchas\nDictionary readers and writers Dictionaries are used in different ways, for representing songs, architecture, and as another example for the launchpad, to keep track of how buttons are mapped to parameters and how parameters are mapped to lights.",
     "tags": [],
     "title": "Dicts",
-    "uri": "/djazz_doc_website/3_api/5_external_controls_and_views/2_dicts.html"
+    "uri": "/3_api/4_external_controls_and_views/2_dicts.html"
   },
   {
     "breadcrumb": "API",
@@ -173,7 +181,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "externals",
-    "uri": "/djazz_doc_website/3_api/2_externals.html"
+    "uri": "/3_api/2_externals.html"
   },
   {
     "breadcrumb": "API \u003e Going further",
@@ -181,15 +189,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Factor Oracle Labeling",
-    "uri": "/djazz_doc_website/3_api/7_going_further/factor_oracle_creation.html"
+    "uri": "/3_api/7_going_further/factor_oracle_creation.html"
   },
   {
     "breadcrumb": "Manual",
-    "content": " 1. SONG LOADING Open a new song 2. BEAT INPUT Manual Metronome From another machine 3. GLOBAL AUDIO CONTROLS Audio In (Microphone) Audio Out (Speakers) 4. SONG GRID Chapter select Bar Select Loop Chapter Button Relation of Grid to beat input 5. PLAYBACK DATA VIEW Beats in song Beats in section (chapter) Section is looped Current beat Current beat label 6. MIDI UI SELECTOR 7. AUDIO UI SELECTOR ",
-    "description": "1. SONG LOADING Open a new song 2. BEAT INPUT Manual Metronome From another machine 3.",
+    "content": " 1. MIDI/AUDIO INTERFACE SELECTOR Clicking on the button labeled “MIDI” or “Audio” will open the MIDI or Audio interface window, respectively. You can also use the key commands “m” to open/close the MIDI window or “a” to open/close the audio window.\n2. BEAT INPUT Input Selector Djazz plays a beat each time it receives a message (a “tap,” or “click”), if it is engaged (how to engage Djazz will be explaind below). When not engaged, it will not play when a beat message is received. When this is the case, you can click on measures or chapters (“cells” of the grid) in the song grid without triggering playback. Once engaged, djazz will begin playing on the next beat after a cell has been clicked on.\nThe cells of the grid change color depending on whether Djazz is engaged and whether a cell is currently playing or not. The colors represent the following:\nLight gray: not the current measure/chapter of the song Dark gray: the current measure measure/chapter of the song, but Djazz is not engaged Blue: the current measure measure/chapter of the song, but not playing Orange: the current measure measure/chapter of the song, and playing\nThere are three ways to send Djazz a beat message; you select one from the dropdown menu: “manual,” “metronome,” or “remote.” Selecting from the dropdown menu will change the controls on the left side of this box. When one option is selected, the other two are not responsive.\nMetronome The button marked with a triangle turns the metronome on and off. When you turn this button on and then select a grid cell, the metronome will trigger a new beat each time it clicks, beginning with the beat represented by the grid cell. No beat will be triggered until a grid cell has been selected. The number selector sets the metronome tempo. This is automatically set when a new song is loaded, but you can change it. This flashes each time the metronome sends a beat. Manual The triangle button engages Djazz. Clicking on the circle button sends Djazz a beat message. You can also press the space bar to send a manual click. Remote This will send a beat message to Djazz every time a MIDI note on message is received (i.e., with a non-zero velocity) on any channel.\nThe dropdown menu selects the MIDI input port for the click. The triangle button engages Djazz. This flashes each time a beat is received. Click sound selector The right-hand side of the window lets you change the sound and output port of the click.\nChanges the pitch of the click. The number indicates the MIDI value of the pitch. The channel of the click. The volume of the click Mutes/unmutes the click The output port of the click. 3. Song selector To load a song grid, select a song using one of these controls. Songs are loaded by selecting folders, not individual files. Each folder contains various files pertaining to the song like scores and JSON metadata files.\nDrag and drop a song folder here. Browse for a song folder. To select a song, click on its folder. Clear the current song. Select a preloaded song from the dropdown menu. 4. SONG GRID When a song is loaded, its grid will appear.\nChapter Select At the top are listed the “chapters” of the song–different sections like verses, choruses, and bridges. Clicking on a chapter will take you to the first measure of the chapter. If Djazz is engaged, it will start playing from here when the next beat is received.\nBar Select When a chapter is selected, the bars in the chapter are shown below it. Each bar contains the number of beats given by the song’s time signature. Clicking on a bar will take you to the first beat in the bar. If Djazz is engaged, it will start playing from here when the next beat is received.\nRewind-to-beginning Button Click to go to the beginning (first bar of first chapter) of the song. When the “lock” button next to the rewind button is on, Djazz will rewind to the beginning of the song every time it is disengaged (i.e., when the metronome is turned off, or when the engage button is unselected in manual or remote beat input.)\nLoop-Chapter/Song Button When selected, Djazz will loop the current chapter or the whole song, depending on the choice selected to the right of the button. That is, it will start from the beginning immediately when the end of the current chapter or song is reached\n3. GLOBAL AUDIO CONTROLS Audio On Clicking on either the microphone-icon button or the loudspeaker-icon button will turn the audio on.\nAudio In Level (Microphone) Controls the level of the audio input. The button labeled “M” below the microphone-icon button mutes audio input.\nAudio Record Level Controls the recorded volume level of the audio input.\nAudio Out (Speakers) Controls the level of the global audio output. The button labeled “M” below the loudspeaker-icon button mutes audio output.\n5. PLAYBACK DATA VIEW Beats in song When a song is loaded, this shows the first and last beat of the song.\nSection is looped Beats in section (chapter) When a song is loaded, this shows the first and last beat of the current chapter.\nTempo This shows the current playback tempo. When the metronome is playing, this will be the same as (sometimes fluctuating extremely slightly from) the metronome tempo. When a manual tap\nCurrent beat Current beat label ",
+    "description": "1. MIDI/AUDIO INTERFACE SELECTOR Clicking on the button labeled “MIDI” or “Audio” will open the MIDI or Audio interface window, respectively.",
     "tags": [],
     "title": "Main Window",
-    "uri": "/djazz_doc_website/1_manual/2_main_window.html"
+    "uri": "/1_manual/2_main_window.html"
   },
   {
     "breadcrumb": "Manual \u003e Tools",
@@ -197,7 +205,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Making a Score File",
-    "uri": "/djazz_doc_website/1_manual/6_tools/make_score_file.html"
+    "uri": "/1_manual/6_tools/make_score_file.html"
   },
   {
     "breadcrumb": "API \u003e externals",
@@ -205,7 +213,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "midifile",
-    "uri": "/djazz_doc_website/3_api/2_externals/midifile.html"
+    "uri": "/3_api/2_externals/midifile.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions",
@@ -213,7 +221,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Other Components",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components.html"
+    "uri": "/3_api/1_abstraction-references/components.html"
   },
   {
     "breadcrumb": "Tutorials",
@@ -221,15 +229,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Recording and playing back audio",
-    "uri": "/djazz_doc_website/2_tutorials/2_record_audio.html"
+    "uri": "/2_tutorials/2_record_audio.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
-    "content": " Le “factor oracle player” qui prend les étiquettes une par une, qui peuvent être de n’importe quelle forme (mais dans le programme actuel, c’est un dictionnaire avec deux entrées : la racine de l’accord et l’étiquette de l’accord), et utilise un factor oracle pour produire un battement qui correspond à l’étiquette. Il fonctionne de la même manière que la version LISP : vous définissez la continuité maximale et il tente de s’y adapter. Lorsque la continuité maximale est atteinte, il prend un lien de suffixe et recherche une étiquette correspondante. Si aucune étiquette correspondante n’est trouvée, il choisit un état aléatoire : patchers/factor_oracle_player/factor_oracle_player.maxpat\nL’implémentation du lecteur d’oracle factoriel est presque terminée. En ce qui concerne l’écriture de nouvelles partitions d’antescofo improvisées à partir d’anciennes partitions, le patch inachevé est ici : patchers/improvise_antescofo/djazz.improvise_antescofo.maxpat\nLorsque le bouton “NEW” est pressé, il lit la partition antescofo actuelle dans la mémoire (en la convertissant en un objet Max dict) (ceci est fait avec Javascript), puis exécute le lecteur factor oracle pour générer une succession différente de rythmes pour chaque canal demandé, en mappant ces rythmes à différents canaux (non utilisés), et en combinant le tout à nouveau dans un Max dict. Le contenu des canaux d’origine n’est pas modifié, comme vous l’avez demandé ; seul le nouveau contenu des nouveaux canaux est ajouté.\nCe qui n’est PAS fait, c’est d’écrire le nouveau Max dict dans une partition antescofo. Cela doit être fait en Javascript, car le temps de passage des notes doit être trié et les nouveaux temps delta calculés, ce qui serait difficile à faire dans Max. Cela ne prendra pas beaucoup de temps à terminer, je ne l’ai simplement pas fait ; je peux le faire lundi prochain.\nLe factor oracle player fonctionne de la même manière pour les improvisateurs audio, mais il n’écrit aucune partition (donc pas de Javascript ici) : il envoie simplement des données aux objets supervp pour qu’ils jouent à partir du tampon audio (enregistré ou chargé) : patchers/improvise_oracles/djazz_audio_oracle_players.maxpat\nCe patch est encore buggy en termes d’interface/implémentation et je dois passer mardi prochain à le debugger.",
-    "description": "Le “factor oracle player” qui prend les étiquettes une par une, qui peuvent être de n’importe quelle forme (mais dans le programme actuel, c’est un dictionnaire avec deux entrées : la racine de l’accord et l’étiquette de l’accord), et utilise un factor oracle pour produire un battement qui correspond à l’étiquette.",
+    "content": "patchers/factor_oracle_player/factor_oracle_player.maxpat\nThe “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it’s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label. It takes two parameters: max-continuity and pitch-transposition. When the maximum continuity is reached, it takes a suffix link and searches for a matching label. If no matching label is found, it chooses a random state.\nWhen the “NEW” button is pressed, it reads the current antescofo partition from memory (converting it into a Max dict object), then runs the factor oracle player to generate a different succession of rhythms for each requested channel, mapping these rhythms to different (unused) channels, and combining everything again into a Max dict.\nThe factor oracle player works the same way for audio improvisers, but it doesn’t write any scores. It sends data to supervp objects to play from the audio buffer (recorded or loaded):\npatchers/improvise_oracles/djazz_audio_oracle_players.maxpat",
+    "description": "patchers/factor_oracle_player/factor_oracle_player.maxpat\nThe “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it’s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label.",
     "tags": [],
     "title": "The Factor Oracle Player",
-    "uri": "/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player.html"
+    "uri": "/3_api/5_improvisation/2_factor_oracle_player.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -237,7 +245,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Beat Clock",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/beat_clock.html"
+    "uri": "/3_api/1_abstraction-references/components/beat_clock.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -245,7 +253,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz view",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view.html"
+    "uri": "/3_api/1_abstraction-references/main_components/djazz_view.html"
   },
   {
     "breadcrumb": "API",
@@ -253,7 +261,7 @@ var relearn_search_index = [
     "description": "File formats used json song file score/track files for MIDI audio: wav and json",
     "tags": [],
     "title": "File formats used",
-    "uri": "/djazz_doc_website/3_api/3_file_formats_used.html"
+    "uri": "/3_api/3_file_formats_used.html"
   },
   {
     "breadcrumb": "API \u003e Going further",
@@ -261,7 +269,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Listeners and Real-time Analyzers",
-    "uri": "/djazz_doc_website/3_api/7_going_further/listeners-and-analyzers.html"
+    "uri": "/3_api/7_going_further/listeners-and-analyzers.html"
   },
   {
     "breadcrumb": "Manual",
@@ -269,15 +277,15 @@ var relearn_search_index = [
     "description": "MIDI In View When clicked and illuminated, the record button arms the buffer for recording.",
     "tags": [],
     "title": "MIDI Window",
-    "uri": "/djazz_doc_website/1_manual/3_midi_window.html"
+    "uri": "/1_manual/3_midi_window.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
-    "content": "1. Architecture Model/Control/View Control/View MVC:\nDjazz uses the Model-View-Control design pattern.\nThe model consists of the objects that do the processing. At the top level, there are various players and the master control just described.\nThe model is controlled entirely by passing named parameters (not what Max calls “parameters”—I’ll talk about these in a later section) in the message format . These parameters are received in the leftmost inlet. The rightmost inlet is for changes in architecture: adding and subtracting components, which I’ll talk about later.\nThe control is also the view, since they’re graphical controls, so I’ll refer the bpatcher containing the combined control and view as the view.",
+    "content": "1. Architecture Model/Control/View Control/View MVC:\nDjazz uses the Model-View-Control design pattern.\nThe model consists of the objects that do the processing. At the top level, there are various players and the master control described in the previous section.\nThe model is controlled entirely by passing named pattrs in the message format . These parameters are received in the leftmost inlet.\nThe control is\nThe view is",
     "description": "1. Architecture Model/Control/View Control/View MVC:\nDjazz uses the Model-View-Control design pattern.",
     "tags": [],
     "title": "Overview of MVVCC (Model-View-View Controller-View) Architecture",
-    "uri": "/djazz_doc_website/3_api/4_architecture/overview_of_mvcvc.html"
+    "uri": "/3_api/6_architecture/overview_of_mvcv.html"
   },
   {
     "breadcrumb": "Tutorials",
@@ -285,7 +293,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Recording and playing back MIDI",
-    "uri": "/djazz_doc_website/2_tutorials/3_record_midi.html"
+    "uri": "/2_tutorials/3_record_midi.html"
   },
   {
     "breadcrumb": "API \u003e externals",
@@ -293,15 +301,7 @@ var relearn_search_index = [
     "description": " SuperVP is used to play audio beats ",
     "tags": [],
     "title": "supervp",
-    "uri": "/djazz_doc_website/3_api/2_externals/supervp.html"
-  },
-  {
-    "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Syncopation",
-    "uri": "/djazz_doc_website/3_api/6_improvisation/3_syncopation.html"
+    "uri": "/3_api/2_externals/supervp.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions",
@@ -309,15 +309,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tools",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/tools.html"
-  },
-  {
-    "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Analyzer",
-    "uri": "/djazz_doc_website/3_api/6_improvisation/analyzer.html"
+    "uri": "/3_api/1_abstraction-references/tools.html"
   },
   {
     "breadcrumb": "Manual",
@@ -325,7 +317,7 @@ var relearn_search_index = [
     "description": "7. AUDIO UI Audio Live Input – see MIDI Live Input Recording – see MIDI Live Input Saving a file – see MIDI Live Input Loading a file – see MIDI Live Input Note: to save and load an audio file, you actually save and load a folder.",
     "tags": [],
     "title": "Audio Window",
-    "uri": "/djazz_doc_website/1_manual/4_audio_window.html"
+    "uri": "/1_manual/4_audio_window.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -333,7 +325,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Beat Generator",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/beat_generator.html"
+    "uri": "/3_api/1_abstraction-references/components/beat_generator.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -341,39 +333,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz view control",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_view_control.html"
-  },
-  {
-    "breadcrumb": "API",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Improvisation with the Factor Oracle",
-    "uri": "/djazz_doc_website/3_api/6_improvisation.html"
-  },
-  {
-    "breadcrumb": "API \u003e System Architecture",
-    "content": "Pattr translation in control and view control\nInterface - not much to say. Just graphical controls. Sends and receives pattrs to and from control. Infinite loop is avoided via pattrstorage output mode set to 5.\nThe CONTROL PATTRS and DATA PATTRS (dicts) are saved. On loading, the data pattrs must be fully loaded first; their priorities are set to 1. The control pattrs are independent so their priorities are all 0.\nEvery parameter is stored in a pattr object.\nAs an example, here is a midi player object, which contains, among other components, a beat clock. The beat clock itself contains several components. Here we see one of them, « loop_section » and the pattr objects it contains. [SLIDE]\nThe pattrhub object invokes them, so a message “step 2” will set the step pattr object in beat_clock to 2.\nPattrs act hierarchically. The beat clock is named “beat_clock” [SLIDE], so the step variable can be invoked by sending the beat clock the message “beat_clock::step 2.” This double-colon format continues as the pattr object is nested in deeper levels of a hierarchy.\nThe control consists of bpatchers. No bpatchers are in the model. These handle all the user interface logic like buttons and file selection. To change a parameter in the model, a pattr object must exist in the view with the same name as the corresponding one in the model. These names don’t conflict because they are in different sub patchers.\nA pattrstorage object in the control keeps track of pattern changes. When the outputmode attribute is non-zero, it will send the names and values of changed parameters out its outlet. Hence, to communicate parameter changes to the model, the pattrstorage output is sent out the control and into a pattrthub object at the top level of the model, which then broadcasts the changes to the proper places.\nNote: with this method, the interior pattrhub objects end up not being used at all, but it’s still good to leave them in so that these objects can be reused and are not dependent on being called this way.\nThe hierarchical nature of the model, though, means that the parameter names sent from the control must have the same hierarchical structure as those in the model. Thus to control the “midi_player_1::beat_clock::loop_length” parameter, there must be a control bpatcher called “midi_player_1” that contains a bpatcher “beat_clock” that contains a pattr “loop_length.”\nFor smaller systems, this could be a good method: the control and the model are parallel hierarchies. There are three problems with this method, though. The separation of model and control is supposed to give you the freedom to design the control without worrying about how things are being processed inside the model.\nThe control architecture is completely linked to the model architecture, which becomes very constraining, especially as the control logic in a complicated system probably does not reflect the way things are processed.\nYou don’t necessarily want to control all the pattrs in the model. Some you might find unnecessary. This is not a big problem, but there is another related one:\nSome pattrs in the model are not actually independent of each other at runtime. Objects were created independently, but their functions in the system are dependent on each other or other objects\nIt’s useful to design objects by thinking of their function independently of other objects, even though in the system they will not be independent.\nFor example:\nThere is an object that outputs a given number of bangs at a given tempo: it has two pattrs, “tempo” and “count”: the number of bangs to output.\nThere is another object that changes the system tempo.\nThe tempo object can be used to adjust the tempo by itself. But it is also used to control a parameter called “speed.” Speed makes the musical output play twice as fast (double time), or in triplets, etc. Changing the speed to two means both doubling the tempo and setting the number of bangs to two.\nThus the mapping from control pattrs to model pattrs is not one-to-one. We can imagine more complicated networks of dependencies among model parameters that we don’t want to reflect in the control.\nIt’s useful to design these two objects separately because they can then be tested and maybe reused later. We end up with a model that is “feature-rich,” and the job is now to decide which features we want to use, and how they will be reflected in the control.\nNote: In terms of domain-driven design, it’s important not to spend too much time building objects that do lots of things that we may not ultimately care about using. We’re not building a library, we’re building an application. On the other hand, building separate small objects that handle specific independent functions is a useful way to make building blocks for our application. So there’s a trade-off: designing for the application with an eye for the kind of independent and reusable objects that will make up a library.\nTo address these three problems, Djazz uses the following method:\nFor each important object that is made up of smaller components containing pattrs, like the “midi player,” there is a parameter bank. [SLIDE] This bank consists only of the surface pattrs that the control will call.\nThe midi player and the parameter bank are wrapped in a larger object, and parameters from the bank are passed to the midi player through a translator object.\nThis translator handles the three problems above. It translates the surface parameters to their corresponding hierarchically named pattrs, which is very easy. In this object, too, are placed the objects that translate control variables into dependent model variables, like f(speed)—\u003e[bang_count, tempo]. Finally, unused variables simply aren’t called. But to be absolutely sure that uncalled variables don’t give us trouble, by storing state that have forgotten about, or by accidentally being called, due to sharing names accidentally with a control variable, we can turn off their visibility to the pattrstorage system, which means they can never be called. There is a javascript object I wrote which will turn off all the pattrs in an object. The first argument tells it what the visibility is, the second weather to recursively change the visibility in sub patchers. [EXAMPLE]\nNow, in the control bpatcher, there is a similar parameter bank. Now the architectures of the control and the model are separate, and we are free to design the control as we want. As long as our controls send a message to the parameter bank with the right name, it will be sent to the model. [SLIDE] Now we can set up the controls as we like, and all the control logic—button operation, etc.—is completely independent of anything that happens in the model, and vice versa. Because the pattrstorage object is inside the view, the namespace “view” is not included in parameter names.\nThe model outputs midi and audio, but it also outputs pattrs to any view that wants to receive them. It does this the same way as the control: a pattrstorage object is at the top level of the model patcher, and when a pattr value is updated, it outputs the pattr name and value. There are two types of pattrs that the model outputs: those that are specifically for a view, and the parameters that were sent from the control. [SLIDE] Because the control is the view, this flow of pattrs becomes a loop. [SLIDE] The control/view pattrstorage sends values to the model’s pattrhub, and the model pattrstorage send values to the control/view’s pattrhub\nTo avoid an infinite loop, we make use the pattrstorage’s outputmode attribute.\nIn the model, the output mode is 2: any changed values are sent out. But in the view, the output mode is 6: values that are changed by objects in the pattr system are not sent out. That is, only values that are changed by user interaction are sent out. Thus the values received by pattrhub are set but not passed on. The loop is broken. [SLIDE]\nThe control flow is clear All of the state is centralised in the parameter banks The state can be read in in real time by the client windows (easy to debug) The state can be saved as preset files and reloaded.",
-    "description": "Pattr translation in control and view control\nInterface - not much to say.",
-    "tags": [],
-    "title": "Pattr usage",
-    "uri": "/djazz_doc_website/3_api/4_architecture/pattr_usage.html"
-  },
-  {
-    "breadcrumb": "API",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "System Architecture",
-    "uri": "/djazz_doc_website/3_api/4_architecture.html"
-  },
-  {
-    "breadcrumb": "Manual",
-    "content": "INPUT/OUTPUT DEVICES Connect/disconnect a device Presets for Launchpads Grid View Parameter controls The preset editor window Create a preset Select Midi Input Select parameter Select color Edit a preset Save a preset Load a preset Devices tested Launchpad Mini Launchpad Pro MK3 ",
-    "description": "INPUT/OUTPUT DEVICES Connect/disconnect a device Presets for Launchpads Grid View Parameter controls The preset editor window Create a preset Select Midi Input Select parameter Select color Edit a preset Save a preset Load a preset Devices tested Launchpad Mini Launchpad Pro MK3 ",
-    "tags": [],
-    "title": "External Controllers",
-    "uri": "/djazz_doc_website/1_manual/5_external-controllers.html"
+    "uri": "/3_api/1_abstraction-references/main_components/djazz_view_control.html"
   },
   {
     "breadcrumb": "API",
@@ -381,7 +341,23 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "External controls and views",
-    "uri": "/djazz_doc_website/3_api/5_external_controls_and_views.html"
+    "uri": "/3_api/4_external_controls_and_views.html"
+  },
+  {
+    "breadcrumb": "API \u003e System Architecture",
+    "content": "Pattr translation in control and view control\nInterface - not much to say. Just graphical controls. Sends and receives pattrs to and from control. Infinite loop is avoided via pattrstorage output mode set to 5.\nThe CONTROL PATTRS and DATA PATTRS (dicts) are saved. On loading, the data pattrs must be fully loaded first; their priorities are set to 1. The control pattrs are independent so their priorities are all 0.\nEvery parameter is stored in a pattr object.\nAs an example, here is a midi player object, which contains, among other components, a beat clock. The beat clock itself contains several components. Here we see one of them, « loop_section » and the pattr objects it contains. [SLIDE]\nThe pattrhub object invokes them, so a message “step 2” will set the step pattr object in beat_clock to 2.\nPattrs act hierarchically. The beat clock is named “beat_clock” [SLIDE], so the step variable can be invoked by sending the beat clock the message “beat_clock::step 2.” This double-colon format continues as the pattr object is nested in deeper levels of a hierarchy.\nThe control consists of bpatchers. No bpatchers are in the model. These handle all the user interface logic like buttons and file selection. To change a parameter in the model, a pattr object must exist in the view with the same name as the corresponding one in the model. These names don’t conflict because they are in different sub patchers.\nA pattrstorage object in the control keeps track of pattern changes. When the outputmode attribute is non-zero, it will send the names and values of changed parameters out its outlet. Hence, to communicate parameter changes to the model, the pattrstorage output is sent out the control and into a pattrthub object at the top level of the model, which then broadcasts the changes to the proper places.\nNote: with this method, the interior pattrhub objects end up not being used at all, but it’s still good to leave them in so that these objects can be reused and are not dependent on being called this way.\nThe hierarchical nature of the model, though, means that the parameter names sent from the control must have the same hierarchical structure as those in the model. Thus to control the “midi_player_1::beat_clock::loop_length” parameter, there must be a control bpatcher called “midi_player_1” that contains a bpatcher “beat_clock” that contains a pattr “loop_length.”\nFor smaller systems, this could be a good method: the control and the model are parallel hierarchies. There are three problems with this method, though. The separation of model and control is supposed to give you the freedom to design the control without worrying about how things are being processed inside the model.\nThe control architecture is completely linked to the model architecture, which becomes very constraining, especially as the control logic in a complicated system probably does not reflect the way things are processed.\nYou don’t necessarily want to control all the pattrs in the model. Some you might find unnecessary. This is not a big problem, but there is another related one:\nSome pattrs in the model are not actually independent of each other at runtime. Objects were created independently, but their functions in the system are dependent on each other or other objects\nIt’s useful to design objects by thinking of their function independently of other objects, even though in the system they will not be independent.\nFor example:\nThere is an object that outputs a given number of bangs at a given tempo: it has two pattrs, “tempo” and “count”: the number of bangs to output.\nThere is another object that changes the system tempo.\nThe tempo object can be used to adjust the tempo by itself. But it is also used to control a parameter called “speed.” Speed makes the musical output play twice as fast (double time), or in triplets, etc. Changing the speed to two means both doubling the tempo and setting the number of bangs to two.\nThus the mapping from control pattrs to model pattrs is not one-to-one. We can imagine more complicated networks of dependencies among model parameters that we don’t want to reflect in the control.\nIt’s useful to design these two objects separately because they can then be tested and maybe reused later. We end up with a model that is “feature-rich,” and the job is now to decide which features we want to use, and how they will be reflected in the control.\nNote: In terms of domain-driven design, it’s important not to spend too much time building objects that do lots of things that we may not ultimately care about using. We’re not building a library, we’re building an application. On the other hand, building separate small objects that handle specific independent functions is a useful way to make building blocks for our application. So there’s a trade-off: designing for the application with an eye for the kind of independent and reusable objects that will make up a library.\nTo address these three problems, Djazz uses the following method:\nFor each important object that is made up of smaller components containing pattrs, like the “midi player,” there is a parameter bank. [SLIDE] This bank consists only of the surface pattrs that the control will call.\nThe midi player and the parameter bank are wrapped in a larger object, and parameters from the bank are passed to the midi player through a translator object.\nThis translator handles the three problems above. It translates the surface parameters to their corresponding hierarchically named pattrs, which is very easy. In this object, too, are placed the objects that translate control variables into dependent model variables, like f(speed)—\u003e[bang_count, tempo]. Finally, unused variables simply aren’t called. But to be absolutely sure that uncalled variables don’t give us trouble, by storing state that have forgotten about, or by accidentally being called, due to sharing names accidentally with a control variable, we can turn off their visibility to the pattrstorage system, which means they can never be called. There is a javascript object I wrote which will turn off all the pattrs in an object. The first argument tells it what the visibility is, the second weather to recursively change the visibility in sub patchers. [EXAMPLE]\nNow, in the control bpatcher, there is a similar parameter bank. Now the architectures of the control and the model are separate, and we are free to design the control as we want. As long as our controls send a message to the parameter bank with the right name, it will be sent to the model. [SLIDE] Now we can set up the controls as we like, and all the control logic—button operation, etc.—is completely independent of anything that happens in the model, and vice versa. Because the pattrstorage object is inside the view, the namespace “view” is not included in parameter names.\nThe model outputs midi and audio, but it also outputs pattrs to any view that wants to receive them. It does this the same way as the control: a pattrstorage object is at the top level of the model patcher, and when a pattr value is updated, it outputs the pattr name and value. There are two types of pattrs that the model outputs: those that are specifically for a view, and the parameters that were sent from the control. [SLIDE] Because the control is the view, this flow of pattrs becomes a loop. [SLIDE] The control/view pattrstorage sends values to the model’s pattrhub, and the model pattrstorage send values to the control/view’s pattrhub\nTo avoid an infinite loop, we make use the pattrstorage’s outputmode attribute.\nIn the model, the output mode is 2: any changed values are sent out. But in the view, the output mode is 6: values that are changed by objects in the pattr system are not sent out. That is, only values that are changed by user interaction are sent out. Thus the values received by pattrhub are set but not passed on. The loop is broken. [SLIDE]\nThe control flow is clear All of the state is centralised in the parameter banks The state can be read in in real time by the client windows (easy to debug) The state can be saved as preset files and reloaded.",
+    "description": "Pattr translation in control and view control\nInterface - not much to say.",
+    "tags": [],
+    "title": "Pattr usage",
+    "uri": "/3_api/6_architecture/pattr_usage.html"
+  },
+  {
+    "breadcrumb": "Manual",
+    "content": "INPUT/OUTPUT DEVICES Connect/disconnect a device Presets for Launchpads Grid View Parameter controls The preset editor window Create a preset Select Midi Input Select parameter Select color Edit a preset Save a preset Load a preset Devices tested Launchpad Mini Launchpad Pro MK3 ",
+    "description": "INPUT/OUTPUT DEVICES Connect/disconnect a device Presets for Launchpads Grid View Parameter controls The preset editor window Create a preset Select Midi Input Select parameter Select color Edit a preset Save a preset Load a preset Devices tested Launchpad Mini Launchpad Pro MK3 ",
+    "tags": [],
+    "title": "External Controllers",
+    "uri": "/1_manual/5_external-controllers.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -389,15 +365,23 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Factor Oracle",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle.html"
+    "uri": "/3_api/1_abstraction-references/components/factor_oracle.html"
   },
   {
-    "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
+    "breadcrumb": "API",
     "content": "",
     "description": "",
     "tags": [],
-    "title": "Listener",
-    "uri": "/djazz_doc_website/3_api/6_improvisation/listener.html"
+    "title": "Improvisation with the Factor Oracle",
+    "uri": "/3_api/5_improvisation.html"
+  },
+  {
+    "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
+    "content": "booboo",
+    "description": "booboo",
+    "tags": [],
+    "title": "The Analyzer",
+    "uri": "/3_api/5_improvisation/3_analyzer.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -405,7 +389,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Factor Oracle Player",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/factor_oracle_player.html"
+    "uri": "/3_api/1_abstraction-references/components/factor_oracle_player.html"
+  },
+  {
+    "breadcrumb": "API",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "System Architecture",
+    "uri": "/3_api/6_architecture.html"
   },
   {
     "breadcrumb": "Manual",
@@ -413,7 +405,7 @@ var relearn_search_index = [
     "description": "Il existe également une structure de données pour les “données de la grille”, afin de faciliter le chargement, l’enregistrement et la recherche de rythmes : patchers/data_structures/grid_data/grid_data.",
     "tags": [],
     "title": "Tools",
-    "uri": "/djazz_doc_website/1_manual/6_tools.html"
+    "uri": "/1_manual/6_tools.html"
   },
   {
     "breadcrumb": "API",
@@ -421,7 +413,7 @@ var relearn_search_index = [
     "description": "Dynamic creation and destruction of objects: arrays and dicts Hierarchies Saving and reloading architecture Objects in djazz can be created and destroyed, so you can set up variable numbers of different types of players, and different midi and audio outputs.",
     "tags": [],
     "title": "Going further",
-    "uri": "/djazz_doc_website/3_api/7_going_further.html"
+    "uri": "/3_api/7_going_further.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -429,7 +421,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Improviser",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/improviser.html"
+    "uri": "/3_api/1_abstraction-references/components/improviser.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -437,7 +429,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Listener",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/listener.html"
+    "uri": "/3_api/1_abstraction-references/components/listener.html"
   },
   {
     "breadcrumb": "API",
@@ -445,7 +437,7 @@ var relearn_search_index = [
     "description": "The goals in rewriting Djazz are as follows.\n•\tprepare the software for distribution as a standalone •\tdesign an architecture that is extensible: ⁃\tChanges can be made in one area without creating bugs in other areas (dependence and modularity) ⁃\tnew functionality can be added without changing the existing code base ⁃\tnew functionality is easy to integrate.",
     "tags": [],
     "title": "Notes on databases in Max",
-    "uri": "/djazz_doc_website/3_api/8_notes_on_rewriting_djazz.html"
+    "uri": "/3_api/8_notes_on_rewriting_djazz.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -453,7 +445,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Master Control",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/master_control.html"
+    "uri": "/3_api/1_abstraction-references/components/master_control.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -461,7 +453,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "MIDI Beat Generator",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/midi_beat_generator.html"
+    "uri": "/3_api/1_abstraction-references/components/midi_beat_generator.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -469,7 +461,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "MIDI Record",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/midi_record.html"
+    "uri": "/3_api/1_abstraction-references/components/midi_record.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -477,7 +469,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz control",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/main_components/djazz_control.html"
+    "uri": "/3_api/1_abstraction-references/main_components/djazz_control.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -485,7 +477,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Score Loader",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/score_loader.html"
+    "uri": "/3_api/1_abstraction-references/components/score_loader.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
@@ -493,7 +485,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "UDP Send to VJazz",
-    "uri": "/djazz_doc_website/3_api/1_abstraction-references/components/to_vjazz.html"
+    "uri": "/3_api/1_abstraction-references/components/to_vjazz.html"
   },
   {
     "breadcrumb": "",
@@ -501,7 +493,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Categories",
-    "uri": "/djazz_doc_website/categories.html"
+    "uri": "/categories.html"
   },
   {
     "breadcrumb": "",
@@ -509,7 +501,7 @@ var relearn_search_index = [
     "description": "Software for musical co-creativity.",
     "tags": [],
     "title": "Djazz",
-    "uri": "/djazz_doc_website/index.html"
+    "uri": "/index.html"
   },
   {
     "breadcrumb": "",
@@ -517,6 +509,6 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tags",
-    "uri": "/djazz_doc_website/tags.html"
+    "uri": "/tags.html"
   }
 ]

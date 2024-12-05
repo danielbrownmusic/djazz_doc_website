@@ -2,45 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Improvisation with the Factor Oracle :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/djazz_doc_website/3_api/6_improvisation.html</link>
+    <link>//localhost:1313/3_api/6_improvisation.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/djazz_doc_website/3_api/6_improvisation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/3_api/6_improvisation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>General Description</title>
+      <link>//localhost:1313/3_api/6_improvisation/0_general_description.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/3_api/6_improvisation/0_general_description.html</guid>
+      <description>classDiagram generator *-- score_player generator *-- improviser improviser *-- factor_oracle_player factor_oracle_player : int max-continuity factor_oracle_player : int pitch-transposition factor_oracle_player *-- factor_oracle Class03 *-- Class04 Class05 *-- Class06 Class07 .</description>
+    </item>
     <item>
       <title>Description of the Factor Oracle</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/1_factor_oracle.html</link>
+      <link>//localhost:1313/3_api/6_improvisation/1_factor_oracle.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/1_factor_oracle.html</guid>
-      <description>La plus grande étape a été de terminer l’objet factor oracle qui est généralisé pour différents types de données, et l’objet factor_oracle_player pour improviser avec lui.</description>
+      <guid>//localhost:1313/3_api/6_improvisation/1_factor_oracle.html</guid>
+      <description>The oracle factor patch is here: patchers/data_structures/factor_oracle/factor_oracle.maxpat&#xA;To use different comparison functions, you need to write a Max patch that performs the label comparison.</description>
     </item>
     <item>
       <title>The Factor Oracle Player</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player.html</link>
+      <link>//localhost:1313/3_api/6_improvisation/2_factor_oracle_player.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/2_factor_oracle_player.html</guid>
-      <description>Le “factor oracle player” qui prend les étiquettes une par une, qui peuvent être de n’importe quelle forme (mais dans le programme actuel, c’est un dictionnaire avec deux entrées : la racine de l’accord et l’étiquette de l’accord), et utilise un factor oracle pour produire un battement qui correspond à l’étiquette.</description>
+      <guid>//localhost:1313/3_api/6_improvisation/2_factor_oracle_player.html</guid>
+      <description>patchers/factor_oracle_player/factor_oracle_player.maxpat&#xA;The “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it’s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label.</description>
     </item>
     <item>
-      <title>Syncopation</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/3_syncopation.html</link>
+      <title>The Analyzer</title>
+      <link>//localhost:1313/3_api/6_improvisation/3_analyzer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/3_syncopation.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Analyzer</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/analyzer.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/analyzer.html</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Listener</title>
-      <link>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/listener.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/djazz_doc_website/3_api/6_improvisation/listener.html</guid>
-      <description></description>
+      <guid>//localhost:1313/3_api/6_improvisation/3_analyzer.html</guid>
+      <description>booboo</description>
     </item>
   </channel>
 </rss>

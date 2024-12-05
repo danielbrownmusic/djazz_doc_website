@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Playing a MIDI Score :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/djazz_doc_website/2_tutorials/1_play_midi_score.html</link>
+    <link>//localhost:1313/2_tutorials/1_play_midi_score.html</link>
     <description></description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/djazz_doc_website/2_tutorials/1_play_midi_score/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/2_tutorials/1_play_midi_score/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

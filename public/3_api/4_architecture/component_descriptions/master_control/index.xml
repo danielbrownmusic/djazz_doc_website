@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>main components :: Hugo Relearn Theme</title>
-    <link>http://localhost:1313/djazz_doc_website/3_api/4_architecture/component_descriptions/master_control.html</link>
+    <link>//localhost:1313/3_api/4_architecture/component_descriptions/master_control.html</link>
     <description>Description of Components in Model:&#xA;Master Control Master Clock - outputs a beat number when it receives a bang - increments its beat number with each output, but also keeps track of position in a song form and adjusts the beat in accordance if looped.</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/djazz_doc_website/3_api/4_architecture/component_descriptions/master_control/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/3_api/4_architecture/component_descriptions/master_control/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
