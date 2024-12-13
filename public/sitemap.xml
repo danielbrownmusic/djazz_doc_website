@@ -49,7 +49,7 @@
     <loc>http://localhost:1313/3_api/1_abstraction-references/tools/make_song_file.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/1_manual/6_tools/make_song_file.html</loc>
+    <loc>http://localhost:1313/1_manual/7_tools/make_song_file.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts.html</loc>
@@ -70,16 +70,19 @@
     <loc>http://localhost:1313/3_api/4_external_controls_and_views/2_dicts.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/1_manual/2_main_window.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/3_api/2_externals.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/3_api/7_going_further/factor_oracle_creation.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/1_manual/2_main_window.html</loc>
+    <loc>http://localhost:1313/1_manual/7_tools/make_score_file.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/1_manual/6_tools/make_score_file.html</loc>
+    <loc>http://localhost:1313/1_manual/3_midi_window/2_scores_view.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/3_api/2_externals/midifile.html</loc>
@@ -107,6 +110,9 @@
   </url>
   <url>
     <loc>http://localhost:1313/3_api/7_going_further/listeners-and-analyzers.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/1_manual/3_midi_window/1_live_input.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/1_manual/3_midi_window.html</loc>
@@ -151,7 +157,10 @@
     <loc>http://localhost:1313/1_manual/2_main_window/4_song_grid.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/1_manual/5_external-controllers.html</loc>
+    <loc>http://localhost:1313/1_manual/5_effects.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/1_manual/6_external-controllers.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/3_api/1_abstraction-references/components/factor_oracle.html</loc>
@@ -172,7 +181,7 @@
     <loc>http://localhost:1313/3_api/6_architecture.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/1_manual/6_tools.html</loc>
+    <loc>http://localhost:1313/1_manual/7_tools.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/3_api/7_going_further.html</loc>
@@ -181,7 +190,7 @@
     <loc>http://localhost:1313/3_api/1_abstraction-references/components/improviser.html</loc>
   </url>
   <url>
-    <loc>http://localhost:1313/1_manual/7_preloaded_resources.html</loc>
+    <loc>http://localhost:1313/1_manual/8_preloaded_resources.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/3_api/1_abstraction-references/components/listener.html</loc>
