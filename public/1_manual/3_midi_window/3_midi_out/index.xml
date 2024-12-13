@@ -3,7 +3,7 @@
   <channel>
     <title>MIDI Out Bank :: Hugo Relearn Theme</title>
     <link>http://localhost:1313/1_manual/3_midi_window/3_midi_out.html</link>
-    <description>Solo Button When illuminated, this will “solo” the MIDI track. If a single track is soloed, it is the only track that you will hear.</description>
+    <description>The MIDI out bank contains 15 tracks output controls.</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/1_manual/3_midi_window/3_midi_out/index.xml" rel="self" type="application/rss+xml" />
