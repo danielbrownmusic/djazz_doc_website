@@ -17,6 +17,6 @@ Each oval in the track represents a repetition of the current looped section. Wh
 ### 3. Maximum Number of Repetitions 
 This selects the maximum number of repetitions that can be recorded. The default is 16.
 
-### 4. Output track repeitions
+### 4. Output track repetitions
 There are two MIDI live input tracks. They use MIDI outs are 1 and 2.  Ovals can be selected to be played if the corresponding input oval is illuminated.
 

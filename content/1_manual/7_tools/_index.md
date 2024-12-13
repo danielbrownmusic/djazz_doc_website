@@ -1,7 +1,5 @@
 +++
 title = "Tools"
-archetype = "chapter"
-alwaysopen = "false"
 weight = 65
 +++
 
