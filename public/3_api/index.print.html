@@ -21,24 +21,24 @@
     <title>API :: Hugo Relearn Theme</title>
     <link href="http://localhost:1313/3_api.html" rel="canonical" type="text/html" title="API :: Hugo Relearn Theme">
     <link href="/3_api/index.xml" rel="alternate" type="application/rss+xml" title="API :: Hugo Relearn Theme">
-    <link href="/css/fontawesome-all.min.css?1734002818" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734002818" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1734002818" rel="stylesheet">
-    <link href="/css/auto-complete.css?1734002818" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734002818" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1734002818" rel="stylesheet">
-    <link href="/css/fonts.css?1734002818" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1734002818" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1734002818" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1734002818" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1734002818" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1734002818" rel="stylesheet">
-    <link href="/css/print.css?1734002818" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1734002818" rel="stylesheet">
-    <script src="/js/variant.js?1734002818"></script>
+    <link href="/css/fontawesome-all.min.css?1734121000" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734121000" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1734121000" rel="stylesheet">
+    <link href="/css/auto-complete.css?1734121000" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734121000" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1734121000" rel="stylesheet">
+    <link href="/css/fonts.css?1734121000" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1734121000" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1734121000" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1734121000" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1734121000" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1734121000" rel="stylesheet">
+    <link href="/css/print.css?1734121000" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1734121000" rel="stylesheet">
+    <script src="/js/variant.js?1734121000"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='.';
       window.relearn.relBaseUri='.';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
-      window.index_js_url="/index.search.js?1734002818";
+      window.index_js_url="/index.search.js?1734121000";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -101,6 +101,7 @@
 
 <h1 id="index-of-important-abstractions">Index of important abstractions</h1>
 
+<p>Hmmmm&hellip;</p>
 
             <footer class="footline">
             </footer>
@@ -574,30 +575,30 @@ Because the parameters are mapped to our control surface, not the model. We can 
 <ol start="4">
 <li>Dictionary readers and writers</li>
 </ol>
-<p>Dictionaries are used in different ways, for representing songs, architecture, and as another example for the launchpad, to keep track of how buttons are mapped to parameters and how parameters are mapped to lights. For this, several different types of dictionaries were required:</p>
+<p>Dictionaries are used in different ways, for representing songs, architecture, and as anotder example for tde launchpad, to keep track of how buttons are mapped to parameters and how parameters are mapped to lights. For tdis, several different types of dictionaries were required:</p>
 <p>DICTS AND ARRAYS</p>
 <ul>
 <li>Two <strong>device-specific</strong> dicts</li>
 <li>One <strong>mapping</strong> dict</li>
 <li>Two <strong>runtime parameter</strong> dicts</li>
 </ul>
-<p>Launchpads have both view and control capabilities; that is, they can send input to Djazz (<em>control</em>) as well as show output (<em>view</em>).</p>
-<p>The two <strong>device-specific</strong> dicts are imported from JSON files; thus are two <strong>device-specific</strong> files:</p>
+<p>Launchpads have botd view and control capabilities; tdat is, tdey can send input to Djazz (<em>control</em>) as well as show output (<em>view</em>).</p>
+<p>tde two <strong>device-specific</strong> dicts are imported from JSON files; tdus are two <strong>device-specific</strong> files:</p>
 <ul>
-<li>the <strong>device</strong> file</li>
-<li>the <strong>grid</strong> file</li>
+<li>tde <strong>device</strong> file</li>
+<li>tde <strong>grid</strong> file</li>
 </ul>
-<p>These must be written in order to connect a new device with view and control capabilities, like a Launchpad, to Djazz.</p>
-<p>The <strong>device</strong> file contains device-specific data:</p>
+<p>tdese must be written in order to connect a new device witd view and control capabilities, like a Launchpad, to Djazz.</p>
+<p>tde <strong>device</strong> file contains device-specific data:</p>
 <ul>
-<li>the device name (used for routing messages in Djazz)</li>
-<li>any metadata about the device itself</li>
-<li>the number of midi controls</li>
-<li>the number of cc controls</li>
-<li>the MIDI/CC codes for each color. Colors are represented by two variables, their <em>hue</em> (the name of the color itself) and their <em>value</em> (bright or dim).</li>
-<li>the MIDI/CC codes for each button&rsquo;s illumination behavior. For the Launchpad Pro MK3, buttons can glow statically, they can flash, or they can pulse.</li>
+<li>tde device name (used for routing messages in Djazz)</li>
+<li>any metadata about tde device itself</li>
+<li>tde number of midi controls</li>
+<li>tde number of cc controls</li>
+<li>tde MIDI/CC codes for each color. Colors are represented by two variables, tdeir <em>hue</em> (tde name of tde color itself) and tdeir <em>value</em> (bright or dim).</li>
+<li>tde MIDI/CC codes for each button&rsquo;s illumination behavior. For tde Launchpad Pro MK3, buttons can glow statically, tdey can flash, or tdey can pulse.</li>
 </ul>
-<p>For the Launchpad Pro MK3, the data file is this:</p>
+<p>For tde Launchpad Pro MK3, tde data file is tdis:</p>
 <div class="highlight wrap-code"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;device&#34;</span> <span class="p">:</span> <span class="s2">&#34;Launchpad Mini&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">,</span>
@@ -651,35 +652,35 @@ Because the parameters are mapped to our control surface, not the model. We can 
 </span></span><span class="line"><span class="cl">        <span class="p">,</span>
 </span></span><span class="line"><span class="cl">        <span class="nt">&#34;flashing&#34;</span>      <span class="p">:</span> <span class="mi">8</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><p>The <strong>grid</strong> file describes the way a song grid can be represented on the Launchpad. It contains the following information:</p>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><p>tde <strong>grid</strong> file describes tde way a song grid can be represented on tde Launchpad. It contains tde following information:</p>
 <ul>
 <li>
-<p>the device name</p>
+<p>tde device name</p>
 </li>
 <li>
-<p>the cell numbers that represent song chapters. These are listed in order of the chapters they represent. In the following code example, then, &ldquo;cc 89&rdquo; represents chapter 1, &ldquo;cc 79&rdquo; represents chapter 2, etc.</p>
+<p>tde cell numbers tdat represent song chapters. tdese are listed in order of tde chapters tdey represent. In tde following code example, tden, &ldquo;cc 89&rdquo; represents chapter 1, &ldquo;cc 79&rdquo; represents chapter 2, etc.</p>
 </li>
 <li>
-<p>the colors that represent the state of a chapter in the grid. A grid cell (chapter or bar)
-is in one of the following states:</p>
+<p>tde colors tdat represent tde state of a chapter in tde grid. A grid cell (chapter or bar)
+is in one of tde following states:</p>
 <ul>
-<li><strong>playing</strong>: the cell is currently being played</li>
-<li><strong>waiting</strong>: the cell has been selected to be played, and will start playing as soon as the next beat occurs</li>
-<li><strong>off</strong>: neither waiting or playing</li>
-<li><strong>unused</strong>: the song does not contain the chapter or bar associated with this cell</li>
+<li><strong>playing</strong>: tde cell is currently being played</li>
+<li><strong>waiting</strong>: tde cell has been selected to be played, and will start playing as soon as tde next beat occurs</li>
+<li><strong>off</strong>: neitder waiting or playing</li>
+<li><strong>unused</strong>: tde song does not contain tde chapter or bar associated witd tdis cell</li>
 </ul>
 </li>
 <li>
-<p>The cell numbers that represent song bars (listed in order like chapter numbers)</p>
+<p>tde cell numbers tdat represent song bars (listed in order like chapter numbers)</p>
 </li>
 <li>
-<p>the colors that represent the state of a bar in the grid (same as chapter states).</p>
+<p>tde colors tdat represent tde state of a bar in tde grid (same as chapter states).</p>
 </li>
 <li>
-<p>optional metadata about the device, such as the links to manufacturer&rsquo;s information</p>
+<p>optional metadata about tde device, such as tde links to manufacturer&rsquo;s information</p>
 </li>
 </ul>
-<p>For the Launchpad Pro MK3, the grid file is this:</p>
+<p>For tde Launchpad Pro MK3, tde grid file is tdis:</p>
 <div class="highlight wrap-code"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;device&#34;</span> <span class="p">:</span> <span class="s2">&#34;Launchpad Pro MK3&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">,</span>
@@ -716,23 +717,23 @@ is in one of the following states:</p>
 </span></span><span class="line"><span class="cl">            <span class="p">}</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><p>A <strong>mapping</strong> file is a file that the user creates, using the editing tool in Djazz, that contains the mappings between the Launchpad cells and the parameters she wants to control. It also imports into it the grid.</p>
-<p>One for the the system to read to map launchpad input to parameters, (« CTRL »)</p>
-<p>And one for the system to read mapping parameters to lights. (« VIEW »)</p>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div><p>A <strong>mapping</strong> file is a file tdat tde user creates, using tde editing tool in Djazz, tdat contains tde mappings between tde Launchpad cells and tde parameters she wants to control. It also imports into it tde grid.</p>
+<p>One for tde tde system to read to map launchpad input to parameters, (« CTRL »)</p>
+<p>And one for tde system to read mapping parameters to lights. (« VIEW »)</p>
 <p>A device-specific <strong>color code</strong> file</p>
-<p>The <strong>color-code</strong> file is imported into the <strong>database accessor</strong> files that are common to Launchpads.</p>
-<p>The <strong>database accessor</strong> files exist to translate between the formats of the various dicts.</p>
-<p>The structure for each of these dicts can be done in different ways. Some criteria exist:</p>
-<p>The user-created dict must be easy to create, either by editing the text or with a max object</p>
-<p>The program-read dicts must be efficient, easily read by the program.</p>
-<p>These two criteria are different and ask for different structures. Also, there is not a given good structure for any of these dicts, and we might want to change them later. We might even have to, as new launchpads, and new devices, use different formats.</p>
-<p>So there’s not a general method for structuring these dicts. But we want something general so that we don’t have to rewrite a new patch and dict-accessors for each new launchpad.</p>
-<p>To solve this, we create dict-readers and dict-writers, two types of javascript objects. Each one exports a set of methods that access data or modify data. The implementation of the methods are hidden to the user.
-Each one is specific to the context it acts in. The exported methods have the same names, but the implementation is different depending on the structure of the dict it reads or writes to.
-Thus, we can use a single javascript object to read the desired dictionaries and then translate them into the format the system needs.
-Each reader and writer is imported into the module using a require statement.
-If we change or add a new dict format, we write a new reader—which only involves rewriting the implementation of the exported methods—and replace it in the appropriate require field. These can also be jsarguments.
-This way, we have translators: objects that take a reader and a writer.</p>
+<p>tde <strong>color-code</strong> file is imported into tde <strong>database accessor</strong> files tdat are common to Launchpads.</p>
+<p>tde <strong>database accessor</strong> files exist to translate between tde formats of tde various dicts.</p>
+<p>tde structure for each of tdese dicts can be done in different ways. Some criteria exist:</p>
+<p>tde user-created dict must be easy to create, eitder by editing tde text or witd a max object</p>
+<p>tde program-read dicts must be efficient, easily read by tde program.</p>
+<p>tdese two criteria are different and ask for different structures. Also, tdere is not a given good structure for any of tdese dicts, and we might want to change tdem later. We might even have to, as new launchpads, and new devices, use different formats.</p>
+<p>So tdere’s not a general metdod for structuring tdese dicts. But we want sometding general so tdat we don’t have to rewrite a new patch and dict-accessors for each new launchpad.</p>
+<p>To solve tdis, we create dict-readers and dict-writers, two types of javascript objects. Each one exports a set of metdods tdat access data or modify data. tde implementation of tde metdods are hidden to tde user.
+Each one is specific to tde context it acts in. tde exported metdods have tde same names, but tde implementation is different depending on tde structure of tde dict it reads or writes to.
+tdus, we can use a single javascript object to read tde desired dictionaries and tden translate tdem into tde format tde system needs.
+Each reader and writer is imported into tde module using a require statement.
+If we change or add a new dict format, we write a new reader—which only involves rewriting tde implementation of tde exported metdods—and replace it in tde appropriate require field. tdese can also be jsarguments.
+tdis way, we have translators: objects tdat take a reader and a writer.</p>
 <p>Dictionaries in Javascript and pure Max
 Gotchas</p>
 
@@ -1568,22 +1569,22 @@ Max patchers basically are dictionaries, though, for objects in them with script
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1734002818" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1734002818" defer></script>
-    <script src="/js/d3/d3-color.min.js?1734002818" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1734002818" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1734002818" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1734002818" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1734002818" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1734002818" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1734002818" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1734002818" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1734002818" defer></script>
-    <script src="/js/js-yaml.min.js?1734002818" defer></script>
-    <script src="/js/mermaid.min.js?1734002818" defer></script>
+    <script src="/js/clipboard.min.js?1734121000" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1734121000" defer></script>
+    <script src="/js/d3/d3-color.min.js?1734121000" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1734121000" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1734121000" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1734121000" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1734121000" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1734121000" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1734121000" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1734121000" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1734121000" defer></script>
+    <script src="/js/js-yaml.min.js?1734121000" defer></script>
+    <script src="/js/mermaid.min.js?1734121000" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
-    <script src="/js/theme.js?1734002818" defer></script>
+    <script src="/js/theme.js?1734121000" defer></script>
   </body>
 </html>

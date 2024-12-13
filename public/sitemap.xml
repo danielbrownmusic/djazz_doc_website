@@ -94,6 +94,9 @@
     <loc>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_2_factor_oracle_player.html</loc>
   </url>
   <url>
+    <loc>http://localhost:1313/1_manual/2_main_window/2_beat_window_selector.html</loc>
+  </url>
+  <url>
     <loc>http://localhost:1313/3_api/1_abstraction-references/components/beat_clock.html</loc>
   </url>
   <url>
@@ -143,6 +146,9 @@
   </url>
   <url>
     <loc>http://localhost:1313/3_api/6_architecture/pattr_usage.html</loc>
+  </url>
+  <url>
+    <loc>http://localhost:1313/1_manual/2_main_window/4_song_grid.html</loc>
   </url>
   <url>
     <loc>http://localhost:1313/1_manual/5_external-controllers.html</loc>
