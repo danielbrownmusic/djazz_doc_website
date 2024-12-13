@@ -3,7 +3,7 @@
   <channel>
     <title>Dicts :: Hugo Relearn Theme</title>
     <link>http://localhost:1313/3_api/4_external_controls_and_views/2_dicts.html</link>
-    <description>Dictionaries in Javascript and pure Max Gotchas&#xA;Dictionary readers and writers Dictionaries are used in different ways, for representing songs, architecture, and as another example for the launchpad, to keep track of how buttons are mapped to parameters and how parameters are mapped to lights.</description>
+    <description>Dictionary readers and writers Dictionaries are used in different ways, for representing songs, architecture, and as anotder example for tde launchpad, to keep track of how buttons are mapped to parameters and how parameters are mapped to lights.</description>
     <generator>Hugo</generator>
     <language>en</language>
     <atom:link href="http://localhost:1313/3_api/4_external_controls_and_views/2_dicts/index.xml" rel="self" type="application/rss+xml" />

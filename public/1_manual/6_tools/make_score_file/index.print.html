@@ -16,34 +16,33 @@
     <meta property="og:title" content="Making a Score File :: Hugo Relearn Theme">
     <meta property="og:description" content="Score files contain preloaded notes, formatted so that Djazz can play them and use them to improvise.">
     <meta property="og:locale" content="en">
-    <meta property="og:type" content="article">
-    <meta property="article:section" content="Manual">
+    <meta property="og:type" content="website">
     <meta property="og:image" content="http://localhost:1313/images/hero.png">
     <meta itemprop="name" content="Making a Score File :: Hugo Relearn Theme">
     <meta itemprop="description" content="Score files contain preloaded notes, formatted so that Djazz can play them and use them to improvise.">
-    <meta itemprop="wordCount" content="430">
+    <meta itemprop="wordCount" content="515">
     <meta itemprop="image" content="http://localhost:1313/images/hero.png">
     <title>Making a Score File :: Hugo Relearn Theme</title>
     <link href="http://localhost:1313/1_manual/6_tools/make_score_file.html" rel="canonical" type="text/html" title="Making a Score File :: Hugo Relearn Theme">
     <link href="/1_manual/6_tools/make_score_file/index.xml" rel="alternate" type="application/rss+xml" title="Making a Score File :: Hugo Relearn Theme">
-    <link href="/css/fontawesome-all.min.css?1733431473" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1733431473" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1733431473" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733431473" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1733431473" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1733431473" rel="stylesheet">
-    <link href="/css/fonts.css?1733431473" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1733431473" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1733431473" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1733431473" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1733431473" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1733431473" rel="stylesheet">
-    <link href="/css/print.css?1733431473" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1733431473" rel="stylesheet">
-    <script src="/js/variant.js?1733431473"></script>
+    <link href="/css/fontawesome-all.min.css?1734096072" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734096072" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1734096072" rel="stylesheet">
+    <link href="/css/auto-complete.css?1734096072" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734096072" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1734096072" rel="stylesheet">
+    <link href="/css/fonts.css?1734096072" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1734096072" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1734096072" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1734096072" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1734096072" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1734096072" rel="stylesheet">
+    <link href="/css/print.css?1734096072" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1734096072" rel="stylesheet">
+    <script src="/js/variant.js?1734096072"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
-      window.index_js_url="/index.search.js?1733431473";
+      window.index_js_url="/index.search.js?1734096072";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -94,60 +93,62 @@
 
 <h1 id="making-a-score-file">Making a Score File</h1>
 
+<p><a href="#R-image-8d263551ae2a2cd20d44fa3b740c1b82" class="lightbox-link"><img alt="make score file tool" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/make-score-file-tool.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8d263551ae2a2cd20d44fa3b740c1b82"><img alt="make score file tool" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/make-score-file-tool.png"></a></p>
 <p>Score files contain preloaded notes, formatted so that Djazz can play them and use them to improvise.
 Djazz comes preloaded with many score files of jazz standards and songs from Madagascar. You can also
 convert your own MIDI files into Djazz scores with the <em>make_score_file</em> Max patcher, located in the <em>tools</em> folder.</p>
 <ol>
 <li>
 <p>Load a song file
-If you haven&rsquo;t yet made a song file for this song, make one using the <a href="/1_manual/6_tools/make_score_file.html">make_song_file</a> tool.</p>
+<a href="#R-image-6f397d7de4ad4dea4c692e3db42ee850" class="lightbox-link"><img alt="load song file" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/load_song_file.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6f397d7de4ad4dea4c692e3db42ee850"><img alt="load song file" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/load_song_file.png"></a>
+If you haven&rsquo;t yet made a song file for this song, make one using the<a href="/1_manual/6_tools/make_score_file.html">make_song_file</a> tool.
+Import the song file by pressing the LOAD button. If the file is loaded properly, the light on the left side will illuminate.</p>
 </li>
 <li>
 <p>Load a click track
+<a href="#R-image-e02256b4899cf0f9f4c58e78e9ec4e7d" class="lightbox-link"><img alt="load click track" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/make_click_track.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e02256b4899cf0f9f4c58e78e9ec4e7d"><img alt="load click track" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/make_click_track.png"></a>
 A click track is needed to divide the notes in the MIDI tracks into the proper beats.
-A click track must</p>
-<p>be a MIDI file
-contain a single MIDI event at the beginning of each beat</p>
-<p>MIDI events must be at pitch C1</p>
-<p>They must be the same length (in beats) as the MIDI tracks with the notes</p>
-<p>They must be exported at the same tempo as the notes.</p>
+A click track must be imported from a MIDI file in which eat beat is designated by a single MIDI event at pitch C1 and non-zero velocity
+The click track be exported at the same tempo as the notes.
+<a href="#R-image-9eccdbf30a3a8204514ef9ebf1620a60" class="lightbox-link"><img alt="click track image" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/midi_click_track.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9eccdbf30a3a8204514ef9ebf1620a60"><img alt="click track image" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/midi_click_track.png"></a>
+Import the MIDI file by pressing the &ldquo;IMPORT MIDI&rdquo; button and selecting the file from the dialog that opens.
+Once imported, you can save this file to a JSON format using the &ldquo;SAVE JSON&rdquo; button.
+If the click track file is loaded properly, the light on the left side will illuminate.</p>
+</li>
+<li>
+<p>If both the song file and click track have loaded successfully, the regions for loading MIDI tracks will be activated.
+You can load either a single MIDI track, or multiple tracks at once. If you import multiple tracks, the resulting JSON file will represent a Djazz <em>score</em>, which you will need to put into a folder in order to play it in Djazz (see below).
+<a href="#R-image-d24a116b91e0494763882bf4b54114d3" class="lightbox-link"><img alt="make multiple tracks" class="bg-white border lazy lightbox noshadow figure-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/make-score-file-tool-make-multiple-tracks.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d24a116b91e0494763882bf4b54114d3"><img alt="make multiple tracks" class="bg-white border lazy lightbox noshadow lightbox-image" loading="lazy" src="/1_manual/6_tools/make_score_file/images/make-score-file-tool-make-multiple-tracks.png"></a></p>
+<p><strong>Tracks available for Djazz are 3 through 15, because tracks 1 and 2 are used for Live MIDI. Make sure the MIDI tracks are exported from your DAW with appropriate track numbers.</strong></p>
+<p>Once you have imported, either in the single or multiple MIDI track format, save your import by pressing the SAVE button. The resulting file will be a JSON file.</p>
+<p>To play a <em>single</em> MIDI track, see these instructions.</p>
+<p>To play <em>multiple</em> MIDI tracks, you need to put your saved file in an appropriately named folder.</p>
+<p>MAKING SCORE FOLDERS</p>
+<p>Multiple MIDI tracks saved together are called a <em>score</em> in Djazz. Score files and their corresponding song files need to be organized into a certain folder structure&ndash;a <strong>song folder</strong>&ndash;for Djazz to read them.</p>
+<p>The format for a <strong>song folder</strong> is this:</p>
 </li>
 </ol>
-<p>HOW TO MAKE A NEW SONG FILE FOR DJAZZ.</p>
-<p>A song file is not a score file. It does not contain any notes to play. It contains the navigation information in the song: chapters, bars, beats chord labels, and tempo, in order to make the grid and send the master clock and factor oracle the appropriate data.</p>
-<p>Here is how to make one. There are seven (7) steps listed below.</p>
-<ol>
-<li>
-<p>Open the patcher “djazz.make_song_file.maxpat” from the folder “patchers/data_conversion_tools” in the current djazz folder.</p>
-</li>
-<li>
-<p>In the appropriate fields, put in the song name, beat count, tempo, time signature, and the starting bars for each chapter. This data is exactly the same, and in the same order, as the data listed for the songs in the old Djazz version, EXCEPT FOR ONE DIFFERENCE: don’t use quotation marks when you put in the start bars. Only put in the list of numbers (and don’t use commas).</p>
-</li>
-<li>
-<p>Put the grid data in the “grid data” box. Put it in (or copy and paste it) in LISP-style notation, where each entry is a list:  ( chord-root   chord-type-symbol   number-of-measures  )
-Do not use outer parentheses for the whole list of lists.
-Do not include any comments or semi-colons.
-Spacing and indentation is not important.</p>
-</li>
-</ol>
-<p>￼</p>
-<ol start="4">
-<li>
-<p>Press the “save” button.</p>
-</li>
-<li>
-<p>Save the song file in the folder of the same song name that contains the subfolders “new” and “new2.” The file name and the song folder name should be exactly the same.</p>
-</li>
-</ol>
-<p>￼</p>
-<ol start="6">
-<li>
-<p>That’s all. If the folder you put the new song file in has scores in its “new” and “new2” subfolders, this song can now be played as usual by Djazz.</p>
-</li>
-<li>
-<p>Press the “clear” button to clear the data.</p>
-</li>
-</ol>
+<div class="highlight wrap-code"><pre tabindex="0"><code>MySongFolder
+├── MySongFolder.json
+├── new
+│   ├── score_1.json
+│   ├── another_score.json
+│   ├── another-score_1.json
+│   └── ... 
+├── new2
+│   ├── some_score.json
+│   └── may_song_score.json
+│   └── ...</code></pre></div><p>The song folder must have the same name as the JSON song file.
+The top level of the song folder contains three things:
+- the JSON song file
+- two directories for score files. These directories must be labeled &ldquo;new&rdquo; and &ldquo;new2.&rdquo;</p>
+<p>The contents of the two score directories will be loaded when a song folder is loaded and <a href="/1_manual/6_tools/make_score_file.html">their contents displayed in the respective dropdown menus</a>.</p>
+<p>A song folder placed into the <em>djazz_user/scores</em> folder inside the Djazz directory will appear in the <a href="/1_manual/6_tools/make_score_file.html">song dropdown menu</a>.</p>
 
             <footer class="footline">
             </footer>
@@ -156,8 +157,8 @@ Spacing and indentation is not important.</p>
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1733431473" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1733431473" defer></script>
-    <script src="/js/theme.js?1733431473" defer></script>
+    <script src="/js/clipboard.min.js?1734096072" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1734096072" defer></script>
+    <script src="/js/theme.js?1734096072" defer></script>
   </body>
 </html>
