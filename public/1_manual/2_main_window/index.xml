@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Djazz Main Window :: Hugo Relearn Theme</title>
+    <title>Main Window :: Hugo Relearn Theme</title>
     <link>http://localhost:1313/1_manual/2_main_window.html</link>
     <description>1. MIDI/audio window selectors Clicking on the button labeled “MIDI” or “Audio” will open and close the MIDI or audio interface window, respectively.</description>
     <generator>Hugo</generator>
@@ -20,6 +20,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/1_manual/2_main_window/4_song_grid.html</guid>
       <description>When a song is loaded, its grid will appear. The cells of the grid change color depending on whether Djazz is engaged and whether a cell is currently playing or not.</description>
+    </item>
+    <item>
+      <title>MIDI Input Selector</title>
+      <link>http://localhost:1313/1_manual/2_main_window/8_midi_input_selector.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1_manual/2_main_window/8_midi_input_selector.html</guid>
+      <description>1. MIDI Flush This will clear any sounding MIDI output.</description>
     </item>
   </channel>
 </rss>

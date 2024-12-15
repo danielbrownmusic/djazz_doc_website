@@ -1,5 +1,4 @@
 +++
-archetype = "chapter"
 title = "supervp"
 weight = 30
 +++

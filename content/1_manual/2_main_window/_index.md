@@ -1,13 +1,12 @@
 +++
 alwaysopen = "false"
-title = "Djazz Main Window"
+title = "Main Window"
 weight = 20  
 +++
 
 
 
 ![pic1](images/djazz-main-window-numbered.png)
-
 
 ## 1. MIDI/audio window selectors
 ![pic1](images/midi-audio-window-select.png?width=20vw)
@@ -37,49 +36,34 @@ To load a song grid, select a song using one of these controls. Songs are loaded
 4. **BEAT** Number of current beat playing
 5. **LABEL** Label of current beat playing, according to the loaded [song file](#3-song-selector)
 
-
-## 5. PLAYBACK DATA VIEW
-![pic1](images/main_window_data_view.png)
-### Beats in song
-When a song is loaded, this shows the first and last beat of the song.
-### Section is looped
-
-### Beats in section (chapter)
-When a song is loaded, this shows the first and last beat of the current chapter.
-
-# Tempo
-This shows the current playback tempo. When the metronome is playing, this will be the same as (sometimes fluctuating extremely slightly from) the metronome tempo. When a manual tap 
-
-### Current beat
-### Current beat label
-
-
 ## 6. Global Effects
 ![global effects](images/global-effects.png)
 
-These effects are the same as the ones used in MIDI scores, MIDI tracks, and audio tracks. Changing a control in the global effects bar will change the corresponding effect in every one of these other effects bars.
+These effects are the same as the [ones used in MIDI scores, MIDI tracks, and audio tracks](). Changing a control in the global effects bar will change the corresponding effect in every one of these other effects bars.
 
 ## 7. GLOBAL AUDIO INPUT/OUTPUT
-### Audio On
-Clicking on either the microphone-icon button or the loudspeaker-icon button will turn the audio on.
-### Audio In Level (Microphone)
 ![pic1](images/audio-io-window.png)
-Controls the level of the audio input. The button labeled "M" below the microphone-icon button mutes audio input.
+
+### Audio On
+Clicking on either the microphone icon or the loudspeaker icon will turn the audio on.
+
+### Audio Monitor Level (Microphone)
+
+Controls the monitor level of the audio input. The button labeled "M" below the microphone-icon button mutes audio input.
+
 ### Audio Record Level
-Controls the recorded volume level of the audio input.
+Controls the recorded volume level of the audio input. The button labeled "M" below the microphone-icon button mutes audio input.
 
 ### Audio Out (Speakers)
 Controls the level of the global audio output. The button labeled "M" below the loudspeaker-icon button mutes audio output.
 
-## 8. MIDI Input Window
-![pic1](images/midi-io-window-numbered.png)
+## 8. [MIDI Input Selector](8_midi_input_selector)
 
 ## 9. External Controllers Selection Menu
+When an external controller such as a Launchpad is plugged in, its name will appear in the dropdown menu. If Djazz supports it, selecting its name from the dropdown menu will open its [interface window]().
 
 ## 10. UDP Send Port Select
-![pic1](images/udp-send.png)
+Select the host and port to send [view messages]() from Djazz.
 
-## 11. Settings Window Open/Close Button
-![pic1](images/settings-button.png)
 
-![pic1](images/settings-window.png)
+## 11. [Settings Window Open/Close Button]()

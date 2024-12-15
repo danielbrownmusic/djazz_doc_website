@@ -70,5 +70,19 @@
       <guid>http://localhost:1313/1_manual/9_saving_and_loading_files.html</guid>
       <description>Djazz saves files together in folders.</description>
     </item>
+    <item>
+      <title>View Messages</title>
+      <link>http://localhost:1313/1_manual/10_view_messages.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1_manual/10_view_messages.html</guid>
+      <description>The following messages are sent out of Djazz via its UDP send port:</description>
+    </item>
+    <item>
+      <title>Settings</title>
+      <link>http://localhost:1313/1_manual/11_settings.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1_manual/11_settings.html</guid>
+      <description> </description>
+    </item>
   </channel>
 </rss>
