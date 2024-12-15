@@ -67,3 +67,57 @@ PresetIn-->PattrStorage
 PattrStorage-->PattrOut
 
 {{< /mermaid >}}
+
+
+### Stochastic LFO with Kuramoto-model coupling.
+<!-- Brief Description -->
+
+###### Outputs a sine-squared amplitude envelope with several settable stochastic parameters.  
+When different instances of this object are "coupled" by connecting their right inlets and outlets,
+    their *coupling_strength* can be changed, causing their LFOs to synchronize or alternate.
+
+# INLETS
+
+### 0:   int/signal/message  
+**signal**: audio (mono) signal to be amplitude modulated.  
+**int**: zero turns off, anything else turns on.  
+**message**: see messages reference.  
+<!-- Full Description  -->
+<!-- INLET -->
+
+### 1: signal
+###### Connect other cicadas to this inlet.
+When the right outlet of another cicada is connected to this inlet, this cicada "listens" to the other one.  
+Change this cicada's *coupling_strength* attribute to change how the other cicada's behavior affects this one.
+
+# OUTLETS
+
+### 0 &emsp; signal
+###### The amplitude-modulated signal.   
+If there is an input signal, this will output the amplitude-modulated signal. 
+If no input signal and [chirp_on_signal]() is zero, this will output the amplitude envelope.
+If no input signal and [chirp_on_signal]() is non-zero, this will not output.  
+
+### 1 &emsp;  bang
+###### _bang_  when amplitude envelope is zero</digest>
+<!-- Brief Description -->
+
+<!-- OUTLETS -->
+
+# ATTRIBUTES
+
+### amplitude_randomness  &emsp; _float_  &emsp; (set) 
+###### Range: 0 to 1
+At 0 all chirps will have peak value 1.0. Increase to randomize peak values. Follows a normal (Gaussian) distribution. Default is zero.
+
+### chirp_length_mean _float_ (set)
+###### In milliseconds. Follows a normal (Gaussian) distribution. Default is 300 ms.
+
+# MESSAGES
+### _int_  
+###### Left inlet: 0 turns off, anything else turns on. Default is on.  
+  
+
+# SEE ALSO
+[_cicada_chorus_control_]()
+      

@@ -21,29 +21,29 @@
     <meta property="og:image" content="http://localhost:1313/images/hero.png">
     <meta itemprop="name" content="djazz :: Hugo Relearn Theme">
     <meta itemprop="description" content="flowchart TB; AudioIn1((Audio\nIn L)) AudioIn2((Audio\nIn R)) MidiIn((MIDI In)) TapIn((Tap\nIn)) PattrIn((Pattr\nIn)) DataIn((File\nData\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master &#34;.">
-    <meta itemprop="wordCount" content="72">
+    <meta itemprop="wordCount" content="292">
     <meta itemprop="image" content="http://localhost:1313/images/hero.png">
     <title>djazz :: Hugo Relearn Theme</title>
     <link href="http://localhost:1313/3_api/1_abstraction-references/main_components/djazz.html" rel="canonical" type="text/html" title="djazz :: Hugo Relearn Theme">
     <link href="/3_api/1_abstraction-references/main_components/djazz/index.xml" rel="alternate" type="application/rss+xml" title="djazz :: Hugo Relearn Theme">
-    <link href="/css/fontawesome-all.min.css?1734124000" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734124000" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1734124000" rel="stylesheet">
-    <link href="/css/auto-complete.css?1734124000" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734124000" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1734124000" rel="stylesheet">
-    <link href="/css/fonts.css?1734124000" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1734124000" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1734124000" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1734124000" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1734124000" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1734124000" rel="stylesheet">
-    <link href="/css/print.css?1734124000" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1734124000" rel="stylesheet">
-    <script src="/js/variant.js?1734124000"></script>
+    <link href="/css/fontawesome-all.min.css?1734203562" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734203562" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1734203562" rel="stylesheet">
+    <link href="/css/auto-complete.css?1734203562" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734203562" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1734203562" rel="stylesheet">
+    <link href="/css/fonts.css?1734203562" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1734203562" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1734203562" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1734203562" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1734203562" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1734203562" rel="stylesheet">
+    <link href="/css/print.css?1734203562" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1734203562" rel="stylesheet">
+    <script src="/js/variant.js?1734203562"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
-      window.index_js_url="/index.search.js?1734124000";
+      window.index_js_url="/index.search.js?1734203562";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -158,6 +158,43 @@ PresetIn--&gt;PattrStorage
 PattrStorage--&gt;PattrOut
 
 </pre>
+<h3 id="stochastic-lfo-with-kuramoto-model-coupling">Stochastic LFO with Kuramoto-model coupling.</h3>
+<!-- Brief Description -->
+<h6 id="outputs-a-sine-squared-amplitude-envelope-with-several-settable-stochastic-parameters">Outputs a sine-squared amplitude envelope with several settable stochastic parameters.</h6>
+<p>When different instances of this object are &ldquo;coupled&rdquo; by connecting their right inlets and outlets,
+their <em>coupling_strength</em> can be changed, causing their LFOs to synchronize or alternate.</p>
+<h1 id="inlets">INLETS</h1>
+<h3 id="0---intsignalmessage">0:   int/signal/message</h3>
+<p><strong>signal</strong>: audio (mono) signal to be amplitude modulated.<br>
+<strong>int</strong>: zero turns off, anything else turns on.<br>
+<strong>message</strong>: see messages reference.</p>
+<!-- Full Description  -->
+<!-- INLET -->
+<h3 id="1-signal">1: signal</h3>
+<h6 id="connect-other-cicadas-to-this-inlet">Connect other cicadas to this inlet.</h6>
+<p>When the right outlet of another cicada is connected to this inlet, this cicada &ldquo;listens&rdquo; to the other one.<br>
+Change this cicada&rsquo;s <em>coupling_strength</em> attribute to change how the other cicada&rsquo;s behavior affects this one.</p>
+<h1 id="outlets">OUTLETS</h1>
+<h3 id="0-emsp-signal">0   signal</h3>
+<h6 id="the-amplitude-modulated-signal">The amplitude-modulated signal.</h6>
+<p>If there is an input signal, this will output the amplitude-modulated signal.
+If no input signal and <a href="/3_api/1_abstraction-references/main_components/djazz.html">chirp_on_signal</a> is zero, this will output the amplitude envelope.
+If no input signal and <a href="/3_api/1_abstraction-references/main_components/djazz.html">chirp_on_signal</a> is non-zero, this will not output.</p>
+<h3 id="1-emsp--bang">1    bang</h3>
+<h6 id="_bang_--when-amplitude-envelope-is-zerodigest"><em>bang</em>  when amplitude envelope is zero</digest></h6>
+<!-- Brief Description -->
+<!-- OUTLETS -->
+<h1 id="attributes">ATTRIBUTES</h1>
+<h3 id="amplitude_randomness--emsp-_float_--emsp-set">amplitude_randomness    <em>float</em>    (set)</h3>
+<h6 id="range-0-to-1">Range: 0 to 1</h6>
+<p>At 0 all chirps will have peak value 1.0. Increase to randomize peak values. Follows a normal (Gaussian) distribution. Default is zero.</p>
+<h3 id="chirp_length_mean-_float_-set">chirp_length_mean <em>float</em> (set)</h3>
+<h6 id="in-milliseconds-follows-a-normal-gaussian-distribution-default-is-300-ms">In milliseconds. Follows a normal (Gaussian) distribution. Default is 300 ms.</h6>
+<h1 id="messages">MESSAGES</h1>
+<h3 id="_int_"><em>int</em></h3>
+<h6 id="left-inlet-0-turns-off-anything-else-turns-on-default-is-on">Left inlet: 0 turns off, anything else turns on. Default is on.</h6>
+<h1 id="see-also">SEE ALSO</h1>
+<p><a href="/3_api/1_abstraction-references/main_components/djazz.html"><em>cicada_chorus_control</em></a></p>
 
             <footer class="footline">
             </footer>
@@ -166,22 +203,22 @@ PattrStorage--&gt;PattrOut
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1734124000" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1734124000" defer></script>
-    <script src="/js/d3/d3-color.min.js?1734124000" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1734124000" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1734124000" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1734124000" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1734124000" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1734124000" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1734124000" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1734124000" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1734124000" defer></script>
-    <script src="/js/js-yaml.min.js?1734124000" defer></script>
-    <script src="/js/mermaid.min.js?1734124000" defer></script>
+    <script src="/js/clipboard.min.js?1734203562" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1734203562" defer></script>
+    <script src="/js/d3/d3-color.min.js?1734203562" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1734203562" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1734203562" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1734203562" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1734203562" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1734203562" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1734203562" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1734203562" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1734203562" defer></script>
+    <script src="/js/js-yaml.min.js?1734203562" defer></script>
+    <script src="/js/mermaid.min.js?1734203562" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
-    <script src="/js/theme.js?1734124000" defer></script>
+    <script src="/js/theme.js?1734203562" defer></script>
   </body>
 </html>

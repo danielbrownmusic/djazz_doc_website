@@ -73,7 +73,7 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
-    "content": " flowchart TB; AudioIn1((Audio\\nIn L)) AudioIn2((Audio\\nIn R)) MidiIn((MIDI In)) TapIn((Tap\\nIn)) PattrIn((Pattr\\nIn)) DataIn((File\\nData\\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master \"./../components/master_control.html\" \"Master Control\" click Audio \"audio.html\" \"Master Control\" click Midi \"midi.html\" \"Master Control\" AudioOut1(((Audio\\nOut 1L))) AudioOut2(((Audio\\nOut 1R))) AudioOut3(((Audio\\nOut 2L))) AudioOut4(((Audio\\nOut 2R))) AudioOut5(((Audio\\nOut 3L))) AudioOut6(((Audio\\nOut 3R))) MidiOut(((MIDI Out))) PattrOut(((Pattr Out))) AudioIn1---\u003eAudio AudioIn2---\u003eAudio TapIn--\u003eMaster PattrIn--\u003eMaster PattrIn--\u003eAudio PattrIn--\u003eMidi DataIn--\u003eAudio DataIn--\u003eMidi DataIn--\u003eMaster Master--\u003eAudio Master--\u003eMidi MidiIn--\u003eMidi Audio--\u003eAudioOut1 Audio--\u003eAudioOut2 Audio--\u003eAudioOut3 Audio--\u003eAudioOut4 Audio--\u003eAudioOut5 Audio--\u003eAudioOut6 Midi--\u003eMidiOut PresetIn--\u003ePattrStorage PattrStorage--\u003ePattrOut ",
+    "content": " flowchart TB; AudioIn1((Audio\\nIn L)) AudioIn2((Audio\\nIn R)) MidiIn((MIDI In)) TapIn((Tap\\nIn)) PattrIn((Pattr\\nIn)) DataIn((File\\nData\\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master \"./../components/master_control.html\" \"Master Control\" click Audio \"audio.html\" \"Master Control\" click Midi \"midi.html\" \"Master Control\" AudioOut1(((Audio\\nOut 1L))) AudioOut2(((Audio\\nOut 1R))) AudioOut3(((Audio\\nOut 2L))) AudioOut4(((Audio\\nOut 2R))) AudioOut5(((Audio\\nOut 3L))) AudioOut6(((Audio\\nOut 3R))) MidiOut(((MIDI Out))) PattrOut(((Pattr Out))) AudioIn1---\u003eAudio AudioIn2---\u003eAudio TapIn--\u003eMaster PattrIn--\u003eMaster PattrIn--\u003eAudio PattrIn--\u003eMidi DataIn--\u003eAudio DataIn--\u003eMidi DataIn--\u003eMaster Master--\u003eAudio Master--\u003eMidi MidiIn--\u003eMidi Audio--\u003eAudioOut1 Audio--\u003eAudioOut2 Audio--\u003eAudioOut3 Audio--\u003eAudioOut4 Audio--\u003eAudioOut5 Audio--\u003eAudioOut6 Midi--\u003eMidiOut PresetIn--\u003ePattrStorage PattrStorage--\u003ePattrOut Stochastic LFO with Kuramoto-model coupling. Outputs a sine-squared amplitude envelope with several settable stochastic parameters. When different instances of this object are “coupled” by connecting their right inlets and outlets, their coupling_strength can be changed, causing their LFOs to synchronize or alternate.\nINLETS 0: int/signal/message signal: audio (mono) signal to be amplitude modulated.\nint: zero turns off, anything else turns on.\nmessage: see messages reference.\n1: signal Connect other cicadas to this inlet. When the right outlet of another cicada is connected to this inlet, this cicada “listens” to the other one.\nChange this cicada’s coupling_strength attribute to change how the other cicada’s behavior affects this one.\nOUTLETS 0 signal The amplitude-modulated signal. If there is an input signal, this will output the amplitude-modulated signal. If no input signal and chirp_on_signal is zero, this will output the amplitude envelope. If no input signal and chirp_on_signal is non-zero, this will not output.\n1 bang bang when amplitude envelope is zero ATTRIBUTES amplitude_randomness float (set) Range: 0 to 1 At 0 all chirps will have peak value 1.0. Increase to randomize peak values. Follows a normal (Gaussian) distribution. Default is zero.\nchirp_length_mean float (set) In milliseconds. Follows a normal (Gaussian) distribution. Default is 300 ms. MESSAGES int Left inlet: 0 turns off, anything else turns on. Default is on. SEE ALSO cicada_chorus_control",
     "description": "flowchart TB; AudioIn1((Audio\\nIn L)) AudioIn2((Audio\\nIn R)) MidiIn((MIDI In)) TapIn((Tap\\nIn)) PattrIn((Pattr\\nIn)) DataIn((File\\nData\\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master \".",
     "tags": [],
     "title": "djazz",
@@ -102,6 +102,14 @@ var relearn_search_index = [
     "tags": [],
     "title": "Installation",
     "uri": "/1_manual/1_installation.html"
+  },
+  {
+    "breadcrumb": "Manual \u003e Audio Window",
+    "content": " These controls are similar to the audio live input controls.\nWhen clicked and illuminated, the record button arms the buffer for recording. It does not start recording until the first beat that advances the grid.\n1. Save/Load/Clear Live Input Session Save the current a audio live session. These sessions are saved as folders (see [saving and loading files]({{ .Page.Dir }})) containing - an audio file in WAV format - a JSON file containing beat, note, label, and repetition metadata, so that this can be reloaded into a Live Input session.\nNote: to save and load an audio file, you actually save and load a folder. Just name the folder in the dialog window, and the folder will be created and appropriately named files (.wav and .json) will be saved in the folder. For loading, choose the folder from the dialog.\n2. Input Track Repetitions Each oval in the track represents a repetition of the current looped section. When recording, each time the end of the section is reached, a new oval will illuminate.\n3. Maximum Number of Repetitions This selects the maximum number of repetitions that can be recorded. The default is 16.\n4. Output track repetitions There are two audio live input tracks. They use audio outs are 1 and 2. Ovals can be selected to be played if the corresponding input oval is illuminated.",
+    "description": "These controls are similar to the audio live input controls.",
+    "tags": [],
+    "title": "Live Input",
+    "uri": "/1_manual/4_audio_window/1_live_input.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -134,6 +142,14 @@ var relearn_search_index = [
     "tags": [],
     "title": "Making a Song File",
     "uri": "/1_manual/7_tools/make_song_file.html"
+  },
+  {
+    "breadcrumb": "Manual \u003e MIDI Window",
+    "content": " When clicked and illuminated, the record button arms the buffer for recording. It does not start recording until the first beat that advances the grid.\n1. Save/Load/Clear Live Input Session Save the current a MIDI live session. These sessions are saved as folders (see [saving and loading files]({{ .Page.Dir }})) containing - a MIDI file - a JSON file containing beat, note, label, and repetition metadata, so that this can be reloaded into a Live Input session. This is not the same format as score files, and will not load into the [score file loader].\n2. Input Track Repetitions Each oval in the track represents a repetition of the current looped section. When recording, each time the end of the section is reached, a new oval will illuminate.\n3. Maximum Number of Repetitions This selects the maximum number of repetitions that can be recorded. The default is 16.\n4. Output track repetitions There are two MIDI live input tracks. They use MIDI outs are 1 and 2. Ovals can be selected to be played if the corresponding input oval is illuminated.",
+    "description": "When clicked and illuminated, the record button arms the buffer for recording.",
+    "tags": [],
+    "title": "MIDI Live Input View",
+    "uri": "/1_manual/3_midi_window/1_live_input.html"
   },
   {
     "breadcrumb": "API \u003e Notes on databases in Max",
@@ -208,6 +224,14 @@ var relearn_search_index = [
     "uri": "/3_api/7_going_further/factor_oracle_creation.html"
   },
   {
+    "breadcrumb": "Manual \u003e Audio Window",
+    "content": " ",
+    "description": " ",
+    "tags": [],
+    "title": "Live Output",
+    "uri": "/1_manual/4_audio_window/2_live_output.html"
+  },
+  {
     "breadcrumb": "Manual \u003e Tools",
     "content": " Score files contain preloaded notes, formatted so that Djazz can play them and use them to improvise. Djazz comes preloaded with many score files of jazz standards and songs from Madagascar. You can also convert your own MIDI files into Djazz scores with the make_score_file Max patcher, located in the tools folder.\nLoad a song file If you haven’t yet made a song file for this song, make one using themake_song_file tool. Import the song file by pressing the LOAD button. If the file is loaded properly, the light on the left side will illuminate.\nLoad a click track A click track is needed to divide the notes in the MIDI tracks into the proper beats. A click track must be imported from a MIDI file in which eat beat is designated by a single MIDI event at pitch C1 and non-zero velocity The click track be exported at the same tempo as the notes. Import the MIDI file by pressing the “IMPORT MIDI” button and selecting the file from the dialog that opens. Once imported, you can save this file to a JSON format using the “SAVE JSON” button. If the click track file is loaded properly, the light on the left side will illuminate.\nIf both the song file and click track have loaded successfully, the regions for loading MIDI tracks will be activated. You can load either a single MIDI track, or multiple tracks at once. If you import multiple tracks, the resulting JSON file will represent a Djazz score, which you will need to put into a folder in order to play it in Djazz (see below). Tracks available for Djazz are 3 through 15, because tracks 1 and 2 are used for Live MIDI. Make sure the MIDI tracks are exported from your DAW with appropriate track numbers.\nOnce you have imported, either in the single or multiple MIDI track format, save your import by pressing the SAVE button. The resulting file will be a JSON file.\nTo play a single MIDI track, see these instructions.\nTo play multiple MIDI tracks, you need to put your saved file in an appropriately named folder.\nMAKING SCORE FOLDERS\nMultiple MIDI tracks saved together are called a score in Djazz. Score files and their corresponding song files need to be organized into a certain folder structure–a song folder–for Djazz to read them.\nThe format for a song folder is this:\nMySongFolder ├── MySongFolder.json ├── new │ ├── score_1.json │ ├── another_score.json │ ├── another-score_1.json │ └── ... ├── new2 │ ├── some_score.json │ └── may_song_score.json │ └── ...The song folder must have the same name as the JSON song file. The top level of the song folder contains three things: - the JSON song file - two directories for score files. These directories must be labeled “new” and “new2.”\nThe contents of the two score directories will be loaded when a song folder is loaded and their contents displayed in the respective dropdown menus.\nA song folder placed into the djazz_user/scores folder inside the Djazz directory will appear in the song dropdown menu.",
     "description": "Score files contain preloaded notes, formatted so that Djazz can play them and use them to improvise.",
@@ -217,8 +241,8 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "Manual \u003e MIDI Window",
-    "content": " Score Player/Loader Window Score Loader ",
-    "description": " Score Player/Loader Window Score Loader ",
+    "content": " Score Player/Loader Window MIDI scores are made up of multiple MIDI tracks. They are saved in a special format. When a score is loaded, the corresponding MIDI tracks will load. Effect controls in each score bar will change all the effects in the tracks belonging to the score.\nDjazz uses two scores. They correspond to the following tracks:\nScore 1: Tracks 8-15 Score 2: Tracks 3-7\nScore Loader Scores can be loaded by dragging a score onto the button with an icon of a folder. If a song folder is loaded that contains scores in its new and new2 subdirectories, these scores will be available in the dropdown menus. Choosing a score from the menu will load it.",
+    "description": "Score Player/Loader Window MIDI scores are made up of multiple MIDI tracks.",
     "tags": [],
     "title": "MIDI Scores View",
     "uri": "/1_manual/3_midi_window/2_scores_view.html"
@@ -264,6 +288,14 @@ var relearn_search_index = [
     "uri": "/1_manual/2_main_window/2_beat_window_selector.html"
   },
   {
+    "breadcrumb": "Manual \u003e Audio Window",
+    "content": " The audio out bank contains three (3) audio output controls. These are similar to MIDI output controls.\nVolume Dial Changes the volume of the MIDI track. If you click just above the dial, the dial will reset to its default value of 80.\nActive Button If not illuminated, the MIDI track will not be audible, and its volume in the volume meter will be gray. When illuminated, the MIDI track will be audible.\nSolo Button When illuminated, this will “solo” the MIDI track. If a single track is soloed, it is the only track that you will hear. If several MIDI tracks are soloed, only these tracks will be audible. If no tracks are soloed, all the tracks will be audible.\nVolume Meter Shows the level of the MIDI output. When a track is inactive, this will be grey. When active, the output will be green, orange, and red, depending on the volume level.",
+    "description": "The audio out bank contains three (3) audio output controls.",
+    "tags": [],
+    "title": "Audio Out Bank",
+    "uri": "/1_manual/4_audio_window/3_audio_out_bank.html"
+  },
+  {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
     "content": "",
     "description": "",
@@ -297,16 +329,16 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "Manual \u003e MIDI Window",
-    "content": " When clicked and illuminated, the record button arms the buffer for recording. It does not start recording until the first beat that advances the grid.\nRecording MIDI ",
-    "description": "When clicked and illuminated, the record button arms the buffer for recording.",
+    "content": " The MIDI out bank contains 15 tracks output controls.\n1-2: Live Output\n3-15: Tracks/Score output\nVolume Dial Changes the volume of the MIDI track. If you click just above the dial, the dial will reset to its default value of 80.\nActive Button If not illuminated, the MIDI track will not be audible, and its volume in the volume meter will be gray. When illuminated, the MIDI track will be audible.\nSolo Button When illuminated, this will “solo” the MIDI track. If a single track is soloed, it is the only track that you will hear. If several MIDI tracks are soloed, only these tracks will be audible. If no tracks are soloed, all the tracks will be audible.\nVolume Meter Shows the level of the MIDI output. When a track is inactive, this will be grey. When active, the output will be green, orange, and red, depending on the volume level.\nChannel Select Allows the user to change the MIDI channel of track. Options are 1 through 16.\nPort Select Allows the user to select the output port of the MIDI track. These are usually Max’s internal MIDI playback (which will be called something like “DAC synth”), and outputs to other applications (called “from Max 1” and “from Max 2”).\nGlobal Port Select: This changes the output port of all the MIDI channels.",
+    "description": "The MIDI out bank contains 15 tracks output controls.",
     "tags": [],
-    "title": "MIDI Live Input View",
-    "uri": "/1_manual/3_midi_window/1_live_input.html"
+    "title": "MIDI Out Bank",
+    "uri": "/1_manual/3_midi_window/3_midi_out.html"
   },
   {
     "breadcrumb": "Manual",
-    "content": " Live Input View Scores View MIDI Out Solo Button When illuminated, this will “solo” the MIDI track. If a single track is soloed, it is the only track that you will hear. If several MIDI tracks are soloed, only these tracks will be audible. If no tracks are soloed, all the tracks will be audible.\nActive Button If not illuminated, the MIDI track will not be audible, and its volume in the volume meter will be gray. When illuminated, the MIDI track will be audible.\nVolume Dial Changes the volume of the MIDI track. If you click just above the dial, the dial will reset to its default value of 80.\nVolume Meter Shows the level of the MIDI output. When a track is inactive, this will be grey. When active, the output will be green, orange, and red, depending on the volume level.\nChannel Select Allows the user to change the MIDI channel of track. Options are 1 through 16.\nPort Select Allows the user to select the output port of the MIDI track. These are usually Max’s internal MIDI playback (which will be called something like “DAC synth”), and outputs to other applications (called “from Max 1” and “from Max 2”).\nGlobal Port Select This changes the output port of all the MIDI channels.",
-    "description": "Live Input View Scores View MIDI Out Solo Button When illuminated, this will “solo” the MIDI track.",
+    "content": " Live Input View Scores View MIDI Out Bank Tracks View ",
+    "description": " Live Input View Scores View MIDI Out Bank Tracks View ",
     "tags": [],
     "title": "MIDI Window",
     "uri": "/1_manual/3_midi_window.html"
@@ -361,8 +393,8 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "Manual",
-    "content": "7. AUDIO UI Audio Live Input – see MIDI Live Input Recording – see MIDI Live Input Saving a file – see MIDI Live Input Loading a file – see MIDI Live Input Note: to save and load an audio file, you actually save and load a folder. Just name the folder in the dialog window, and the folder will be created and appropriately named files (.wav and .json) will be saved in the folder. For loading, choose the folder from the dialog. Audio Track Playback \u0026 Improvising – see Midi Track Looping sections/Repetitions – see MIDI Live Input Audio Input Volume dial and reset click Mute Audio Out Audio Out Track Volume dial and reset click Solo Mute Volume meter Il y a un patch pour extraire les données de la grille des partitions audio textuelles comme celles que vous avez envoyées vers le nouveau format : patchers/data_file_makers/text_score_to_audio_grid_data.maxpat",
-    "description": "7. AUDIO UI Audio Live Input – see MIDI Live Input Recording – see MIDI Live Input Saving a file – see MIDI Live Input Loading a file – see MIDI Live Input Note: to save and load an audio file, you actually save and load a folder.",
+    "content": " 7. AUDIO UI Audio Live Input Audio Track Playback \u0026 Improvising – see Midi Track Volume dial and reset click Mute Audio Out Audio Out Track Volume dial and reset click Solo Mute Volume meter Il y a un patch pour extraire les données de la grille des partitions audio textuelles comme celles que vous avez envoyées vers le nouveau format : patchers/data_file_makers/text_score_to_audio_grid_data.maxpat",
+    "description": "7. AUDIO UI Audio Live Input Audio Track Playback \u0026 Improvising – see Midi Track Volume dial and reset click Mute Audio Out Audio Out Track Volume dial and reset click Solo Mute Volume meter Il y a un patch pour extraire les données de la grille des partitions audio textuelles comme celles que vous avez envoyées vers le nouveau format : patchers/data_file_makers/text_score_to_audio_grid_data.",
     "tags": [],
     "title": "Audio Window",
     "uri": "/1_manual/4_audio_window.html"
@@ -390,6 +422,14 @@ var relearn_search_index = [
     "tags": [],
     "title": "External controls and views",
     "uri": "/3_api/4_external_controls_and_views.html"
+  },
+  {
+    "breadcrumb": "Manual \u003e MIDI Window",
+    "content": " Track effects File/track info select Load MIDI track You can load a track that does not follow the chord progression in the song file. If the track contains chords that are used in the song file, though, the improviser will use this chord information to create a harmonically correct solo!\nTrack info view ",
+    "description": "Track effects File/track info select Load MIDI track You can load a track that does not follow the chord progression in the song file.",
+    "tags": [],
+    "title": "MIDI Tracks View",
+    "uri": "/1_manual/3_midi_window/4_tracks_view.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -505,8 +545,8 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "Manual",
-    "content": "AllINeed, 64 164 4 \" 1\"; AllOfMe, 160 135 4 \" 1 33\"; Allthethingsyouare, 144 180 4 \" 1 33\"; AutumnleavesDoMin, 192 182 4 \" 1 33\"; BandeOrgueZay, 40 140 4 \" 1\"; BesameMucho, 160 110 4 \" 1 33\"; BluesFamaj, 48 120 4 \" 1\"; Boomerang, 236 58 4 \" 1 4 36 44\"; CamelBluesTernaire8, 32 103 4 \" 1\"; CamelSahelien, 96 103 4 \" 1\"; Capharnaum, 128 131 4 \" 1\"; Caravan, 256 220 4 \" 1 33\"; Carlos, 32 80 4 \" 1\"; Cerebral, 608 125 4 \" 1 9 33 49 73 105 121\"; CheektoCheek, 532 184 4 \" 1 6 38 62 78 102\"; CheektoCheekDjin, 224 184 4 \" 1 33\"; Cheerleader, 208 118 4 \" 1 9 13 21\"; ChegadeSaudade, 300 135 4 \" 1 9 41 71\"; Dang, 64 105 4 \" 1\"; Embona, 532 150 4 \" 1 24 56 86 118\"; Equilibrium, 56 118 4 \" 1 3\"; Espion, 752 129 4 \" 1 17 49 61 93 125 157\"; EtrangeJournee, 144 125 4 \" 1 13\"; EveryBreath, 400 103 4 \" 1 11 35 45 69\"; Fahatsia, 128 149 4 \" 1\"; Formidable, 324 135 4 \" 1 5 37 39 71\"; Free1, 4 100 4 \" 1\"; Free4, 16 100 4 \" 1\"; Free8, 32 100 4 \" 1\"; Free16, 64 200 4 \" 1\"; Free24, 96 200 4 \" 1\"; Free32, 128 200 4 \" 1\"; FreedomJazzDance, 32 105 4 \" 1\"; Guerre, 240 119 2 \" 1 27 48 65 97\"; Handfulofkeys, 344 240 4 \" 1 9 41 50\"; HandfulofkeysTheme1, 160 240 4 \" 1 9 41\"; Happy, 192 160 4 \" 1 17 33\"; Helmut, 128 130 4 \" 1\"; Hoany, 190 133 1 \" 1 22 40 66 96 119 151 159\"; Ifarakely, 444 102 4 \" 1 33 65 81 88\"; Jabeau, 48 120 3; JakeFine, 32 83 4 \" 1\"; JustAGigolo, 272 124 4 \" 1 5 37\"; JustTheWay, 64 130 4 \" 1 11\"; KillerJoe, 128 135 4 \" 1\"; Kissamile, 32 170 4 \" 1\"; L-O-V-E, 504 157 4 \" 1 5 37 69 101\"; LaJavanaise, 72 110 3 \" 1\"; Lasa, 672 120 4 \" 1 33 53 78 95 103 112 144\"; Liana, 748 120 4 \" 1 27 56 67 92 124 156\"; LianaIntro16, 64 270 4 \" 1\"; LoveYourself, 160 100 4 \" 1 33\"; Lullaby, 536 129 4 \" 1 11 43 75 79 95\"; MakingFlippy, 64 130 4 \" 1\"; Malaky, 346 145 2 \" 1 19 43 75 99 119 144\"; Mezerg, 128 132 4 \" 1\"; MieuxQue, 608 126 4 \" 1 9 33 57 81 97 121\"; Nightintunisia, 320 170 4 \" 1 17 49 65\"; Padam, 618 181 3 \" 1 24 46 76 95 117 149 175\"; PasAVendre, 616 134 4 \" 1 9 25 43 75 91 123\"; PasJalouse, 608 139 4 \" 1 17 33 49 65 81 89 121\"; PasPeur, 592 120 4 \" 1 5 33 61 89 117\"; Perfect, 190 46 2 \" 1 5 32 58 64\"; Perhaps, 304 103 4 \" 1 5 37 53\"; Rasputin, 148 123 4 \" 1 29\"; Rasputincourt, 116 123 4 \" 1\"; SatinDoll, 144 125 4 \" 1 5\"; Save, 406 144 2 \" 1 5 37 69 101 120 148 180\"; SoWhat, 128 135 4 \" 1\"; Spain, 220 240 4 \" 1 11 19 32\"; StarWazzz, 32 135 4 \" 1\"; Summertime, 64 180 4 \" 1\"; TakeFive, 200 170 5 \" 1 33\"; TheseBoots, 624 164 4 \" 1 32 63 94 102 125\"; Tsofyrano, 672 178 4 \" 1 17 45 61 93 105 137\"; Walk, 504 102 4 \" 1 9 23 45 59 73 97 111\"; Williason, 56 140 4 \" 1\"; WizKhalifa, 32 194 4 \" 1\"; Zay, 420 140 4 \" 1 21 34 66 80\";",
-    "description": "AllINeed, 64 164 4 \" 1\"; AllOfMe, 160 135 4 \" 1 33\"; Allthethingsyouare, 144 180 4 \" 1 33\"; AutumnleavesDoMin, 192 182 4 \" 1 33\"; BandeOrgueZay, 40 140 4 \" 1\"; BesameMucho, 160 110 4 \" 1 33\"; BluesFamaj, 48 120 4 \" 1\"; Boomerang, 236 58 4 \" 1 4 36 44\"; CamelBluesTernaire8, 32 103 4 \" 1\"; CamelSahelien, 96 103 4 \" 1\"; Capharnaum, 128 131 4 \" 1\"; Caravan, 256 220 4 \" 1 33\"; Carlos, 32 80 4 \" 1\"; Cerebral, 608 125 4 \" 1 9 33 49 73 105 121\"; CheektoCheek, 532 184 4 \" 1 6 38 62 78 102\"; CheektoCheekDjin, 224 184 4 \" 1 33\"; Cheerleader, 208 118 4 \" 1 9 13 21\"; ChegadeSaudade, 300 135 4 \" 1 9 41 71\"; Dang, 64 105 4 \" 1\"; Embona, 532 150 4 \" 1 24 56 86 118\"; Equilibrium, 56 118 4 \" 1 3\"; Espion, 752 129 4 \" 1 17 49 61 93 125 157\"; EtrangeJournee, 144 125 4 \" 1 13\"; EveryBreath, 400 103 4 \" 1 11 35 45 69\"; Fahatsia, 128 149 4 \" 1\"; Formidable, 324 135 4 \" 1 5 37 39 71\"; Free1, 4 100 4 \" 1\"; Free4, 16 100 4 \" 1\"; Free8, 32 100 4 \" 1\"; Free16, 64 200 4 \" 1\"; Free24, 96 200 4 \" 1\"; Free32, 128 200 4 \" 1\"; FreedomJazzDance, 32 105 4 \" 1\"; Guerre, 240 119 2 \" 1 27 48 65 97\"; Handfulofkeys, 344 240 4 \" 1 9 41 50\"; HandfulofkeysTheme1, 160 240 4 \" 1 9 41\"; Happy, 192 160 4 \" 1 17 33\"; Helmut, 128 130 4 \" 1\"; Hoany, 190 133 1 \" 1 22 40 66 96 119 151 159\"; Ifarakely, 444 102 4 \" 1 33 65 81 88\"; Jabeau, 48 120 3; JakeFine, 32 83 4 \" 1\"; JustAGigolo, 272 124 4 \" 1 5 37\"; JustTheWay, 64 130 4 \" 1 11\"; KillerJoe, 128 135 4 \" 1\"; Kissamile, 32 170 4 \" 1\"; L-O-V-E, 504 157 4 \" 1 5 37 69 101\"; LaJavanaise, 72 110 3 \" 1\"; Lasa, 672 120 4 \" 1 33 53 78 95 103 112 144\"; Liana, 748 120 4 \" 1 27 56 67 92 124 156\"; LianaIntro16, 64 270 4 \" 1\"; LoveYourself, 160 100 4 \" 1 33\"; Lullaby, 536 129 4 \" 1 11 43 75 79 95\"; MakingFlippy, 64 130 4 \" 1\"; Malaky, 346 145 2 \" 1 19 43 75 99 119 144\"; Mezerg, 128 132 4 \" 1\"; MieuxQue, 608 126 4 \" 1 9 33 57 81 97 121\"; Nightintunisia, 320 170 4 \" 1 17 49 65\"; Padam, 618 181 3 \" 1 24 46 76 95 117 149 175\"; PasAVendre, 616 134 4 \" 1 9 25 43 75 91 123\"; PasJalouse, 608 139 4 \" 1 17 33 49 65 81 89 121\"; PasPeur, 592 120 4 \" 1 5 33 61 89 117\"; Perfect, 190 46 2 \" 1 5 32 58 64\"; Perhaps, 304 103 4 \" 1 5 37 53\"; Rasputin, 148 123 4 \" 1 29\"; Rasputincourt, 116 123 4 \" 1\"; SatinDoll, 144 125 4 \" 1 5\"; Save, 406 144 2 \" 1 5 37 69 101 120 148 180\"; SoWhat, 128 135 4 \" 1\"; Spain, 220 240 4 \" 1 11 19 32\"; StarWazzz, 32 135 4 \" 1\"; Summertime, 64 180 4 \" 1\"; TakeFive, 200 170 5 \" 1 33\"; TheseBoots, 624 164 4 \" 1 32 63 94 102 125\"; Tsofyrano, 672 178 4 \" 1 17 45 61 93 105 137\"; Walk, 504 102 4 \" 1 9 23 45 59 73 97 111\"; Williason, 56 140 4 \" 1\"; WizKhalifa, 32 194 4 \" 1\"; Zay, 420 140 4 \" 1 21 34 66 80\";",
+    "content": "AllINeed, 64 164 4 \" 1\";\nAllOfMe, 160 135 4 \" 1 33\";\nAllthethingsyouare, 144 180 4 \" 1 33\";\nAutumnleavesDoMin, 192 182 4 \" 1 33\";\nBandeOrgueZay, 40 140 4 \" 1\";\nBesameMucho, 160 110 4 \" 1 33\";\nBluesFamaj, 48 120 4 \" 1\";\nBoomerang, 236 58 4 \" 1 4 36 44\";\nCamelBluesTernaire8, 32 103 4 \" 1\";\nCamelSahelien, 96 103 4 \" 1\";\nCapharnaum, 128 131 4 \" 1\";\nCaravan, 256 220 4 \" 1 33\";\nCarlos, 32 80 4 \" 1\";\nCerebral, 608 125 4 \" 1 9 33 49 73 105 121\";\nCheektoCheek, 532 184 4 \" 1 6 38 62 78 102\";\nCheektoCheekDjin, 224 184 4 \" 1 33\";\nCheerleader, 208 118 4 \" 1 9 13 21\";\nChegadeSaudade, 300 135 4 \" 1 9 41 71\";\nDang, 64 105 4 \" 1\";\nEmbona, 532 150 4 \" 1 24 56 86 118\";\nEquilibrium, 56 118 4 \" 1 3\";\nEspion, 752 129 4 \" 1 17 49 61 93 125 157\";\nEtrangeJournee, 144 125 4 \" 1 13\";\nEveryBreath, 400 103 4 \" 1 11 35 45 69\";\nFahatsia, 128 149 4 \" 1\";\nFormidable, 324 135 4 \" 1 5 37 39 71\";\nFree1, 4 100 4 \" 1\";\nFree4, 16 100 4 \" 1\";\nFree8, 32 100 4 \" 1\";\nFree16, 64 200 4 \" 1\";\nFree24, 96 200 4 \" 1\";\nFree32, 128 200 4 \" 1\";\nFreedomJazzDance, 32 105 4 \" 1\";\nGuerre, 240 119 2 \" 1 27 48 65 97\";\nHandfulofkeys, 344 240 4 \" 1 9 41 50\";\nHandfulofkeysTheme1, 160 240 4 \" 1 9 41\";\nHappy, 192 160 4 \" 1 17 33\";\nHelmut, 128 130 4 \" 1\";\nHoany, 190 133 1 \" 1 22 40 66 96 119 151 159\";\nIfarakely, 444 102 4 \" 1 33 65 81 88\";\nJabeau, 48 120 3;\nJakeFine, 32 83 4 \" 1\";\nJustAGigolo, 272 124 4 \" 1 5 37\";\nJustTheWay, 64 130 4 \" 1 11\";\nKillerJoe, 128 135 4 \" 1\";\nKissamile, 32 170 4 \" 1\";\nL-O-V-E, 504 157 4 \" 1 5 37 69 101\";\nLaJavanaise, 72 110 3 \" 1\";\nLasa, 672 120 4 \" 1 33 53 78 95 103 112 144\";\nLiana, 748 120 4 \" 1 27 56 67 92 124 156\";\nLianaIntro16, 64 270 4 \" 1\";\nLoveYourself, 160 100 4 \" 1 33\";\nLullaby, 536 129 4 \" 1 11 43 75 79 95\";\nMakingFlippy, 64 130 4 \" 1\";\nMalaky, 346 145 2 \" 1 19 43 75 99 119 144\";\nMezerg, 128 132 4 \" 1\";\nMieuxQue, 608 126 4 \" 1 9 33 57 81 97 121\";\nNightintunisia, 320 170 4 \" 1 17 49 65\";\nPadam, 618 181 3 \" 1 24 46 76 95 117 149 175\";\nPasAVendre, 616 134 4 \" 1 9 25 43 75 91 123\";\nPasJalouse, 608 139 4 \" 1 17 33 49 65 81 89 121\";\nPasPeur, 592 120 4 \" 1 5 33 61 89 117\";\nPerfect, 190 46 2 \" 1 5 32 58 64\";\nPerhaps, 304 103 4 \" 1 5 37 53\";\nRasputin, 148 123 4 \" 1 29\";\nRasputincourt, 116 123 4 \" 1\";\nSatinDoll, 144 125 4 \" 1 5\";\nSave, 406 144 2 \" 1 5 37 69 101 120 148 180\";\nSoWhat, 128 135 4 \" 1\";\nSpain, 220 240 4 \" 1 11 19 32\";\nStarWazzz, 32 135 4 \" 1\";\nSummertime, 64 180 4 \" 1\";\nTakeFive, 200 170 5 \" 1 33\";\nTheseBoots, 624 164 4 \" 1 32 63 94 102 125\";\nTsofyrano, 672 178 4 \" 1 17 45 61 93 105 137\";\nWalk, 504 102 4 \" 1 9 23 45 59 73 97 111\";\nWilliason, 56 140 4 \" 1\";\nWizKhalifa, 32 194 4 \" 1\";\nZay, 420 140 4 \" 1 21 34 66 80\";",
+    "description": "AllINeed, 64 164 4 \" 1\";\nAllOfMe, 160 135 4 \" 1 33\";",
     "tags": [],
     "title": "Preloaded Songs",
     "uri": "/1_manual/8_preloaded_resources.html"
@@ -534,6 +574,14 @@ var relearn_search_index = [
     "tags": [],
     "title": "Master Control",
     "uri": "/3_api/1_abstraction-references/components/master_control.html"
+  },
+  {
+    "breadcrumb": "Manual",
+    "content": "Djazz saves files together in folders.",
+    "description": "Djazz saves files together in folders.",
+    "tags": [],
+    "title": "Saving and Loading Files",
+    "uri": "/1_manual/9_saving_and_loading_files.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
