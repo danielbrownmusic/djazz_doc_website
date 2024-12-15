@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# title
 cat $1 | sed -En '1 s/(.+) +([0-9]+)/+++\ntitle = "\1"\nweight = \2\n+++/p; q'
 
-# digest and description
 cat $1 | sed -En '3 s/(.+)/######\1/p;q'
 cat $1 | sed -En '4 s/(.+)/######\1/p;q'
 
@@ -11,53 +9,46 @@ cat $1 | sed -En '4 s/(.+)/######\1/p;q'
 cat $1 | gsed -En '/INLETS/,/OUTLETS/    {  
                                             s/INLETS/\n# INLETS/p; 
                                             /^[0-9]+/ {   
-                                                s/(^[0-9]+)/\n### \1 \&emsp; /; 
-                                                s/([^ ]+)([^#0-9;]) /_\1\2_\//g 
-                                                p;
+                                                s/ /_\/_/g;
+                                                s/(^[0-9]+)_\//\n### \1 \&emsp; /
+                                                s/$/_/p;
                                                 n;
-                                                s/.*/###### &/;p } 
-                                            
-                                            /int|float|list|anything|symbol/ {
-                                                s/(^[^ ]+)/**\1**:/p
+                                                s/.*/###### &/p
                                             }
+                                            /# INLETS|OUTLETS/! s/(^[^# ]+)/_\1_/p
                                         }'
-
 
 cat $1 | gsed -En '/OUTLETS/,/ATTRIBUTES/    {  
                                             s/^OUTLETS/\n# OUTLETS/p; 
                                             /^[0-9]+/ { 
-                                               s/(^[0-9]+)/### \1 \&emsp; /; 
+                                               s/(^[0-9]+)/\n### \1 \&emsp; /; 
                                                 s/([^ ]+)$/_\1_/p;
                                                 n;
-                                                s/.*/\n###### &/;p }
+                                                s/.*/###### &/p 
+                                                n
+                                                p}
                                             }'
 
-cat $1 | gsed -En '/ATTRIBUTES/,/MESSAGES/    {  
-                                            s/^ATTRIBUTES/\n# ATTRIBUTES/p; 
-                                            /^ *$/ {
-                                                p
-                                                n
-                                                {s/(^[^ ]+)/### \1 \&emsp; /
-                                                s/; +([^ ]+)/ _\1_ \&emsp; /
-                                                s/g s$/(get\/set)/
-                                                s/s$/(set)/
-                                                s/g$/(get)/ 
-                                                p
-                                                n
-                                                s/.*/###### &/p
-                                                n
-                                                p
-                                                }
-                                                    }
+cat $1 | gsed -En '/ATTRIBUTES/,/MESSAGES/  {  
+                                            s/^(ATTRIBUTES|MESSAGES)/\n# \1/p; 
+                                            /(^ *$|ATTRIBUTES|MESSAGES)/! {s/(^[^ ]+)/\n### \1 \&emsp; /
+                                                        s/; +([^ ]+)/ _\1_ \&emsp; /
+                                                        s/g s$/(get\/set)/
+                                                        s/s$/(set)/
+                                                        s/g$/(get)/ 
+                                                        p
+                                                        n
+                                                        s/.*/###### &/p
+                                                        n
+                                                        p
+                                                        }
                                                 }'
 
-
 cat $1 | gsed -En '/MESSAGES/,/SEE ALSO/    {  
-                                            s/^MESSAGES/\n# MESSAGES/p; 
                                             /^ *$/ {
                                                 p
                                                 n
-                                                {   s/(^[^ ]+)/### _\1_/
+                                                {   /SEE ALSO/! { s/(^[^ ]+)/### _\1_/
                                                     p
                                                     n
                                                     s/.*/###### &/p
@@ -65,8 +56,9 @@ cat $1 | gsed -En '/MESSAGES/,/SEE ALSO/    {
                                                     p
                                                     }
                                                     }
+                                                    }
                                                 }'
-# 
-#                                             
-# s/;([^ ]+)/_\1_ \&emsp; /
-#  }
+
+cat $1 | gsed -En '/^SEE ALSO/,$ { s/^SEE ALSO/# SEE ALSO/p;
+                                    /# SEE ALSO/! s/(^[^ ]+) +([^ ]+)/[\1](\2)/p
+                                    }'

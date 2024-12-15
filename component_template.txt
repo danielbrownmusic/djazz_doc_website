@@ -47,10 +47,13 @@ attribute_1 type g s
 digest
 definition
 
-
 MESSAGES
 
 message1
+digest
+description
+
+message2
 digest
 description
 
