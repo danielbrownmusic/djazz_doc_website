@@ -87,21 +87,24 @@ definition
 
 MESSAGES
 
-See [asynchronous messages]().
+-See [asynchronous messages]().
 
-See [Master Control]() for details about the following:
+-See [Master Control]() for details about the following:
+/master_control
 master::loop_section_active     0/1
 master::loop_section_beats list (int int) start-beat end-beat
 master::start_beat  int
 master::end_beat    int
 master::initial_tempo   float
 
-See [Audio In]() for details about the following:
+-See [Audio In]() for details about the following:
+/audio_in
 audio::audio_in::record_active 0/1
 audio::audio_in::max_repetitions int
 audio::audio_in::save::folder_path  symbol
 
-See [Audio In]() for details about the following:
+-See [Audio Out]() for details about the following:
+/audio_out
 (for n from 1-3):
 audio::audio_out::beat_players::beat_player_n::crossfade_time_in_ms     int
 audio::audio_out::beat_players::beat_player_n::audio_buffer_offset_in_ms    int
