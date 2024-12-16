@@ -43,13 +43,6 @@
       <description>The “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it’s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label.</description>
     </item>
     <item>
-      <title>Syncopation</title>
-      <link>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_3_syncopation.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_3_syncopation.html</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Analyzer</title>
       <link>http://localhost:1313/3_api/5_improvisation/_d_improv/_d_4_analyzer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

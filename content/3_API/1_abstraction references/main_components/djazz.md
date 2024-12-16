@@ -69,55 +69,150 @@ PattrStorage-->PattrOut
 {{< /mermaid >}}
 
 
-### Stochastic LFO with Kuramoto-model coupling.
-<!-- Brief Description -->
-
-###### Outputs a sine-squared amplitude envelope with several settable stochastic parameters.  
-When different instances of this object are "coupled" by connecting their right inlets and outlets,
-    their *coupling_strength* can be changed, causing their LFOs to synchronize or alternate.
-
 # INLETS
 
-### 0:   int/signal/message  
-**signal**: audio (mono) signal to be amplitude modulated.  
-**int**: zero turns off, anything else turns on.  
-**message**: see messages reference.  
-<!-- Full Description  -->
-<!-- INLET -->
+### 1 &emsp; _signal_
+###### Audio In 1 
+_signal_ Audio signal is sent to djazz_audio_in
 
-### 1: signal
-###### Connect other cicadas to this inlet.
-When the right outlet of another cicada is connected to this inlet, this cicada "listens" to the other one.  
-Change this cicada's *coupling_strength* attribute to change how the other cicada's behavior affects this one.
+### 2 &emsp; _signal_
+###### Audio In 2
+_signal_ Audio signal is sent to djazz_audio_in
+
+### 3 &emsp; _list_
+###### Midi In
+_list_ (int pitch, int velocity, int channel) sent to djazz_midi_in
+
+### 4 &emsp; _bang_
+###### Triggers next beat
+_bang_ All active tracks MIDI and audio tracks will play their data located at the current beat in tempo when a bang is received. Any armed recording tracks will record any input during this beat in tempo. 
+
+### 5 &emsp; _list_
+###### Asynchronous input (such as that sent from pattr objects)
+_list_ (symbol argument-name anything argument-value) See the section on [pattrs]()
+
+### 6 &emsp; _symbol_
+###### Loads records needed for playback
+_symbol_ The name of a Max dict that has been loaded with a JSON file. These are either song files or score files.
+
+### 7 &emsp; _anything_
+###### Messages to the pattrstorage objects
+_anything_ This is only used to send the "clientwindow" message to the pattrstorage object, which is useful for debugging. Any preset-related messages could be sent, but they should actually be sent to djazz_control.
 
 # OUTLETS
 
-### 0 &emsp; signal
-###### The amplitude-modulated signal.   
-If there is an input signal, this will output the amplitude-modulated signal. 
-If no input signal and [chirp_on_signal]() is zero, this will output the amplitude envelope.
-If no input signal and [chirp_on_signal]() is non-zero, this will not output.  
+### 0 &emsp;  _signal_
+###### Audio Track 1 Out 1
+Audio signal
 
-### 1 &emsp;  bang
-###### _bang_  when amplitude envelope is zero</digest>
-<!-- Brief Description -->
+### 1 &emsp;  _signal_
+###### Audio Track 1 Out 2
+Audio signal
 
-<!-- OUTLETS -->
+### 2 &emsp;  _signal_
+###### Audio Track 2 Out 1
+Audio signal
 
-# ATTRIBUTES
+### 3 &emsp;  _signal_
+###### Audio Track 2 Out 2
+Audio signal
 
-### amplitude_randomness  &emsp; _float_  &emsp; (set) 
-###### Range: 0 to 1
-At 0 all chirps will have peak value 1.0. Increase to randomize peak values. Follows a normal (Gaussian) distribution. Default is zero.
+### 4 &emsp;  _signal_
+###### Audio Track 3 Out 1
+Audio signal
 
-### chirp_length_mean _float_ (set)
-###### In milliseconds. Follows a normal (Gaussian) distribution. Default is 300 ms.
+### 5 &emsp;  _signal_
+###### Audio Track 3 Out 2
+Audio signal
 
-# MESSAGES
-### _int_  
-###### Left inlet: 0 turns off, anything else turns on. Default is on.  
-  
+### 6 &emsp;  _list_
+###### MIDI output
+A MIDI note is sent out as a list (int pitch, int velocity, int channel)
 
+### 7 &emsp;  _list_
+###### View control data
+
+### ATTRIBUTES  
+None  
+
+### MESSAGES  
+[###]() MESSAGES    
+-See [asynchronous messages]().  
+-See [Master Control]() for details about the following:  
+/master_control  
+[master::loop_section_active]()     0/1  
+[master::loop_section_beats]() list (int int) start-beat end-beat  
+[master::start_beat]()  int  
+[master::end_beat]()    int  
+[master::initial_tempo]()   float  
+-See [Audio In]() for details about the following:  
+/audio_in  
+[audio::audio_in::record_active]() 0/1  
+[audio::audio_in::max_repetitions]() int  
+[audio::audio_in::save::folder_path]()  symbol  
+-See [Audio Out]() for details about the following:  
+/audio_out  
+(for n from 1-3):  
+[audio::audio_out::beat_players::beat_player_n::crossfade_time_in_ms]()     int  
+[audio::audio_out::beat_players::beat_player_n::audio_buffer_offset_in_ms]()    int  
+(for n from 1-3):  
+[audio::audio_out::listeners::listener_n]()     0/1  
+[audio::audio_out::listeners::include_master]() 0/1  
+(for n from 1-3):  
+[audio::audio_out::audio_out_bank::track_n::volume]() int 0-127  
+[audio::audio_out::audio_out_bank::track_n::mute]() 0/1  
+[audio::audio_out::audio_out_bank::track_n::solo]() 0/1  
+[audio::audio_out::audio_out_bank::track_n::active]() 0/1  
+(for n from 1-3):  
+[audio::audio_out::generators::audio_beat_generator_n::loop_length]() int  
+[audio::audio_out::generators::audio_beat_generator_n::speed_numerator]() int  
+[audio::audio_out::generators::audio_beat_generator_n::end_beat]() int  
+[audio::audio_out::generators::audio_beat_generator_n::next_beat]() int  
+[audio::audio_out::generators::audio_beat_generator_n::loop_section_active]() 0/1  
+[audio::audio_out::generators::audio_beat_generator_n::speed_denominator]() int  
+[audio::audio_out::generators::audio_beat_generator_n::speed_active]() 0/1  
+[audio::audio_out::generators::audio_beat_generator_n::loop_section_beats]() int  
+[audio::audio_out::generators::audio_beat_generator_n::pitch_range]() int  
+[audio::audio_out::generators::audio_beat_generator_n::max_continuity]() int  
+[audio::audio_out::generators::audio_beat_generator_n::improvise]() 0/1  
+[audio::audio_out::generators::audio_beat_generator_n::transpose_octave]() int  
+[audio::audio_out::generators::audio_beat_generator_n::transpose_pitch]() int  
+(for n from 1-3):  
+[audio::audio_out::data_loaders::track_loader_n::repetition]() int  
+(for n from 1-15):  
+[midi::midi_out::midi_out_bank::track_n::mute]()    0/1  
+[midi::midi_out::midi_out_bank::track_n::active]()  0/1  
+[midi::midi_out::midi_out_bank::track_n::solo]()    0/1  
+[midi::midi_out::midi_out_bank::track_n::volume]()  int 0-127  
+[midi::midi_out::midi_out_bank::track_n::port]()    symbol  
+[midi::midi_out::midi_out_bank::track_n::channel_out]() int 1-16  
+[midi::midi_out::midi_out_bank::track_n::ctrl_msg]()    int  
+[midi::midi_out::midi_out_bank::track_n::effect_list::transpose_octave::octaves]() int -255-+255  
+[midi::midi_out::midi_out_bank::track_n::effect_list::transpose_pitch::semitones]() int -255-+255  
+[midi::midi_out::data_loaders::scores::score_file_1::file_path]()   symbol  
+[midi::midi_out::data_loaders::scores::score_file_2::file_path]()   symbol  
+[midi::midi_out::data_loaders::track_loader_1::repetition]() int 0-255  
+[midi::midi_out::data_loaders::track_loader_2::repetition]() int 0-255  
+(for n from 1-15):  
+[midi::midi_out::listeners::listener_n]()  
+[midi::midi_out::listeners::include_master]()  
+(for n from 1-15):  
+[midi::midi_out::generators::midi_beat_generator_n::loop_length]() int   
+[midi::midi_out::generators::midi_beat_generator_n::speed_numerator]() int  
+[midi::midi_out::generators::midi_beat_generator_n::end_beat]() int   
+[midi::midi_out::generators::midi_beat_generator_n::start_beat]() int   
+[midi::midi_out::generators::midi_beat_generator_n::loop_section_active]() 0/1   
+[midi::midi_out::generators::midi_beat_generator_n::speed_denominator]() int   
+[midi::midi_out::generators::midi_beat_generator_n::speed_active]() 0/1   
+[midi::midi_out::generators::midi_beat_generator_n::loop_section_beats]() list (int int)   
+[midi::midi_out::generators::midi_beat_generator_n::pitch_range]() 0-255   
+[midi::midi_out::generators::midi_beat_generator_n::max_continuity]() 0-255   
+[midi::midi_out::generators::midi_beat_generator_n::improvise]() 0/1   
+[midi::midi_in::folder_path]()  symbol  
+[midi::midi_in::record_active]() 0/1  
+[midi::midi_in::save::folder_path]() symbol  
+[SEE]() ALSO  
 # SEE ALSO
-[_cicada_chorus_control_]()
-      
+[djazz_data]() 
+[djazz_control]()
+[djazz_view_control]()

@@ -73,7 +73,7 @@ var relearn_search_index = [
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
-    "content": " flowchart TB; AudioIn1((Audio\\nIn L)) AudioIn2((Audio\\nIn R)) MidiIn((MIDI In)) TapIn((Tap\\nIn)) PattrIn((Pattr\\nIn)) DataIn((File\\nData\\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master \"./../components/master_control.html\" \"Master Control\" click Audio \"audio.html\" \"Master Control\" click Midi \"midi.html\" \"Master Control\" AudioOut1(((Audio\\nOut 1L))) AudioOut2(((Audio\\nOut 1R))) AudioOut3(((Audio\\nOut 2L))) AudioOut4(((Audio\\nOut 2R))) AudioOut5(((Audio\\nOut 3L))) AudioOut6(((Audio\\nOut 3R))) MidiOut(((MIDI Out))) PattrOut(((Pattr Out))) AudioIn1---\u003eAudio AudioIn2---\u003eAudio TapIn--\u003eMaster PattrIn--\u003eMaster PattrIn--\u003eAudio PattrIn--\u003eMidi DataIn--\u003eAudio DataIn--\u003eMidi DataIn--\u003eMaster Master--\u003eAudio Master--\u003eMidi MidiIn--\u003eMidi Audio--\u003eAudioOut1 Audio--\u003eAudioOut2 Audio--\u003eAudioOut3 Audio--\u003eAudioOut4 Audio--\u003eAudioOut5 Audio--\u003eAudioOut6 Midi--\u003eMidiOut PresetIn--\u003ePattrStorage PattrStorage--\u003ePattrOut Stochastic LFO with Kuramoto-model coupling. Outputs a sine-squared amplitude envelope with several settable stochastic parameters. When different instances of this object are “coupled” by connecting their right inlets and outlets, their coupling_strength can be changed, causing their LFOs to synchronize or alternate.\nINLETS 0: int/signal/message signal: audio (mono) signal to be amplitude modulated.\nint: zero turns off, anything else turns on.\nmessage: see messages reference.\n1: signal Connect other cicadas to this inlet. When the right outlet of another cicada is connected to this inlet, this cicada “listens” to the other one.\nChange this cicada’s coupling_strength attribute to change how the other cicada’s behavior affects this one.\nOUTLETS 0 signal The amplitude-modulated signal. If there is an input signal, this will output the amplitude-modulated signal. If no input signal and chirp_on_signal is zero, this will output the amplitude envelope. If no input signal and chirp_on_signal is non-zero, this will not output.\n1 bang bang when amplitude envelope is zero ATTRIBUTES amplitude_randomness float (set) Range: 0 to 1 At 0 all chirps will have peak value 1.0. Increase to randomize peak values. Follows a normal (Gaussian) distribution. Default is zero.\nchirp_length_mean float (set) In milliseconds. Follows a normal (Gaussian) distribution. Default is 300 ms. MESSAGES int Left inlet: 0 turns off, anything else turns on. Default is on. SEE ALSO cicada_chorus_control",
+    "content": " flowchart TB; AudioIn1((Audio\\nIn L)) AudioIn2((Audio\\nIn R)) MidiIn((MIDI In)) TapIn((Tap\\nIn)) PattrIn((Pattr\\nIn)) DataIn((File\\nData\\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master \"./../components/master_control.html\" \"Master Control\" click Audio \"audio.html\" \"Master Control\" click Midi \"midi.html\" \"Master Control\" AudioOut1(((Audio\\nOut 1L))) AudioOut2(((Audio\\nOut 1R))) AudioOut3(((Audio\\nOut 2L))) AudioOut4(((Audio\\nOut 2R))) AudioOut5(((Audio\\nOut 3L))) AudioOut6(((Audio\\nOut 3R))) MidiOut(((MIDI Out))) PattrOut(((Pattr Out))) AudioIn1---\u003eAudio AudioIn2---\u003eAudio TapIn--\u003eMaster PattrIn--\u003eMaster PattrIn--\u003eAudio PattrIn--\u003eMidi DataIn--\u003eAudio DataIn--\u003eMidi DataIn--\u003eMaster Master--\u003eAudio Master--\u003eMidi MidiIn--\u003eMidi Audio--\u003eAudioOut1 Audio--\u003eAudioOut2 Audio--\u003eAudioOut3 Audio--\u003eAudioOut4 Audio--\u003eAudioOut5 Audio--\u003eAudioOut6 Midi--\u003eMidiOut PresetIn--\u003ePattrStorage PattrStorage--\u003ePattrOut INLETS 1 signal Audio In 1 signal Audio signal is sent to djazz_audio_in\n2 signal Audio In 2 signal Audio signal is sent to djazz_audio_in\n3 list Midi In list (int pitch, int velocity, int channel) sent to djazz_midi_in\n4 bang Triggers next beat bang All active tracks MIDI and audio tracks will play their data located at the current beat in tempo when a bang is received. Any armed recording tracks will record any input during this beat in tempo.\n5 list Asynchronous input (such as that sent from pattr objects) list (symbol argument-name anything argument-value) See the section on pattrs\n6 symbol Loads records needed for playback symbol The name of a Max dict that has been loaded with a JSON file. These are either song files or score files.\n7 anything Messages to the pattrstorage objects anything This is only used to send the “clientwindow” message to the pattrstorage object, which is useful for debugging. Any preset-related messages could be sent, but they should actually be sent to djazz_control.\nOUTLETS 0 signal Audio Track 1 Out 1 Audio signal\n1 signal Audio Track 1 Out 2 Audio signal\n2 signal Audio Track 2 Out 1 Audio signal\n3 signal Audio Track 2 Out 2 Audio signal\n4 signal Audio Track 3 Out 1 Audio signal\n5 signal Audio Track 3 Out 2 Audio signal\n6 list MIDI output A MIDI note is sent out as a list (int pitch, int velocity, int channel)\n7 list View control data ATTRIBUTES None\nMESSAGES ### MESSAGES -See asynchronous messages.\n-See Master Control for details about the following:\n/master_control\nmaster::loop_section_active 0/1\nmaster::loop_section_beats list (int int) start-beat end-beat\nmaster::start_beat int\nmaster::end_beat int\nmaster::initial_tempo float\n-See Audio In for details about the following:\n/audio_in\naudio::audio_in::record_active 0/1\naudio::audio_in::max_repetitions int\naudio::audio_in::save::folder_path symbol\n-See Audio Out for details about the following:\n/audio_out\n(for n from 1-3):\naudio::audio_out::beat_players::beat_player_n::crossfade_time_in_ms int\naudio::audio_out::beat_players::beat_player_n::audio_buffer_offset_in_ms int\n(for n from 1-3):\naudio::audio_out::listeners::listener_n 0/1\naudio::audio_out::listeners::include_master 0/1\n(for n from 1-3):\naudio::audio_out::audio_out_bank::track_n::volume int 0-127\naudio::audio_out::audio_out_bank::track_n::mute 0/1\naudio::audio_out::audio_out_bank::track_n::solo 0/1\naudio::audio_out::audio_out_bank::track_n::active 0/1\n(for n from 1-3):\naudio::audio_out::generators::audio_beat_generator_n::loop_length int\naudio::audio_out::generators::audio_beat_generator_n::speed_numerator int\naudio::audio_out::generators::audio_beat_generator_n::end_beat int\naudio::audio_out::generators::audio_beat_generator_n::next_beat int\naudio::audio_out::generators::audio_beat_generator_n::loop_section_active 0/1\naudio::audio_out::generators::audio_beat_generator_n::speed_denominator int\naudio::audio_out::generators::audio_beat_generator_n::speed_active 0/1\naudio::audio_out::generators::audio_beat_generator_n::loop_section_beats int\naudio::audio_out::generators::audio_beat_generator_n::pitch_range int\naudio::audio_out::generators::audio_beat_generator_n::max_continuity int\naudio::audio_out::generators::audio_beat_generator_n::improvise 0/1\naudio::audio_out::generators::audio_beat_generator_n::transpose_octave int\naudio::audio_out::generators::audio_beat_generator_n::transpose_pitch int\n(for n from 1-3):\naudio::audio_out::data_loaders::track_loader_n::repetition int\n(for n from 1-15):\nmidi::midi_out::midi_out_bank::track_n::mute 0/1\nmidi::midi_out::midi_out_bank::track_n::active 0/1\nmidi::midi_out::midi_out_bank::track_n::solo 0/1\nmidi::midi_out::midi_out_bank::track_n::volume int 0-127\nmidi::midi_out::midi_out_bank::track_n::port symbol\nmidi::midi_out::midi_out_bank::track_n::channel_out int 1-16\nmidi::midi_out::midi_out_bank::track_n::ctrl_msg int\nmidi::midi_out::midi_out_bank::track_n::effect_list::transpose_octave::octaves int -255-+255\nmidi::midi_out::midi_out_bank::track_n::effect_list::transpose_pitch::semitones int -255-+255\nmidi::midi_out::data_loaders::scores::score_file_1::file_path symbol\nmidi::midi_out::data_loaders::scores::score_file_2::file_path symbol\nmidi::midi_out::data_loaders::track_loader_1::repetition int 0-255\nmidi::midi_out::data_loaders::track_loader_2::repetition int 0-255\n(for n from 1-15):\nmidi::midi_out::listeners::listener_n\nmidi::midi_out::listeners::include_master\n(for n from 1-15):\nmidi::midi_out::generators::midi_beat_generator_n::loop_length int\nmidi::midi_out::generators::midi_beat_generator_n::speed_numerator int\nmidi::midi_out::generators::midi_beat_generator_n::end_beat int\nmidi::midi_out::generators::midi_beat_generator_n::start_beat int\nmidi::midi_out::generators::midi_beat_generator_n::loop_section_active 0/1\nmidi::midi_out::generators::midi_beat_generator_n::speed_denominator int\nmidi::midi_out::generators::midi_beat_generator_n::speed_active 0/1\nmidi::midi_out::generators::midi_beat_generator_n::loop_section_beats list (int int)\nmidi::midi_out::generators::midi_beat_generator_n::pitch_range 0-255\nmidi::midi_out::generators::midi_beat_generator_n::max_continuity 0-255\nmidi::midi_out::generators::midi_beat_generator_n::improvise 0/1\nmidi::midi_in::folder_path symbol\nmidi::midi_in::record_active 0/1\nmidi::midi_in::save::folder_path symbol\nSEE ALSO\nSEE ALSO djazz_data djazz_control djazz_view_control",
     "description": "flowchart TB; AudioIn1((Audio\\nIn L)) AudioIn2((Audio\\nIn R)) MidiIn((MIDI In)) TapIn((Tap\\nIn)) PattrIn((Pattr\\nIn)) DataIn((File\\nData\\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master \".",
     "tags": [],
     "title": "djazz",
@@ -200,14 +200,6 @@ var relearn_search_index = [
     "uri": "/3_api/4_external_controls_and_views/2_dicts.html"
   },
   {
-    "breadcrumb": "Manual",
-    "content": " 1. MIDI/audio window selectors Clicking on the button labeled “MIDI” or “Audio” will open and close the MIDI or audio interface window, respectively.\nYou can also use the key commands “m” (lowercase) to open/close the MIDI window or “a” (lowercase) to open/close the audio window.\n2. Beat input window 3. Song selector To load a song grid, select a song using one of these controls. Songs are loaded by selecting folders, not individual files. Each folder contains various files pertaining to the song like scores and JSON metadata files.\nDrag and drop a song folder here. Browse for a song folder. To select a song, click on its folder. Clear the current song. Select a preloaded song from the dropdown menu. 4. Song Grid 5. Data View BEATS: total number of beats in the song SECTION: whether section is looped, and number of beats in current section TEMPO: current tempo. Note: if the [beat input] comes from Djazz’s metronome or a remote metronome, this will not change. If the beat input is manual, or if the remote source is a manual tap, this may fluctuate. BEAT Number of current beat playing LABEL Label of current beat playing, according to the loaded song file 5. PLAYBACK DATA VIEW Beats in song When a song is loaded, this shows the first and last beat of the song.\nSection is looped Beats in section (chapter) When a song is loaded, this shows the first and last beat of the current chapter.\nTempo This shows the current playback tempo. When the metronome is playing, this will be the same as (sometimes fluctuating extremely slightly from) the metronome tempo. When a manual tap\nCurrent beat Current beat label 6. Global Effects These effects are the same as the ones used in MIDI scores, MIDI tracks, and audio tracks. Changing a control in the global effects bar will change the corresponding effect in every one of these other effects bars.\n7. GLOBAL AUDIO INPUT/OUTPUT Audio On Clicking on either the microphone-icon button or the loudspeaker-icon button will turn the audio on.\nAudio In Level (Microphone) Controls the level of the audio input. The button labeled “M” below the microphone-icon button mutes audio input.\nAudio Record Level Controls the recorded volume level of the audio input.\nAudio Out (Speakers) Controls the level of the global audio output. The button labeled “M” below the loudspeaker-icon button mutes audio output.\n8. MIDI Input Window 9. External Controllers Selection Menu 10. UDP Send Port Select 11. Settings Window Open/Close Button ",
-    "description": "1. MIDI/audio window selectors Clicking on the button labeled “MIDI” or “Audio” will open and close the MIDI or audio interface window, respectively.",
-    "tags": [],
-    "title": "Djazz Main Window",
-    "uri": "/1_manual/2_main_window.html"
-  },
-  {
     "breadcrumb": "API",
     "content": "",
     "description": "",
@@ -230,6 +222,22 @@ var relearn_search_index = [
     "tags": [],
     "title": "Live Output",
     "uri": "/1_manual/4_audio_window/2_live_output.html"
+  },
+  {
+    "breadcrumb": "Manual",
+    "content": " 1. MIDI/audio window selectors Clicking on the button labeled “MIDI” or “Audio” will open and close the MIDI or audio interface window, respectively.\nYou can also use the key commands “m” (lowercase) to open/close the MIDI window or “a” (lowercase) to open/close the audio window.\n2. Beat input window 3. Song selector To load a song grid, select a song using one of these controls. Songs are loaded by selecting folders, not individual files. Each folder contains various files pertaining to the song like scores and JSON metadata files.\nDrag and drop a song folder here. Browse for a song folder. To select a song, click on its folder. Clear the current song. Select a preloaded song from the dropdown menu. 4. Song Grid 5. Data View BEATS: total number of beats in the song SECTION: whether section is looped, and number of beats in current section TEMPO: current tempo. Note: if the [beat input] comes from Djazz’s metronome or a remote metronome, this will not change. If the beat input is manual, or if the remote source is a manual tap, this may fluctuate. BEAT Number of current beat playing LABEL Label of current beat playing, according to the loaded song file 6. Global Effects These effects are the same as the ones used in MIDI scores, MIDI tracks, and audio tracks. Changing a control in the global effects bar will change the corresponding effect in every one of these other effects bars.\n7. GLOBAL AUDIO INPUT/OUTPUT Audio On Clicking on either the microphone icon or the loudspeaker icon will turn the audio on.\nAudio Monitor Level (Microphone) Controls the monitor level of the audio input. The button labeled “M” below the microphone-icon button mutes audio input.\nAudio Record Level Controls the recorded volume level of the audio input. The button labeled “M” below the microphone-icon button mutes audio input.\nAudio Out (Speakers) Controls the level of the global audio output. The button labeled “M” below the loudspeaker-icon button mutes audio output.\n8. MIDI Input Selector 9. External Controllers Selection Menu When an external controller such as a Launchpad is plugged in, its name will appear in the dropdown menu. If Djazz supports it, selecting its name from the dropdown menu will open its interface window.\n10. UDP Send Port Select Select the host and port to send view messages from Djazz.\n11. Settings Window Open/Close Button ",
+    "description": "1. MIDI/audio window selectors Clicking on the button labeled “MIDI” or “Audio” will open and close the MIDI or audio interface window, respectively.",
+    "tags": [],
+    "title": "Main Window",
+    "uri": "/1_manual/2_main_window.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions \u003e Tools",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "make score file",
+    "uri": "/3_api/1_abstraction-references/tools/make_score_file.html"
   },
   {
     "breadcrumb": "Manual \u003e Tools",
@@ -280,7 +288,7 @@ var relearn_search_index = [
     "uri": "/3_api/5_improvisation/_d_improv/_d_2_factor_oracle_player.html"
   },
   {
-    "breadcrumb": "Manual \u003e Djazz Main Window",
+    "breadcrumb": "Manual \u003e Main Window",
     "content": "2. BEAT INPUT Input Selector Djazz plays a beat each time it receives a message (a “tap,” or “click”), if it is engaged (how to engage Djazz will be explained below). When not engaged, it will not play when a beat message is received. When this is the case, you can click on bars or chapters (“cells” of the grid) in the song grid without triggering playback. Once engaged, djazz will begin playing on the next beat after a cell has been clicked on.\nThe cells of the grid change color depending on whether Djazz is engaged and whether a cell is currently playing or not. The colors represent the following:\nLight gray: not the current measure/chapter of the song Dark gray: the current measure measure/chapter of the song, but Djazz is not engaged Blue: the current measure measure/chapter of the song, but not playing Orange: the current measure measure/chapter of the song, and playing There are three ways to send Djazz a beat message; you select one from the dropdown menu: manual, metronome, or remote. Selecting from the dropdown menu will change the controls on the left side of this box. When one option is selected, the other two are not responsive.\nThe right-hand side of the window lets you change the sound and output port of the click.\n1. INPUT SELECTOR: Select if the input beat will come from one of the following:\nDjazz’s metronome a manual tap from the user a remote source, such as another DAW. 2. OUTPUT CLICK MIDI PITCH: Changes the pitch of the click. The number indicates the MIDI value of the pitch.\n3. OUTPUT CLICK MIDI CHANNEL: The MIDI channel of the click (1-16). 4. SELECTED INPUT VIEW: metronome, manual, or remote.\n5. OUTPUT CLICK VOLUME CONTROL: The volume of the click. When muted, this will be gray.\n6. OUTPUT CLICK MUTE BUTTON: Mutes/unmutes the click\n7. OUTPUT CLICK MIDI PORT: The output port of the click.\nBEAT INPUT VIEWS Metronome The button marked with a triangle turns the metronome on and off. When you turn this button on and then select a grid cell, the metronome will trigger a new beat each time it clicks, beginning with the beat represented by the grid cell. No beat will be triggered until a grid cell has been selected. The number selector sets the metronome tempo. This is automatically set when a new song is loaded, but you can change it. This flashes each time the metronome sends a beat. Manual The triangle button engages Djazz. Clicking on the circle button sends Djazz a beat message. You can also press the space bar to send a manual click. Djazz expects the starting tempo given in the song file!\nRemote This will send a beat message to Djazz every time a MIDI note on message is received (i.e., with a non-zero velocity) on any channel.\nThe dropdown menu selects the MIDI input port for the click. The triangle button engages Djazz. This flashes each time a beat is received. ",
     "description": "2. BEAT INPUT Input Selector Djazz plays a beat each time it receives a message (a “tap,” or “click”), if it is engaged (how to engage Djazz will be explained below).",
     "tags": [],
@@ -368,14 +376,6 @@ var relearn_search_index = [
     "uri": "/3_api/2_externals/supervp.html"
   },
   {
-    "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Syncopation",
-    "uri": "/3_api/5_improvisation/_d_improv/_d_3_syncopation.html"
-  },
-  {
     "breadcrumb": "API \u003e Index of important abstractions",
     "content": "",
     "description": "",
@@ -448,12 +448,20 @@ var relearn_search_index = [
     "uri": "/3_api/6_architecture/pattr_usage.html"
   },
   {
-    "breadcrumb": "Manual \u003e Djazz Main Window",
+    "breadcrumb": "Manual \u003e Main Window",
     "content": "When a song is loaded, its grid will appear. The cells of the grid change color depending on whether Djazz is engaged and whether a cell is currently playing or not. The colors represent the following:\nLight gray: not the current measure/chapter of the song Dark gray: the current measure measure/chapter of the song, but Djazz is not engaged Blue: the current measure measure/chapter of the song, but not playing Orange: the current measure measure/chapter of the song, and playing 1. Chapter Select At the top are listed the “chapters” of the song–different sections like verses, choruses, and bridges. Clicking on a chapter will take you to the first measure of the chapter. If Djazz is engaged, it will start playing from here when the next beat is received.\n2. Bar Select When a chapter is selected, the bars in the chapter are shown below it. Each bar contains the number of beats given by the song’s time signature. Clicking on a bar will take you to the first beat in the bar. If Djazz is engaged, it will start playing from here when the next beat is received.\n3. Rewind-to-beginning Button Click to go to the beginning (first bar of first chapter) of the song.\n4. Lock button When the lock button next to the rewind button is on, Djazz will rewind to the beginning of the song every time it is disengaged (i.e., when the metronome is turned off, or when the engage button is unselected in manual or remote beat input.)\n5. Loop-Chapter/Song Button When selected, Djazz will loop the current chapter or the whole song, depending on the choice selected to the right of the button. That is, it will start from the beginning immediately when the end of the current chapter or song is reached\n5. Loop-Chapter/Song Select Selects whether to loop the current chapter or the whole song when the loop-chapter button is on.",
     "description": "When a song is loaded, its grid will appear. The cells of the grid change color depending on whether Djazz is engaged and whether a cell is currently playing or not.",
     "tags": [],
     "title": "Song Grid",
     "uri": "/1_manual/2_main_window/4_song_grid.html"
+  },
+  {
+    "breadcrumb": "Manual \u003e Main Window",
+    "content": " 1. MIDI Flush This will clear any sounding MIDI output.\n2. MIDI input port selection menu 3. Computer keyboard window open/close When selected, the computer keyboard window will open.\n4. MIDI input monitor on/off 5. MIDI monitor output port selection menu 6. MIDI volume meter When the monitor button is on, this will show the MIDI input volume level in green, orange, and red. When the monitor is off, it will be grey.\nComputer Keyboard Window 1. Output Port 2. MIDI Channel select 3. Number keys enable When enabled, the computer keys 0-9 will play the MIDI values C3-D4.\n4. Mode selection menu: select between monophonic and polyphonic mode 5. Keyboard Click a key with the mouse to play it. If the mode selected is polyphonic, you must click the key again to stop it playing.",
+    "description": "1. MIDI Flush This will clear any sounding MIDI output.",
+    "tags": [],
+    "title": "MIDI Input Selector",
+    "uri": "/1_manual/2_main_window/8_midi_input_selector.html"
   },
   {
     "breadcrumb": "Manual",
@@ -592,6 +600,14 @@ var relearn_search_index = [
     "uri": "/3_api/1_abstraction-references/components/midi_beat_generator.html"
   },
   {
+    "breadcrumb": "Manual",
+    "content": "The following messages are sent out of Djazz via its UDP send port:",
+    "description": "The following messages are sent out of Djazz via its UDP send port:",
+    "tags": [],
+    "title": "View Messages",
+    "uri": "/1_manual/10_view_messages.html"
+  },
+  {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
     "content": "",
     "description": "",
@@ -600,12 +616,28 @@ var relearn_search_index = [
     "uri": "/3_api/1_abstraction-references/components/midi_record.html"
   },
   {
+    "breadcrumb": "Manual",
+    "content": " ",
+    "description": " ",
+    "tags": [],
+    "title": "Settings",
+    "uri": "/1_manual/11_settings.html"
+  },
+  {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
     "content": "",
     "description": "",
     "tags": [],
     "title": "djazz control",
     "uri": "/3_api/1_abstraction-references/main_components/djazz_control.html"
+  },
+  {
+    "breadcrumb": "Manual",
+    "content": "",
+    "description": "",
+    "tags": [],
+    "title": "Improvising with Djazz",
+    "uri": "/1_manual/12_improvising.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",

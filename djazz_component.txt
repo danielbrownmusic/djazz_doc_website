@@ -69,21 +69,7 @@ View control data
 
 ATTRIBUTES
 
-attribute_1 type
-digest
-definition
-
-attribute_2 type g
-digest
-definition
-
-attribute_1 type s
-digest
-definition
-
-attribute_1 type g s
-digest
-definition
+None
 
 MESSAGES
 

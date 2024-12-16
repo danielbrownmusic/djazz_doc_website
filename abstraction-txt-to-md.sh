@@ -29,35 +29,46 @@ cat $1 | gsed -En '/OUTLETS/,/ATTRIBUTES/    {
                                                 p}
                                             }'
 
-cat $1 | gsed -En '/ATTRIBUTES/,/MESSAGES/  {  
-                                            s/^(ATTRIBUTES|MESSAGES)/\n# \1/p; 
-                                            /(^ *$|ATTRIBUTES|MESSAGES)/! {s/(^[^ ]+)/\n### \1 \&emsp; /
-                                                        s/; +([^ ]+)/ _\1_ \&emsp; /
-                                                        s/g s$/(get\/set)/
-                                                        s/s$/(set)/
-                                                        s/g$/(get)/ 
-                                                        p
-                                                        n
-                                                        s/.*/###### &/p
-                                                        n
-                                                        p
-                                                        }
-                                                }'
+# cat $1 | gsed -En '/ATTRIBUTES/,/MESSAGES/  {  
+#                                             s/^(ATTRIBUTES|MESSAGES)/\n# \1/p; 
+#                                             /(^ *$|ATTRIBUTES|MESSAGES)/! {s/(^[^ ]+)/\n### \1 \&emsp; /
+#                                                         s/; +([^ ]+)/ _\1_ \&emsp; /
+#                                                         s/g s$/(get\/set)/
+#                                                         s/s$/(set)/
+#                                                         s/g$/(get)/ 
+#                                                         p
+#                                                         n
+#                                                         s/.*/###### &/p
+#                                                         n
+#                                                         p
+#                                                         }
+#                                                 }'
 
-cat $1 | gsed -En '/MESSAGES/,/SEE ALSO/    {  
-                                            /^ *$/ {
-                                                p
-                                                n
-                                                {   /SEE ALSO/! { s/(^[^ ]+)/### _\1_/
-                                                    p
-                                                    n
-                                                    s/.*/###### &/p
-                                                    n
-                                                    p
-                                                    }
-                                                    }
-                                                    }
-                                                }'
+cat $1 | gsed -En 's/ATTRIBUTES/### &  \nNone  \n/p'
+
+
+# cat $1 | gsed -En '/MESSAGES/,/SEE ALSO/    {  
+#                                             /^ *$/ {
+#                                                 p
+#                                                 n
+#                                                 {   /SEE ALSO/! { s/(^[^ ]+)/### _\1_/
+#                                                     p
+#                                                     n
+#                                                     s/.*/###### &/p
+#                                                     n
+#                                                     p
+#                                                     }
+#                                                     }
+#                                                     }
+#                                                 }'
+
+cat $1 | gsed -En '/MESSAGES/,/SEE ALSO/    {
+    s/MESSAGES/### &  /p
+    /^(\/|\-|\()/! s/(^[^ ]+)(.*)/[\1]()\2  /p
+    /^(\/|\-|\()/ s/.*/&  /p
+
+
+}'
 
 cat $1 | gsed -En '/^SEE ALSO/,$ { s/^SEE ALSO/# SEE ALSO/p;
                                     /# SEE ALSO/! s/(^[^ ]+) +([^ ]+)/[\1](\2)/p
