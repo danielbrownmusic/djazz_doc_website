@@ -1,5 +1,6 @@
 +++
 title = "Song Grid"
+alwaysopen = "false"
 weight = 45
 +++
 

@@ -1,5 +1,6 @@
 +++
 archetype = "home"
+alwaysopen = false
 description = "Software for musical co-creativity."
 title = "Djazz"
 +++

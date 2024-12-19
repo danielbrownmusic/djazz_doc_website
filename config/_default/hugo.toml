@@ -5,6 +5,8 @@
 baseURL = 'http://localhost:1313'
 #baseURL = 'https://www.danielbrownmusic.com/djazz_doc_website/'
 
+alwaysopen = false
+
 # required value to serve this page from a webserver AND the file system;
 # if you don't want to serve your page from the file system, you can also set this value
 # to false

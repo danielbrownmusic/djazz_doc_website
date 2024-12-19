@@ -62,6 +62,24 @@ cat $1 | gsed -En 's/ATTRIBUTES/### &  \nNone  \n/p'
 #                                                     }
 #                                                 }'
 
+
+n_messages=`grep -En '^MESSAGES' | cut -d: -f1`
+n_seealso=`grep -En '^SEE ALSO' | cut -d: -f1`
+
+page=""
+
+for i in `seq $((n_messages + 1)) $((n_seealso + 1))`
+do
+    new_page=`sed -n 'i s/^\/(.+\/)*([^ ]+)/\1/p'`
+    if [[ $new_page ]]
+    then page=$new_page
+    fi
+    
+echo boo
+fi
+done
+
+
 cat $1 | gsed -En '/MESSAGES/,/SEE ALSO/    {
     s/MESSAGES/### &  /p
     /^(\/|\-|\()/! s/(^[^ ]+)(.*)/[\1]()\2  /p

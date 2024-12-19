@@ -75,8 +75,7 @@ MESSAGES
 
 -See [asynchronous messages]().
 
--See [Master Control]() for details about the following:
-/master_control
+/3_api/1_abstraction_references/components/master_control
 master::loop_section_active     0/1
 master::loop_section_beats list (int int) start-beat end-beat
 master::start_beat  int

@@ -21,24 +21,24 @@
     <title>Other Components :: Hugo Relearn Theme</title>
     <link href="http://localhost:1313/3_api/1_abstraction-references/components.html" rel="canonical" type="text/html" title="Other Components :: Hugo Relearn Theme">
     <link href="/3_api/1_abstraction-references/components/index.xml" rel="alternate" type="application/rss+xml" title="Other Components :: Hugo Relearn Theme">
-    <link href="/css/fontawesome-all.min.css?1734388996" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734388996" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1734388996" rel="stylesheet">
-    <link href="/css/auto-complete.css?1734388996" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734388996" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1734388996" rel="stylesheet">
-    <link href="/css/fonts.css?1734388996" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1734388996" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1734388996" rel="stylesheet">
-    <link href="/css/theme-relearn-auto.css?1734388996" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-relearn-auto.css?1734388996" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1734388996" rel="stylesheet">
-    <link href="/css/print.css?1734388996" rel="stylesheet" media="print">
-    <link href="/css/format-print.css?1734388996" rel="stylesheet">
-    <script src="/js/variant.js?1734388996"></script>
+    <link href="/css/fontawesome-all.min.css?1734552045" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1734552045" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1734552045" rel="stylesheet">
+    <link href="/css/auto-complete.css?1734552045" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1734552045" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1734552045" rel="stylesheet">
+    <link href="/css/fonts.css?1734552045" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1734552045" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1734552045" rel="stylesheet">
+    <link href="/css/theme-relearn-auto.css?1734552045" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-relearn-auto.css?1734552045" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1734552045" rel="stylesheet">
+    <link href="/css/print.css?1734552045" rel="stylesheet" media="print">
+    <link href="/css/format-print.css?1734552045" rel="stylesheet">
+    <script src="/js/variant.js?1734552045"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
       window.relearn.relBaseUri='..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
-      window.index_js_url="/index.search.js?1734388996";
+      window.index_js_url="/index.search.js?1734552045";
       // variant stuff
       window.variants && variants.init( [ 'relearn-auto', 'relearn-light', 'relearn-dark', 'relearn-bright', 'zen-auto', 'zen-light', 'zen-dark', 'retro-auto', 'neon', 'learn', 'blue', 'green', 'red' ] );
       // translations
@@ -122,6 +122,50 @@
             <header class="headline">
             </header>
 
+<h1 id="djazz-midi">djazz MIDI</h1>
+
+
+<pre class="mermaid align-left zoomable">
+flowchart TB;
+gIn(( ))
+g1[Generator 1]
+g2[Generator 2]
+g3[Generator 3]
+g4[Generator 4]
+g5[Generator 5]
+
+mbPlayer[MIDI Beat Player]
+
+t1[MIDI\nTrack 1]
+t2[MIDI\nTrack 2]
+t3[MIDI\nTrack 3]
+t4[MIDI\nTrack 4]
+t5[MIDI\nTrack 5]
+
+gOut((( )))
+
+gIn --&gt; g1 --&gt; mbPlayer
+gIn --&gt; g2 --&gt; mbPlayer
+gIn --&gt; g3 --&gt; mbPlayer
+gIn --&gt; g4 --&gt; mbPlayer
+gIn --&gt; g5 --&gt; mbPlayer
+
+mbPlayer --&gt; t1 --&gt; gOut
+mbPlayer --&gt; t2 --&gt; gOut
+mbPlayer --&gt; t3 --&gt; gOut
+mbPlayer --&gt; t4 --&gt; gOut
+mbPlayer --&gt; t5 --&gt; gOut
+
+</pre>
+
+            <footer class="footline">
+            </footer>
+          </article>
+
+          <article class="default">
+            <header class="headline">
+            </header>
+
 <h1 id="beat-clock">Beat Clock</h1>
 
 
@@ -135,6 +179,47 @@
 
 <h1 id="beat-generator">Beat Generator</h1>
 
+<h2 id="beat-generator">Beat Generator</h2>
+
+<pre class="mermaid align-left zoomable">
+flowchart TB;
+subgraph BeatGenerator[Beat Generator]
+direction TB
+	BeatGeneratorIn(( ))
+	BeatGeneratorSwitch{ }
+	subgraph ScorePlayer[Score Player]
+	direction TB
+		ScorePlayerSwitch[switch]
+		MasterClockFollower[Master Clock\nFollower]
+		ScorePlayerOut[out]
+		subgraph InternalClockFollower[Internal Clock Follower]
+		direction TB
+			InternalClockFollowerSpeed[Speed Control]
+			BeatClock[Beat Clock]
+			InternalClockFollowerSpeed --&gt; BeatClock
+		end
+		ScorePlayerSwitch --&gt; MasterClockFollower
+		ScorePlayerSwitch --&gt; InternalClockFollower
+	MasterClockFollower --&gt; ScorePlayerOut
+	InternalClockFollower --&gt; ScorePlayerOut
+	end
+	subgraph Improviser[Improviser]
+	direction TB
+		ImproviserSpeed[Speed Control]
+		FOP[Factor Oracle Player]
+		ImproviserSpeed --&gt; FOP
+	end
+
+	BeatGeneratorOut((( )))
+
+	BeatGeneratorIn		--&gt; BeatGeneratorSwitch
+	BeatGeneratorSwitch --&gt; ScorePlayer
+	BeatGeneratorSwitch --&gt; Improviser
+	ScorePlayer 		--&gt; BeatGeneratorOut
+	Improviser 			--&gt; BeatGeneratorOut
+end
+	
+</pre>
 
             <footer class="footline">
             </footer>
@@ -235,6 +320,20 @@ Master Clock
 
 <h1 id="midi-beat-generator">MIDI Beat Generator</h1>
 
+<h2 id="midi-beat-generator">MIDI Beat Generator</h2>
+
+<pre class="mermaid align-left zoomable">
+flowchart TB;
+subgraph MidiBeatGenerator
+direction TB
+		MidiBeatGeneratorIn(( ))
+		BeatReader[Beat Reader]
+		Looper[Beat Number Looper]
+		BeatReader[MIDI Beat Reader]
+		MidiBeatGeneratorOut((( )))
+		MidiBeatGeneratorIn --&gt; BeatGenerator --&gt; Looper --&gt; BeatReader --&gt; MidiBeatGeneratorOut
+end
+</pre>
 
             <footer class="footline">
             </footer>
@@ -277,22 +376,22 @@ Master Clock
         </div>
       </main>
     </div>
-    <script src="/js/clipboard.min.js?1734388996" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1734388996" defer></script>
-    <script src="/js/d3/d3-color.min.js?1734388996" defer></script>
-    <script src="/js/d3/d3-dispatch.min.js?1734388996" defer></script>
-    <script src="/js/d3/d3-drag.min.js?1734388996" defer></script>
-    <script src="/js/d3/d3-ease.min.js?1734388996" defer></script>
-    <script src="/js/d3/d3-interpolate.min.js?1734388996" defer></script>
-    <script src="/js/d3/d3-selection.min.js?1734388996" defer></script>
-    <script src="/js/d3/d3-timer.min.js?1734388996" defer></script>
-    <script src="/js/d3/d3-transition.min.js?1734388996" defer></script>
-    <script src="/js/d3/d3-zoom.min.js?1734388996" defer></script>
-    <script src="/js/js-yaml.min.js?1734388996" defer></script>
-    <script src="/js/mermaid.min.js?1734388996" defer></script>
+    <script src="/js/clipboard.min.js?1734552045" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1734552045" defer></script>
+    <script src="/js/d3/d3-color.min.js?1734552045" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1734552045" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1734552045" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1734552045" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1734552045" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1734552045" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1734552045" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1734552045" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1734552045" defer></script>
+    <script src="/js/js-yaml.min.js?1734552045" defer></script>
+    <script src="/js/mermaid.min.js?1734552045" defer></script>
     <script>
       window.themeUseMermaid = JSON.parse("{ \"securityLevel\": \"loose\" }");
     </script>
-    <script src="/js/theme.js?1734388996" defer></script>
+    <script src="/js/theme.js?1734552045" defer></script>
   </body>
 </html>

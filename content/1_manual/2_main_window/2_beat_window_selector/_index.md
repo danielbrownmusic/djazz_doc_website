@@ -1,5 +1,6 @@
 +++
 title = "Beat Input"
+alwaysopen = "false"
 weight = 25
 +++
 

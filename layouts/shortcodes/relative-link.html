@@ -1,2 +1,0 @@
-{{- $path := .Get "path" -}}
-<a href="{{ .Page.RelPermalink | relURL | (printf "%s/%s" .Page.Dir $path) }}">{{ .Inner }}</a>

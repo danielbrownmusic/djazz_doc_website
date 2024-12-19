@@ -9,9 +9,9 @@
     <atom:link href="http://localhost:1313/3_api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Index of important abstractions</title>
-      <link>http://localhost:1313/3_api/1_abstraction-references.html</link>
+      <link>http://localhost:1313/3_api/1_abstraction_references.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/3_api/1_abstraction-references.html</guid>
+      <guid>http://localhost:1313/3_api/1_abstraction_references.html</guid>
       <description>Hmmmm…</description>
     </item>
     <item>
@@ -40,7 +40,7 @@
       <link>http://localhost:1313/3_api/5_improvisation.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/3_api/5_improvisation.html</guid>
-      <description></description>
+      <description>The generator uses the beat number when improvise mode is not on; it uses this to play the next beat or a different beat if one has been selected by the user.</description>
     </item>
     <item>
       <title>System Architecture</title>

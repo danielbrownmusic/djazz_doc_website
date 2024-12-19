@@ -22,6 +22,13 @@
       <description></description>
     </item>
     <item>
+      <title>djazz MIDI</title>
+      <link>http://localhost:1313/3_api/1_abstraction-references/components/djazz_midi.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3_api/1_abstraction-references/components/djazz_midi.html</guid>
+      <description> flowchart TB; gIn(( )) g1[Generator 1] g2[Generator 2] g3[Generator 3] g4[Generator 4] g5[Generator 5] mbPlayer[MIDI Beat Player] t1[MIDI\nTrack 1] t2[MIDI\nTrack 2] t3[MIDI\nTrack 3] t4[MIDI\nTrack 4] t5[MIDI\nTrack 5] gOut((( ))) gIn --&gt; g1 --&gt; mbPlayer gIn --&gt; g2 --&gt; mbPlayer gIn --&gt; g3 --&gt; mbPlayer gIn --&gt; g4 --&gt; mbPlayer gIn --&gt; g5 --&gt; mbPlayer mbPlayer --&gt; t1 --&gt; gOut mbPlayer --&gt; t2 --&gt; gOut mbPlayer --&gt; t3 --&gt; gOut mbPlayer --&gt; t4 --&gt; gOut mbPlayer --&gt; t5 --&gt; gOut </description>
+    </item>
+    <item>
       <title>Beat Clock</title>
       <link>http://localhost:1313/3_api/1_abstraction-references/components/beat_clock.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -33,7 +40,7 @@
       <link>http://localhost:1313/3_api/1_abstraction-references/components/beat_generator.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/3_api/1_abstraction-references/components/beat_generator.html</guid>
-      <description></description>
+      <description>Beat Generator flowchart TB; subgraph BeatGenerator[Beat Generator] direction TB BeatGeneratorIn(( )) BeatGeneratorSwitch{ } subgraph ScorePlayer[Score Player] direction TB ScorePlayerSwitch[switch] MasterClockFollower[Master Clock\nFollower] ScorePlayerOut[out] subgraph InternalClockFollower[Internal Clock Follower] direction TB InternalClockFollowerSpeed[Speed Control] BeatClock[Beat Clock] InternalClockFollowerSpeed --&gt; BeatClock end ScorePlayerSwitch --&gt; MasterClockFollower ScorePlayerSwitch --&gt; InternalClockFollower MasterClockFollower --&gt; ScorePlayerOut InternalClockFollower --&gt; ScorePlayerOut end subgraph Improviser[Improviser] direction TB ImproviserSpeed[Speed Control] FOP[Factor Oracle Player] ImproviserSpeed --&gt; FOP end BeatGeneratorOut((( ))) BeatGeneratorIn&#x9;--&gt; BeatGeneratorSwitch BeatGeneratorSwitch --&gt; ScorePlayer BeatGeneratorSwitch --&gt; Improviser ScorePlayer --&gt; BeatGeneratorOut Improviser --&gt; BeatGeneratorOut end </description>
     </item>
     <item>
       <title>Factor Oracle</title>
@@ -75,7 +82,7 @@
       <link>http://localhost:1313/3_api/1_abstraction-references/components/midi_beat_generator.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/3_api/1_abstraction-references/components/midi_beat_generator.html</guid>
-      <description></description>
+      <description>MIDI Beat Generator flowchart TB; subgraph MidiBeatGenerator direction TB MidiBeatGeneratorIn(( )) BeatReader[Beat Reader] Looper[Beat Number Looper] BeatReader[MIDI Beat Reader] MidiBeatGeneratorOut((( ))) MidiBeatGeneratorIn --&gt; BeatGenerator --&gt; Looper --&gt; BeatReader --&gt; MidiBeatGeneratorOut end </description>
     </item>
     <item>
       <title>MIDI Record</title>
