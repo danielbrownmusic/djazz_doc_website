@@ -2,8 +2,8 @@
 # change this to a value appropriate for you; if your site is served from a subdirectory
 # set it like "https://example.com/mysite/"
 
-#baseURL = 'http://localhost:1313'
-baseURL = 'https://www.danielbrownmusic.com/djazz_doc_website/'
+baseURL = 'http://localhost:1313'
+#baseURL = 'https://www.danielbrownmusic.com/djazz_doc_website/'
 
 alwaysopen = false
 
