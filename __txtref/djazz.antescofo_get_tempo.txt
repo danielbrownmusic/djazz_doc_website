@@ -1,0 +1,19 @@
+Uses antescofo to infer the current tempo based on time between input messages.
+
+Detailed Description
+Loads the file _antescofo_djazz.txt_, which must be in the Max search path (currently in data/antescofo_scores).
+
+INLETS
+0 (bang, symbol) see messages
+
+OUTLETS
+0 (float) tempo inferred from time between
+
+MESSAGES
+bang
+left inlet: bangs will cause inferred tempo to be output. Initial tempo must be set and bangs must not deviate far from current tempo. Two bangs must occur before tempo is inferred.
+
+initial_tempo + float
+left inlet: tempo to set antescofo's tempo inference mechanism. Initial input tempo must be close to this.
+
+SEE ALSO

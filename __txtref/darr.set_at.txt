@@ -1,0 +1,12 @@
+darr.set_at
+
+Sets the entry at the given index
+
+Detailed Description
+When using a dict to mimic an array, use this as the assignment operator [] or _set_.
+
+INLETS
+0 (list: int anything*) index, entry
+1 (symbol) dict name
+
+SEE ALSO

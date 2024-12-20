@@ -1,0 +1,20 @@
+djazz.audio_out_track
+
+Passes audio signal through. Control with djazz.view.audio_track.
+Pattr messages (must be passed via an external pattrhub/pattrstorage):
+volume (int) 0-127
+active (int) 0/1
+solo (int) 0/1
+mute (int) 0/1
+
+INLETS
+0 (signal) audio signal 1/L
+1 (signal) audio signal 2/R
+
+OUTLETS
+0 (signal) audio signal 1/L
+1 (signal) audio signal 2/R
+
+SEE ALSO
+djazz.view.audio_out_track
+djazz.solo_bank

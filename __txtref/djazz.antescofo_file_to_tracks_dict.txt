@@ -1,0 +1,25 @@
+NAME
+
+Converts an antescofo file into a Max dict (which can then be saved as a JSON file).
+Dict format: 
+tracks
+    int
+        beat  
+            int  
+                notes  
+                    int: note data  
+                    int: note data 
+            int
+            
+
+INLETS
+0 () stuff
+
+OUTLETS
+0 (symbol) tracks dict name
+
+MESSAGES
+clear
+
+SEE ALSO
+stuff

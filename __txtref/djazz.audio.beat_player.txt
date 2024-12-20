@@ -1,0 +1,18 @@
+NAME
+
+Plays back a beat of audio at a time from a buffer, where beats are passed in in a dict.
+Uses supervp to playback in tempo and with pitch transposition.
+
+
+INLETS
+0 (list: int float int int) pitch transposition, tempo, start time, end time
+1 messages: audio_buffer_offset_in_ms + int, crossfade_time_in_ms + int
+2 messages: audio_buffer_name + symbol
+
+OUTLETS
+0 (signal) audio out 1
+1 (signal) audio out 2
+
+SEE ALSO
+djazz.audio.beat_generator
+djazz.audio.supervp_player

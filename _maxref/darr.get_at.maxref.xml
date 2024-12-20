@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="./_c74_ref.xsl" type="text/xsl"?>
+
+<c74object name="darr.get_at" module="max" category="dict_utils">
+
+	<digest>
+    Retrieves an element at a given integer key from a dict. 
+	</digest>
+	
+	<description>
+    Retrieves an element at a given index, from a dictionary whose keys are integers (that is, a dict that mimics an array).
+    </description>
+
+  <!--METADATA-->
+    <metadatalist>
+        <metadata name="author">Daniel Brown</metadata>
+        <metadata name="tag">IRCAM</metadata>
+        <metadata name="tag">Djazz</metadata>
+    </metadatalist>
+	
+	
+    <!--INLETS-->
+    <inletlist>
+        <inlet id="0" type="int"> <!-- id is zero-based inlet number from right -->
+            <digest>
+            index of element to retrieve
+            </digest>
+            <description>
+            </description>
+        </inlet>
+
+        <inlet id="1" type="symbol"> <!-- id is zero-based inlet number from right -->
+            <digest>
+            dict name
+            </digest>
+            <description>
+            </description>
+        </inlet>
+    </inletlist>
+
+
+    <!--OUTLETS-->
+    <outletlist>
+        <outlet id="0" type="anything">
+            <digest>
+            element at given index, if index exists
+            </digest>
+            <description>
+            </description>        
+        </outlet>
+
+        <outlet id="1" type="bang">
+            <digest>
+            bang if index does not exist
+            </digest>
+            <description>
+            </description>        
+        </outlet>
+
+    </outletlist>
+
+	<!--MESSAGES-->
+	<methodlist>
+    </methodlist>
+	
+    <seealsolist>
+		<seealso name=""/>
+     </seealsolist>
+	
+</c74object>

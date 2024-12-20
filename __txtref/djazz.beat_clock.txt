@@ -1,0 +1,44 @@
+Inputs bangs and outputs a beat number, based on loop, step, start, and end parameters.
+
+Will not output when end beat is reached or after.
+
+INLETS
+
+0 bang
+-bang for next beat
+-
+
+1 messages: next_beat, end, step
+-see messages
+-
+
+OUTLETS
+
+0 int
+-next beat
+-
+
+1 bang
+-bang when loop occurs
+-
+
+2 bang
+-bang when end is reached
+-
+
+MESSAGES 
+
+next_beat
+sets the next beat
+-
+
+end
+-
+-
+
+step
+-
+-
+
+SEE ALSO
+none

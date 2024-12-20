@@ -1,0 +1,14 @@
+NAME
+
+Adjusts message being sent to djaz.audio.beat_player so that the audio will be transposed up the desired number of semitones.
+
+Pattr messages (must be passed via an external pattrhub/pattrstorage):
+semitones (int) -255 to 255
+
+INLETS
+0 (list: s i f) beat_dict_name pitch_transposition tempo
+
+OUTLETS
+0 (list: s i f) beat_dict_name pitch_transposition tempo
+
+SEE ALSO
