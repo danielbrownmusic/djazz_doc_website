@@ -5,7 +5,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Manual",
-    "uri": "/1_manual.html"
+    "uri": "/djazz_doc_website/1_manual.html"
   },
   {
     "breadcrumb": "",
@@ -13,7 +13,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tutorials",
-    "uri": "/2_tutorials.html"
+    "uri": "/djazz_doc_website/2_tutorials.html"
   },
   {
     "breadcrumb": "",
@@ -21,7 +21,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "API",
-    "uri": "/3_api.html"
+    "uri": "/djazz_doc_website/3_api.html"
   },
   {
     "breadcrumb": "API \u003e externals",
@@ -29,15 +29,15 @@ var relearn_search_index = [
     "description": " Antescofo is used in two places: Master control, to calculate the tempo (SCORE NAME) MIDI beat reader, to sequence and send out midi notes in the proper tempo and rhythm (SCORE NAME) ",
     "tags": [],
     "title": "antescofo",
-    "uri": "/3_api/2_externals/antescofo.html"
+    "uri": "/djazz_doc_website/3_api/2_externals/antescofo.html"
   },
   {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Returns the number of keys in a dict\nWhen using a dict to mimic an array, use this to retrieve the length of the array.\nOUTLETS 0 int number of keys in dict\nMESSAGES symbol\ndict name\nSEE ALSO ",
+    "description": "Returns the number of keys in a dict\nWhen using a dict to mimic an array, use this to retrieve the length of the array.",
     "tags": [],
-    "title": "Audio Beat Generator",
-    "uri": "/3_api/1_abstraction_references/components/audio_beat_generator.html"
+    "title": "darr.get_size",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/darr.get_size.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
@@ -45,7 +45,7 @@ var relearn_search_index = [
     "description": "The oracle factor patch is here: patchers/data_structures/factor_oracle/factor_oracle.maxpat\nTo use different comparison functions, you need to write a Max patch that performs the label comparison.",
     "tags": [],
     "title": "Description of the Factor Oracle",
-    "uri": "/3_api/5_improvisation/1_factor_oracle.html"
+    "uri": "/djazz_doc_website/3_api/5_improvisation/1_factor_oracle.html"
   },
   {
     "breadcrumb": "API \u003e Notes on databases in Max",
@@ -53,15 +53,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Dicts in Max and javascript",
-    "uri": "/3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max.html"
+    "uri": "/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/max_dictionaris_in_js_and_max.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
-    "content": " flowchart TB; AudioIn1((Audio\\nIn L)) AudioIn2((Audio\\nIn R)) MidiIn((MIDI In)) TapIn((Tap\\nIn)) PattrIn((Pattr\\nIn)) DataIn((File\\nData\\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master \"./../components/master_control.html\" \"Master Control\" click Audio \"audio.html\" \"Master Control\" click Midi \"midi.html\" \"Master Control\" AudioOut1(((Audio\\nOut 1L))) AudioOut2(((Audio\\nOut 1R))) AudioOut3(((Audio\\nOut 2L))) AudioOut4(((Audio\\nOut 2R))) AudioOut5(((Audio\\nOut 3L))) AudioOut6(((Audio\\nOut 3R))) MidiOut(((MIDI Out))) PattrOut(((Pattr Out))) AudioIn1---\u003eAudio AudioIn2---\u003eAudio TapIn--\u003eMaster PattrIn--\u003eMaster PattrIn--\u003eAudio PattrIn--\u003eMidi DataIn--\u003eAudio DataIn--\u003eMidi DataIn--\u003eMaster Master--\u003eAudio Master--\u003eMidi MidiIn--\u003eMidi Audio--\u003eAudioOut1 Audio--\u003eAudioOut2 Audio--\u003eAudioOut3 Audio--\u003eAudioOut4 Audio--\u003eAudioOut5 Audio--\u003eAudioOut6 Midi--\u003eMidiOut PresetIn--\u003ePattrStorage PattrStorage--\u003ePattrOut INLETS 1 signal Audio In 1 signal Audio signal is sent to djazz_audio_in\n2 signal Audio In 2 signal Audio signal is sent to djazz_audio_in\n3 list Midi In list (int pitch, int velocity, int channel) sent to djazz_midi_in\n4 bang Triggers next beat bang All active tracks MIDI and audio tracks will play their data located at the current beat in tempo when a bang is received. Any armed recording tracks will record any input during this beat in tempo.\n5 list Asynchronous input (such as that sent from pattr objects) list (symbol argument-name anything argument-value) See the section on pattrs\n6 symbol Loads records needed for playback symbol The name of a Max dict that has been loaded with a JSON file. These are either song files or score files.\n7 anything Messages to the pattrstorage objects anything This is only used to send the “clientwindow” message to the pattrstorage object, which is useful for debugging. Any preset-related messages could be sent, but they should actually be sent to djazz_control.\nOUTLETS 0 signal Audio Track 1 Out 1 Audio signal\n1 signal Audio Track 1 Out 2 Audio signal\n2 signal Audio Track 2 Out 1 Audio signal\n3 signal Audio Track 2 Out 2 Audio signal\n4 signal Audio Track 3 Out 1 Audio signal\n5 signal Audio Track 3 Out 2 Audio signal\n6 list MIDI output A MIDI note is sent out as a list (int pitch, int velocity, int channel)\n7 list View control data ATTRIBUTES None\nMESSAGES ### MESSAGES -See asynchronous messages.\n-See Master Control for details about the following:\n/master_control\nPage not found: /3_api/1_abstraction_references/components/master_control#loop-section-active\n0/1 master::loop_section_beats list (int int) start-beat end-beat master::start_beat int\nmaster::end_beat int\nmaster::initial_tempo float\n-See Audio In for details about the following:\n/audio_in\naudio::audio_in::record_active 0/1\naudio::audio_in::max_repetitions int\naudio::audio_in::save::folder_path symbol\n-See Audio Out for details about the following:\n/audio_out\n(for n from 1-3):\naudio::audio_out::beat_players::beat_player_n::crossfade_time_in_ms int\naudio::audio_out::beat_players::beat_player_n::audio_buffer_offset_in_ms int\n(for n from 1-3):\naudio::audio_out::listeners::listener_n 0/1\naudio::audio_out::listeners::include_master 0/1\n(for n from 1-3):\naudio::audio_out::audio_out_bank::track_n::volume int 0-127\naudio::audio_out::audio_out_bank::track_n::mute 0/1\naudio::audio_out::audio_out_bank::track_n::solo 0/1\naudio::audio_out::audio_out_bank::track_n::active 0/1\n(for n from 1-3):\naudio::audio_out::generators::audio_beat_generator_n::loop_length int\naudio::audio_out::generators::audio_beat_generator_n::speed_numerator int\naudio::audio_out::generators::audio_beat_generator_n::end_beat int\naudio::audio_out::generators::audio_beat_generator_n::next_beat int\naudio::audio_out::generators::audio_beat_generator_n::loop_section_active 0/1\naudio::audio_out::generators::audio_beat_generator_n::speed_denominator int\naudio::audio_out::generators::audio_beat_generator_n::speed_active 0/1\naudio::audio_out::generators::audio_beat_generator_n::loop_section_beats int\naudio::audio_out::generators::audio_beat_generator_n::pitch_range int\naudio::audio_out::generators::audio_beat_generator_n::max_continuity int\naudio::audio_out::generators::audio_beat_generator_n::improvise 0/1\naudio::audio_out::generators::audio_beat_generator_n::transpose_octave int\naudio::audio_out::generators::audio_beat_generator_n::transpose_pitch int\n(for n from 1-3):\naudio::audio_out::data_loaders::track_loader_n::repetition int\n(for n from 1-15):\nmidi::midi_out::midi_out_bank::track_n::mute 0/1\nmidi::midi_out::midi_out_bank::track_n::active 0/1\nmidi::midi_out::midi_out_bank::track_n::solo 0/1\nmidi::midi_out::midi_out_bank::track_n::volume int 0-127\nmidi::midi_out::midi_out_bank::track_n::port symbol\nmidi::midi_out::midi_out_bank::track_n::channel_out int 1-16\nmidi::midi_out::midi_out_bank::track_n::ctrl_msg int\nmidi::midi_out::midi_out_bank::track_n::effect_list::transpose_octave::octaves int -255-+255\nmidi::midi_out::midi_out_bank::track_n::effect_list::transpose_pitch::semitones int -255-+255\nmidi::midi_out::data_loaders::scores::score_file_1::file_path symbol\nmidi::midi_out::data_loaders::scores::score_file_2::file_path symbol\nmidi::midi_out::data_loaders::track_loader_1::repetition int 0-255\nmidi::midi_out::data_loaders::track_loader_2::repetition int 0-255\n(for n from 1-15):\nmidi::midi_out::listeners::listener_n\nmidi::midi_out::listeners::include_master\n(for n from 1-15):\nmidi::midi_out::generators::midi_beat_generator_n::loop_length int\nmidi::midi_out::generators::midi_beat_generator_n::speed_numerator int\nmidi::midi_out::generators::midi_beat_generator_n::end_beat int\nmidi::midi_out::generators::midi_beat_generator_n::start_beat int\nmidi::midi_out::generators::midi_beat_generator_n::loop_section_active 0/1\nmidi::midi_out::generators::midi_beat_generator_n::speed_denominator int\nmidi::midi_out::generators::midi_beat_generator_n::speed_active 0/1\nmidi::midi_out::generators::midi_beat_generator_n::loop_section_beats list (int int)\nmidi::midi_out::generators::midi_beat_generator_n::pitch_range 0-255\nmidi::midi_out::generators::midi_beat_generator_n::max_continuity 0-255\nmidi::midi_out::generators::midi_beat_generator_n::improvise 0/1\nmidi::midi_in::folder_path symbol\nmidi::midi_in::record_active 0/1\nmidi::midi_in::save::folder_path symbol\nSEE ALSO\nSEE ALSO djazz_data djazz_control djazz_view_control",
+    "content": " flowchart TB; AudioIn1((Audio\\nIn L)) AudioIn2((Audio\\nIn R)) MidiIn((MIDI In)) TapIn((Tap\\nIn)) PattrIn((Pattr\\nIn)) DataIn((File\\nData\\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master \"./../components/master_control.html\" \"Master Control\" click Audio \"audio.html\" \"Master Control\" click Midi \"midi.html\" \"Master Control\" AudioOut1(((Audio\\nOut 1L))) AudioOut2(((Audio\\nOut 1R))) AudioOut3(((Audio\\nOut 2L))) AudioOut4(((Audio\\nOut 2R))) AudioOut5(((Audio\\nOut 3L))) AudioOut6(((Audio\\nOut 3R))) MidiOut(((MIDI Out))) PattrOut(((Pattr Out))) AudioIn1---\u003eAudio AudioIn2---\u003eAudio TapIn--\u003eMaster PattrIn--\u003eMaster PattrIn--\u003eAudio PattrIn--\u003eMidi DataIn--\u003eAudio DataIn--\u003eMidi DataIn--\u003eMaster Master--\u003eAudio Master--\u003eMidi MidiIn--\u003eMidi Audio--\u003eAudioOut1 Audio--\u003eAudioOut2 Audio--\u003eAudioOut3 Audio--\u003eAudioOut4 Audio--\u003eAudioOut5 Audio--\u003eAudioOut6 Midi--\u003eMidiOut PresetIn--\u003ePattrStorage PattrStorage--\u003ePattrOut INLETS 1 signal Audio In 1 signal Audio signal is sent to djazz_audio_in\n2 signal Audio In 2 signal Audio signal is sent to djazz_audio_in\n3 list Midi In list (int pitch, int velocity, int channel) sent to djazz_midi_in\n4 bang Triggers next beat bang All active tracks MIDI and audio tracks will play their data located at the current beat in tempo when a bang is received. Any armed recording tracks will record any input during this beat in tempo.\n5 list Asynchronous input (such as that sent from pattr objects) list (symbol argument-name anything argument-value) See the section on pattrs\n6 symbol Loads records needed for playback symbol The name of a Max dict that has been loaded with a JSON file. These are either song files or score files.\n7 anything Messages to the pattrstorage objects anything This is only used to send the “clientwindow” message to the pattrstorage object, which is useful for debugging. Any preset-related messages could be sent, but they should actually be sent to djazz_control.\nOUTLETS 0 signal Audio Track 1 Out 1 Audio signal\n1 signal Audio Track 1 Out 2 Audio signal\n2 signal Audio Track 2 Out 1 Audio signal\n3 signal Audio Track 2 Out 2 Audio signal\n4 signal Audio Track 3 Out 1 Audio signal\n5 signal Audio Track 3 Out 2 Audio signal\n6 list MIDI output A MIDI note is sent out as a list (int pitch, int velocity, int channel)\n7 list View control data ATTRIBUTES None\nMESSAGES ### MESSAGES -See asynchronous messages.\n-See Page not found: /3_api/1_abstraction_references/components/master_control\nfor details about the following:\n/master_control\nPage not found: /3_api/1_abstraction_references/components/master_control#loop-section-active\n0/1 Page not found: /3_api/1_abstraction_references/components/master_control\nlist (int int) start-beat end-beat master::start_beat int\nmaster::end_beat int\nmaster::initial_tempo float\n-See Audio In for details about the following:\n/audio_in\naudio::audio_in::record_active 0/1\naudio::audio_in::max_repetitions int\naudio::audio_in::save::folder_path symbol\n-See Audio Out for details about the following:\n/audio_out\n(for n from 1-3):\naudio::audio_out::beat_players::beat_player_n::crossfade_time_in_ms int\naudio::audio_out::beat_players::beat_player_n::audio_buffer_offset_in_ms int\n(for n from 1-3):\naudio::audio_out::listeners::listener_n 0/1\naudio::audio_out::listeners::include_master 0/1\n(for n from 1-3):\naudio::audio_out::audio_out_bank::track_n::volume int 0-127\naudio::audio_out::audio_out_bank::track_n::mute 0/1\naudio::audio_out::audio_out_bank::track_n::solo 0/1\naudio::audio_out::audio_out_bank::track_n::active 0/1\n(for n from 1-3):\naudio::audio_out::generators::audio_beat_generator_n::loop_length int\naudio::audio_out::generators::audio_beat_generator_n::speed_numerator int\naudio::audio_out::generators::audio_beat_generator_n::end_beat int\naudio::audio_out::generators::audio_beat_generator_n::next_beat int\naudio::audio_out::generators::audio_beat_generator_n::loop_section_active 0/1\naudio::audio_out::generators::audio_beat_generator_n::speed_denominator int\naudio::audio_out::generators::audio_beat_generator_n::speed_active 0/1\naudio::audio_out::generators::audio_beat_generator_n::loop_section_beats int\naudio::audio_out::generators::audio_beat_generator_n::pitch_range int\naudio::audio_out::generators::audio_beat_generator_n::max_continuity int\naudio::audio_out::generators::audio_beat_generator_n::improvise 0/1\naudio::audio_out::generators::audio_beat_generator_n::transpose_octave int\naudio::audio_out::generators::audio_beat_generator_n::transpose_pitch int\n(for n from 1-3):\naudio::audio_out::data_loaders::track_loader_n::repetition int\n(for n from 1-15):\nmidi::midi_out::midi_out_bank::track_n::mute 0/1\nmidi::midi_out::midi_out_bank::track_n::active 0/1\nmidi::midi_out::midi_out_bank::track_n::solo 0/1\nmidi::midi_out::midi_out_bank::track_n::volume int 0-127\nmidi::midi_out::midi_out_bank::track_n::port symbol\nmidi::midi_out::midi_out_bank::track_n::channel_out int 1-16\nmidi::midi_out::midi_out_bank::track_n::ctrl_msg int\nmidi::midi_out::midi_out_bank::track_n::effect_list::transpose_octave::octaves int -255-+255\nmidi::midi_out::midi_out_bank::track_n::effect_list::transpose_pitch::semitones int -255-+255\nmidi::midi_out::data_loaders::scores::score_file_1::file_path symbol\nmidi::midi_out::data_loaders::scores::score_file_2::file_path symbol\nmidi::midi_out::data_loaders::track_loader_1::repetition int 0-255\nmidi::midi_out::data_loaders::track_loader_2::repetition int 0-255\n(for n from 1-15):\nmidi::midi_out::listeners::listener_n\nmidi::midi_out::listeners::include_master\n(for n from 1-15):\nmidi::midi_out::generators::midi_beat_generator_n::loop_length int\nmidi::midi_out::generators::midi_beat_generator_n::speed_numerator int\nmidi::midi_out::generators::midi_beat_generator_n::end_beat int\nmidi::midi_out::generators::midi_beat_generator_n::start_beat int\nmidi::midi_out::generators::midi_beat_generator_n::loop_section_active 0/1\nmidi::midi_out::generators::midi_beat_generator_n::speed_denominator int\nmidi::midi_out::generators::midi_beat_generator_n::speed_active 0/1\nmidi::midi_out::generators::midi_beat_generator_n::loop_section_beats list (int int)\nmidi::midi_out::generators::midi_beat_generator_n::pitch_range 0-255\nmidi::midi_out::generators::midi_beat_generator_n::max_continuity 0-255\nmidi::midi_out::generators::midi_beat_generator_n::improvise 0/1\nmidi::midi_in::folder_path symbol\nmidi::midi_in::record_active 0/1\nmidi::midi_in::save::folder_path symbol\nSEE ALSO\nSEE ALSO djazz_data djazz_control djazz_view_control",
     "description": "flowchart TB; AudioIn1((Audio\\nIn L)) AudioIn2((Audio\\nIn R)) MidiIn((MIDI In)) TapIn((Tap\\nIn)) PattrIn((Pattr\\nIn)) DataIn((File\\nData\\nIn)) PresetIn((Presets In)) Master[Master Control] Audio[Djazz Audio] Midi[Djazz MIDI] PattrStorage[PattrStorage] click Master \".",
     "tags": [],
     "title": "djazz",
-    "uri": "/3_api/1_abstraction_references/main_components/djazz.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/main_components/djazz.html"
   },
   {
     "breadcrumb": "API \u003e Going further",
@@ -69,7 +69,7 @@ var relearn_search_index = [
     "description": "Dynamic creation and destruction of objects: arrays and dicts Hierarchies Saving and reloading architecture Objects in djazz can be created and destroyed, so you can set up variable numbers of different types of players, and different midi and audio outputs.",
     "tags": [],
     "title": "Dynamic Object Creation and Destruction",
-    "uri": "/3_api/7_going_further/dynamic_object_creation_and_destruction.html"
+    "uri": "/djazz_doc_website/3_api/7_going_further/dynamic_object_creation_and_destruction.html"
   },
   {
     "breadcrumb": "API",
@@ -77,7 +77,7 @@ var relearn_search_index = [
     "description": "Hmmmm…",
     "tags": [],
     "title": "Index of important abstractions",
-    "uri": "/3_api/1_abstraction_references.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references.html"
   },
   {
     "breadcrumb": "Manual",
@@ -85,7 +85,7 @@ var relearn_search_index = [
     "description": "Djazz needs no special installation. Download the djazz folder here. Open Max.",
     "tags": [],
     "title": "Installation",
-    "uri": "/1_manual/1_installation.html"
+    "uri": "/djazz_doc_website/1_manual/1_installation.html"
   },
   {
     "breadcrumb": "Manual \u003e Audio Window",
@@ -93,7 +93,7 @@ var relearn_search_index = [
     "description": "These controls are similar to the audio live input controls.",
     "tags": [],
     "title": "Live Input",
-    "uri": "/1_manual/4_audio_window/1_live_input.html"
+    "uri": "/djazz_doc_website/1_manual/4_audio_window/1_live_input.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -101,7 +101,7 @@ var relearn_search_index = [
     "description": "Description of Components in Model:\nMaster Control Master Clock - outputs a beat number when it receives a bang - increments its beat number with each output, but also keeps track of position in a song form and adjusts the beat in accordance if looped.",
     "tags": [],
     "title": "main components",
-    "uri": "/3_api/6_architecture/component_descriptions/master_control.html"
+    "uri": "/djazz_doc_website/3_api/6_architecture/component_descriptions/master_control.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions",
@@ -109,7 +109,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Main Components",
-    "uri": "/3_api/1_abstraction_references/main_components.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/main_components.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Tools",
@@ -117,7 +117,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "make song file",
-    "uri": "/3_api/1_abstraction_references/tools/make_song_file.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/tools/make_song_file.html"
   },
   {
     "breadcrumb": "Manual \u003e Tools",
@@ -125,7 +125,7 @@ var relearn_search_index = [
     "description": "Djazz uses a song file to play a song, whether you are plaing back scores or using live MIDI or audio.",
     "tags": [],
     "title": "Making a Song File",
-    "uri": "/1_manual/7_tools/make_song_file.html"
+    "uri": "/djazz_doc_website/1_manual/7_tools/make_song_file.html"
   },
   {
     "breadcrumb": "Manual \u003e MIDI Window",
@@ -133,7 +133,7 @@ var relearn_search_index = [
     "description": "When clicked and illuminated, the record button arms the buffer for recording.",
     "tags": [],
     "title": "MIDI Live Input View",
-    "uri": "/1_manual/3_midi_window/1_live_input.html"
+    "uri": "/djazz_doc_website/1_manual/3_midi_window/1_live_input.html"
   },
   {
     "breadcrumb": "API \u003e Notes on databases in Max",
@@ -141,7 +141,7 @@ var relearn_search_index = [
     "description": "Dicts, like colls, are persistent and global, so use them only as read-only.",
     "tags": [],
     "title": "Notes on dicts",
-    "uri": "/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts.html"
+    "uri": "/djazz_doc_website/3_api/8_notes_on_rewriting_djazz/thoughts_on_dicts.html"
   },
   {
     "breadcrumb": "API \u003e External controls and views",
@@ -149,15 +149,7 @@ var relearn_search_index = [
     "description": "Attaching External Devices Parameters Parameter Listeners External devices with views as well as controls Launchpads Mapping editors Dictionary readers and writers in javascript",
     "tags": [],
     "title": "Parameters",
-    "uri": "/3_api/4_external_controls_and_views/1_parameters.html"
-  },
-  {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Audio Record",
-    "uri": "/3_api/1_abstraction_references/components/audio_record.html"
+    "uri": "/djazz_doc_website/3_api/4_external_controls_and_views/1_parameters.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -165,7 +157,15 @@ var relearn_search_index = [
     "description": "graph TB; A[Master Clock] B[Audio] C[MIDI] A--\u003e|tempo, beat number, label| B A--\u003e|tempo, beat number, label| C flowchart TB; gIn(( )) g1[Generator 1] g2[Generator 2] g3[Generator 3] g4[Generator 4] g5[Generator 5] mbPlayer[MIDI Beat Player] t1[MIDI\\nTrack 1] t2[MIDI\\nTrack 2] t3[MIDI\\nTrack 3] t4[MIDI\\nTrack 4] t5[MIDI\\nTrack 5] gOut((( ))) gIn --\u003e g1 --\u003e mbPlayer gIn --\u003e g2 --\u003e mbPlayer gIn --\u003e g3 --\u003e mbPlayer gIn --\u003e g4 --\u003e mbPlayer gIn --\u003e g5 --\u003e mbPlayer mbPlayer --\u003e t1 --\u003e gOut mbPlayer --\u003e t2 --\u003e gOut mbPlayer --\u003e t3 --\u003e gOut mbPlayer --\u003e t4 --\u003e gOut mbPlayer --\u003e t5 --\u003e gOut Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.",
     "tags": [],
     "title": "control flow",
-    "uri": "/3_api/6_architecture/control_flow.html"
+    "uri": "/djazz_doc_website/3_api/6_architecture/control_flow.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Sets the entry at the given index\nWhen using a dict to mimic an array, use this as the assignment operator [] or set.\nMESSAGES list\nleft inlet: (int anything) index, entry\nsymbol\nright inlet: dict name\nSEE ALSO ",
+    "description": "Sets the entry at the given index\nWhen using a dict to mimic an array, use this as the assignment operator [] or set.",
+    "tags": [],
+    "title": "darr.set_at",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/darr.set_at.html"
   },
   {
     "breadcrumb": "API \u003e External controls and views",
@@ -173,15 +173,7 @@ var relearn_search_index = [
     "description": "Dictionary readers and writers Dictionaries are used in different ways, for representing songs, architecture, and as anotder example for tde launchpad, to keep track of how buttons are mapped to parameters and how parameters are mapped to lights.",
     "tags": [],
     "title": "Dicts",
-    "uri": "/3_api/4_external_controls_and_views/2_dicts.html"
-  },
-  {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": " flowchart TB; gIn(( )) g1[Generator 1] g2[Generator 2] g3[Generator 3] g4[Generator 4] g5[Generator 5] mbPlayer[MIDI Beat Player] t1[MIDI\\nTrack 1] t2[MIDI\\nTrack 2] t3[MIDI\\nTrack 3] t4[MIDI\\nTrack 4] t5[MIDI\\nTrack 5] gOut((( ))) gIn --\u003e g1 --\u003e mbPlayer gIn --\u003e g2 --\u003e mbPlayer gIn --\u003e g3 --\u003e mbPlayer gIn --\u003e g4 --\u003e mbPlayer gIn --\u003e g5 --\u003e mbPlayer mbPlayer --\u003e t1 --\u003e gOut mbPlayer --\u003e t2 --\u003e gOut mbPlayer --\u003e t3 --\u003e gOut mbPlayer --\u003e t4 --\u003e gOut mbPlayer --\u003e t5 --\u003e gOut ",
-    "description": " flowchart TB; gIn(( )) g1[Generator 1] g2[Generator 2] g3[Generator 3] g4[Generator 4] g5[Generator 5] mbPlayer[MIDI Beat Player] t1[MIDI\\nTrack 1] t2[MIDI\\nTrack 2] t3[MIDI\\nTrack 3] t4[MIDI\\nTrack 4] t5[MIDI\\nTrack 5] gOut((( ))) gIn --\u003e g1 --\u003e mbPlayer gIn --\u003e g2 --\u003e mbPlayer gIn --\u003e g3 --\u003e mbPlayer gIn --\u003e g4 --\u003e mbPlayer gIn --\u003e g5 --\u003e mbPlayer mbPlayer --\u003e t1 --\u003e gOut mbPlayer --\u003e t2 --\u003e gOut mbPlayer --\u003e t3 --\u003e gOut mbPlayer --\u003e t4 --\u003e gOut mbPlayer --\u003e t5 --\u003e gOut ",
-    "tags": [],
-    "title": "djazz MIDI",
-    "uri": "/3_api/1_abstraction_references/components/djazz_midi.html"
+    "uri": "/djazz_doc_website/3_api/4_external_controls_and_views/2_dicts.html"
   },
   {
     "breadcrumb": "API",
@@ -189,7 +181,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "externals",
-    "uri": "/3_api/2_externals.html"
+    "uri": "/djazz_doc_website/3_api/2_externals.html"
   },
   {
     "breadcrumb": "API \u003e Going further",
@@ -197,7 +189,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Factor Oracle Labeling",
-    "uri": "/3_api/7_going_further/factor_oracle_creation.html"
+    "uri": "/djazz_doc_website/3_api/7_going_further/factor_oracle_creation.html"
   },
   {
     "breadcrumb": "Manual \u003e Audio Window",
@@ -205,7 +197,7 @@ var relearn_search_index = [
     "description": " ",
     "tags": [],
     "title": "Live Output",
-    "uri": "/1_manual/4_audio_window/2_live_output.html"
+    "uri": "/djazz_doc_website/1_manual/4_audio_window/2_live_output.html"
   },
   {
     "breadcrumb": "Manual",
@@ -213,7 +205,7 @@ var relearn_search_index = [
     "description": "1. MIDI/audio window selectors Clicking on the button labeled “MIDI” or “Audio” will open and close the MIDI or audio interface window, respectively.",
     "tags": [],
     "title": "Main Window",
-    "uri": "/1_manual/2_main_window.html"
+    "uri": "/djazz_doc_website/1_manual/2_main_window.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Tools",
@@ -221,7 +213,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "make score file",
-    "uri": "/3_api/1_abstraction_references/tools/make_score_file.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/tools/make_score_file.html"
   },
   {
     "breadcrumb": "Manual \u003e Tools",
@@ -229,7 +221,7 @@ var relearn_search_index = [
     "description": "Score files contain preloaded notes, formatted so that Djazz can play them and use them to improvise.",
     "tags": [],
     "title": "Making a Score File",
-    "uri": "/1_manual/7_tools/make_score_file.html"
+    "uri": "/djazz_doc_website/1_manual/7_tools/make_score_file.html"
   },
   {
     "breadcrumb": "Manual \u003e MIDI Window",
@@ -237,7 +229,7 @@ var relearn_search_index = [
     "description": "Score Player/Loader Window MIDI scores are made up of multiple MIDI tracks.",
     "tags": [],
     "title": "MIDI Scores View",
-    "uri": "/1_manual/3_midi_window/2_scores_view.html"
+    "uri": "/djazz_doc_website/1_manual/3_midi_window/2_scores_view.html"
   },
   {
     "breadcrumb": "API \u003e externals",
@@ -245,15 +237,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "midifile",
-    "uri": "/3_api/2_externals/midifile.html"
-  },
-  {
-    "breadcrumb": "API \u003e Index of important abstractions",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Other Components",
-    "uri": "/3_api/1_abstraction_references/components.html"
+    "uri": "/djazz_doc_website/3_api/2_externals/midifile.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
@@ -261,7 +245,7 @@ var relearn_search_index = [
     "description": "patchers/factor_oracle_player/factor_oracle_player.maxpat\nThe “factor oracle player” which takes labels one by one, which can be of any form (but in the current program, it’s a dictionary with two entries: the chord root and the chord label), and uses a factor oracle to produce a beat that matches the label.",
     "tags": [],
     "title": "The Factor Oracle Player",
-    "uri": "/3_api/5_improvisation/2_factor_oracle_player.html"
+    "uri": "/djazz_doc_website/3_api/5_improvisation/2_factor_oracle_player.html"
   },
   {
     "breadcrumb": "Manual \u003e Main Window",
@@ -269,7 +253,7 @@ var relearn_search_index = [
     "description": "2. BEAT INPUT Input Selector Djazz plays a beat each time it receives a message (a “tap,” or “click”), if it is engaged (how to engage Djazz will be explained below).",
     "tags": [],
     "title": "Beat Input",
-    "uri": "/1_manual/2_main_window/2_beat_window_selector.html"
+    "uri": "/djazz_doc_website/1_manual/2_main_window/2_beat_window_selector.html"
   },
   {
     "breadcrumb": "Manual \u003e Audio Window",
@@ -277,15 +261,7 @@ var relearn_search_index = [
     "description": "The audio out bank contains three (3) audio output controls.",
     "tags": [],
     "title": "Audio Out Bank",
-    "uri": "/1_manual/4_audio_window/3_audio_out_bank.html"
-  },
-  {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Beat Clock",
-    "uri": "/3_api/1_abstraction_references/components/beat_clock.html"
+    "uri": "/djazz_doc_website/1_manual/4_audio_window/3_audio_out_bank.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -293,7 +269,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz view",
-    "uri": "/3_api/1_abstraction_references/main_components/djazz_view.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/main_components/djazz_view.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Takes a label representing the current musical state, and returns another label to be used by the improvisation algorithm.\nThe input label can be passed to it by anything–the master control, other generators, or the same generator in which this analyzer resides.\nCurrently only passes the chord label for the next beat, passed by the master control, directly through without modification.\nSo for now this object exists more as a placeholder. This is where real-time music analysis code should go.\nOUTLETS 0 list: symbol symbol label + new symbol\nMESSAGES symbol\na label representing the current musical state to be used by the improvisation algorithm.\nSEE ALSO djazz.listener_control\ndjazz.listeners_router\ndjazz.beat_generator\ndjazz.midi.midi_beat_generator\ndjazz.audio.beat_generator",
+    "description": "Takes a label representing the current musical state, and returns another label to be used by the improvisation algorithm.",
+    "tags": [],
+    "title": "djazz.analyzer",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.analyzer.html"
   },
   {
     "breadcrumb": "API",
@@ -301,7 +285,7 @@ var relearn_search_index = [
     "description": "File formats used json song file score/track files for MIDI audio: wav and json",
     "tags": [],
     "title": "File formats used",
-    "uri": "/3_api/3_file_formats_used.html"
+    "uri": "/djazz_doc_website/3_api/3_file_formats_used.html"
   },
   {
     "breadcrumb": "API \u003e Going further",
@@ -309,7 +293,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Listeners and Real-time Analyzers",
-    "uri": "/3_api/7_going_further/listeners-and-analyzers.html"
+    "uri": "/djazz_doc_website/3_api/7_going_further/listeners-and-analyzers.html"
   },
   {
     "breadcrumb": "Manual \u003e MIDI Window",
@@ -317,7 +301,7 @@ var relearn_search_index = [
     "description": "The MIDI out bank contains 15 tracks output controls.",
     "tags": [],
     "title": "MIDI Out Bank",
-    "uri": "/1_manual/3_midi_window/3_midi_out.html"
+    "uri": "/djazz_doc_website/1_manual/3_midi_window/3_midi_out.html"
   },
   {
     "breadcrumb": "Manual",
@@ -325,7 +309,7 @@ var relearn_search_index = [
     "description": " Live Input View Scores View MIDI Out Bank Tracks View ",
     "tags": [],
     "title": "MIDI Window",
-    "uri": "/1_manual/3_midi_window.html"
+    "uri": "/djazz_doc_website/1_manual/3_midi_window.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -333,7 +317,7 @@ var relearn_search_index = [
     "description": "1. Architecture Model/Control/View Control/View MVC:\nDjazz uses the Model-View-Control design pattern.",
     "tags": [],
     "title": "Overview of MVVCC (Model-View-View Controller-View) Architecture",
-    "uri": "/3_api/6_architecture/overview_of_mvcvc.html"
+    "uri": "/djazz_doc_website/3_api/6_architecture/overview_of_mvcvc.html"
   },
   {
     "breadcrumb": "API \u003e externals",
@@ -341,7 +325,7 @@ var relearn_search_index = [
     "description": " SuperVP is used to play audio beats ",
     "tags": [],
     "title": "supervp",
-    "uri": "/3_api/2_externals/supervp.html"
+    "uri": "/djazz_doc_website/3_api/2_externals/supervp.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions",
@@ -349,7 +333,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tools",
-    "uri": "/3_api/1_abstraction_references/tools.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/tools.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
@@ -357,7 +341,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Analyzer",
-    "uri": "/3_api/5_improvisation/4_analyzer.html"
+    "uri": "/djazz_doc_website/3_api/5_improvisation/4_analyzer.html"
   },
   {
     "breadcrumb": "Manual",
@@ -365,15 +349,7 @@ var relearn_search_index = [
     "description": "7. AUDIO UI Audio Live Input Audio Track Playback \u0026 Improvising – see Midi Track Volume dial and reset click Mute Audio Out Audio Out Track Volume dial and reset click Solo Mute Volume meter Il y a un patch pour extraire les données de la grille des partitions audio textuelles comme celles que vous avez envoyées vers le nouveau format : patchers/data_file_makers/text_score_to_audio_grid_data.",
     "tags": [],
     "title": "Audio Window",
-    "uri": "/1_manual/4_audio_window.html"
-  },
-  {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "Beat Generator flowchart TB; subgraph BeatGenerator[Beat Generator] direction TB BeatGeneratorIn(( )) BeatGeneratorSwitch{ } subgraph ScorePlayer[Score Player] direction TB ScorePlayerSwitch[switch] MasterClockFollower[Master Clock\\nFollower] ScorePlayerOut[out] subgraph InternalClockFollower[Internal Clock Follower] direction TB InternalClockFollowerSpeed[Speed Control] BeatClock[Beat Clock] InternalClockFollowerSpeed --\u003e BeatClock end ScorePlayerSwitch --\u003e MasterClockFollower ScorePlayerSwitch --\u003e InternalClockFollower MasterClockFollower --\u003e ScorePlayerOut InternalClockFollower --\u003e ScorePlayerOut end subgraph Improviser[Improviser] direction TB ImproviserSpeed[Speed Control] FOP[Factor Oracle Player] ImproviserSpeed --\u003e FOP end BeatGeneratorOut((( ))) BeatGeneratorIn\t--\u003e BeatGeneratorSwitch BeatGeneratorSwitch --\u003e ScorePlayer BeatGeneratorSwitch --\u003e Improviser ScorePlayer --\u003e BeatGeneratorOut Improviser --\u003e BeatGeneratorOut end ",
-    "description": "Beat Generator flowchart TB; subgraph BeatGenerator[Beat Generator] direction TB BeatGeneratorIn(( )) BeatGeneratorSwitch{ } subgraph ScorePlayer[Score Player] direction TB ScorePlayerSwitch[switch] MasterClockFollower[Master Clock\\nFollower] ScorePlayerOut[out] subgraph InternalClockFollower[Internal Clock Follower] direction TB InternalClockFollowerSpeed[Speed Control] BeatClock[Beat Clock] InternalClockFollowerSpeed --\u003e BeatClock end ScorePlayerSwitch --\u003e MasterClockFollower ScorePlayerSwitch --\u003e InternalClockFollower MasterClockFollower --\u003e ScorePlayerOut InternalClockFollower --\u003e ScorePlayerOut end subgraph Improviser[Improviser] direction TB ImproviserSpeed[Speed Control] FOP[Factor Oracle Player] ImproviserSpeed --\u003e FOP end BeatGeneratorOut((( ))) BeatGeneratorIn\t--\u003e BeatGeneratorSwitch BeatGeneratorSwitch --\u003e ScorePlayer BeatGeneratorSwitch --\u003e Improviser ScorePlayer --\u003e BeatGeneratorOut Improviser --\u003e BeatGeneratorOut end ",
-    "tags": [],
-    "title": "Beat Generator",
-    "uri": "/3_api/1_abstraction_references/components/beat_generator.html"
+    "uri": "/djazz_doc_website/1_manual/4_audio_window.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -381,7 +357,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz view control",
-    "uri": "/3_api/1_abstraction_references/main_components/djazz_view_control.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/main_components/djazz_view_control.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Converts an antescofo file into a Max dict (which can then be saved as a JSON file).\nDict format:\ntracks\nint\nbeat int notes int: note data int: note data\nint\n…\nOUTLETS 0 symbol tracks dict name\nMESSAGES symbol\nfull path to antescofo file\nclear\nclears the Max dict\nSEE ALSO ",
+    "description": "Converts an antescofo file into a Max dict (which can then be saved as a JSON file).",
+    "tags": [],
+    "title": "djazz.antescofo_file_to_tracks_dict",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.antescofo_file_to_tracks_dict.html"
   },
   {
     "breadcrumb": "API",
@@ -389,7 +373,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "External controls and views",
-    "uri": "/3_api/4_external_controls_and_views.html"
+    "uri": "/djazz_doc_website/3_api/4_external_controls_and_views.html"
   },
   {
     "breadcrumb": "Manual \u003e MIDI Window",
@@ -397,7 +381,7 @@ var relearn_search_index = [
     "description": "Track effects File/track info select Load MIDI track You can load a track that does not follow the chord progression in the song file.",
     "tags": [],
     "title": "MIDI Tracks View",
-    "uri": "/1_manual/3_midi_window/4_tracks_view.html"
+    "uri": "/djazz_doc_website/1_manual/3_midi_window/4_tracks_view.html"
   },
   {
     "breadcrumb": "API \u003e System Architecture",
@@ -405,7 +389,7 @@ var relearn_search_index = [
     "description": "Input is passed to patchers two ways: synchronously and asynchronously, depending on the type of input data.",
     "tags": [],
     "title": "Pattr usage",
-    "uri": "/3_api/6_architecture/pattr_usage.html"
+    "uri": "/djazz_doc_website/3_api/6_architecture/pattr_usage.html"
   },
   {
     "breadcrumb": "Manual \u003e Main Window",
@@ -413,7 +397,7 @@ var relearn_search_index = [
     "description": "When a song is loaded, its grid will appear. The cells of the grid change color depending on whether Djazz is engaged and whether a cell is currently playing or not.",
     "tags": [],
     "title": "Song Grid",
-    "uri": "/1_manual/2_main_window/4_song_grid.html"
+    "uri": "/djazz_doc_website/1_manual/2_main_window/4_song_grid.html"
   },
   {
     "breadcrumb": "Manual \u003e Main Window",
@@ -421,7 +405,15 @@ var relearn_search_index = [
     "description": "1. MIDI Flush This will clear any sounding MIDI output.",
     "tags": [],
     "title": "MIDI Input Selector",
-    "uri": "/1_manual/2_main_window/8_midi_input_selector.html"
+    "uri": "/djazz_doc_website/1_manual/2_main_window/8_midi_input_selector.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Uses antescofo to infer the current tempo based on time between input messages.\nLoads the file antescofo_djazz.txt, which must be in the Max search path (currently in data/antescofo_scores).\nOUTLETS 0 float tempo inferred from time between inputs\nMESSAGES bang\nleft inlet: bangs will cause inferred tempo to be output. Initial tempo must be set and bangs must not deviate far from current tempo. Two bangs must occur before tempo is inferred.\ninitial_tempo\nleft inlet: ( + float) tempo to set antescofo’s tempo inference mechanism. Initial input tempo must be close to this.\nSEE ALSO ",
+    "description": "Uses antescofo to infer the current tempo based on time between input messages.",
+    "tags": [],
+    "title": "djazz.antescofo_get_tempo",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.antescofo_get_tempo.html"
   },
   {
     "breadcrumb": "Manual",
@@ -429,7 +421,7 @@ var relearn_search_index = [
     "description": "Pitch Transposition Changes the pitch of the MIDI output Octave Transposition Changes the octave of the MIDI output Speed Changes the speed of the MIDI output Loop Loops the previous n beats of the MIDI output “Jam” (Improvise) “Jam” Button Turns the improviser on.",
     "tags": [],
     "title": "Effects Bar",
-    "uri": "/1_manual/5_effects.html"
+    "uri": "/djazz_doc_website/1_manual/5_effects.html"
   },
   {
     "breadcrumb": "Manual",
@@ -437,15 +429,7 @@ var relearn_search_index = [
     "description": " MAPPING EXAMPLE 1 LAUNCHPAD PRO MK3 AUDIO 1 LOOP 1 AUDIO 1 LOOP 2 AUDIO 1 LOOP 3 AUDIO 1 LOOP 4 AUDIO 2 LOOP 1 AUDIO 2 LOOP 2 AUDIO 2 LOOP 3 AUDIO 2 LOOP 4 AUDIO 1 SPEED 2 AUDIO 1 PITCH UP AUDIO 1 OCTAVE UP AUDIO 1 UNMUTE AUDIO 2 SPEED 2 AUDIO 2 PITCH UP AUDIO 2 OCTAVE UP AUDIO 2 UNMUTE AUDIO 1 SPEED 3/2 AUDIO 1 RESET PITCH AUDIO 1 RESET OCTAVE AUDIO 1 TRACK ON AUDIO 2 SPEED 3/2 AUDIO 2 RESET PITCH AUDIO 2 RESET OCTAVE AUDIO 2 TRACK ON AUDIO 1 SPEED 1/2 AUDIO 1 PITCH DOWN AUDIO 1 OCTAVE DOWN AUDIO 1 IMPROVISE AUDIO 1 SPEED 1/2 AUDIO 1 PITCH DOWN AUDIO 1 OCTAVE DOWN AUDIO 2 IMPROVISE LAUNCHPAD MINI AUDIO 1 LOOP 1 AUDIO 1 LOOP 2 AUDIO 1 LOOP 3 AUDIO 1 LOOP 4 AUDIO 2 LOOP 1 AUDIO 2 LOOP 2 AUDIO 2 LOOP 3 AUDIO 2 LOOP 4 AUDIO 1 SPEED 2 AUDIO 1 PITCH UP AUDIO 1 OCTAVE UP AUDIO 1 UNMUTE AUDIO 2 SPEED 2 AUDIO 2 PITCH UP AUDIO 2 OCTAVE UP AUDIO 2 UNMUTE AUDIO 1 SPEED 3/2 AUDIO 1 RESET PITCH AUDIO 1 RESET OCTAVE AUDIO 1 TRACK ON AUDIO 2 SPEED 3/2 AUDIO 2 RESET PITCH AUDIO 2 RESET OCTAVE AUDIO 2 TRACK ON AUDIO 1 SPEED 1/2 AUDIO 1 PITCH DOWN AUDIO 1 OCTAVE DOWN AUDIO 1 IMPROVISE AUDIO 1 SPEED 1/2 AUDIO 1 PITCH DOWN AUDIO 1 OCTAVE DOWN AUDIO 2 IMPROVISE MAPPING EXAMPLE 2 LAUNCHPAD PRO MK3 \u0026 LAUNCHPAD PRO MK3 MIDI OUT 1 UNMUTE MIDI OUT 2 UNMUTE MIDI OUT 3 UNMUTE MIDI OUT 4 UNMUTE MIDI OUT 5 UNMUTE MIDI OUT 6 UNMUTE MIDI OUT 7 UNMUTE MIDI OUT 8 UNMUTE MIDI TRACK 1 IMPROVISE MIDI TRACK 2 IMPROVISE MIDI TRACK 3 IMPROVISE MIDI TRACK 4 IMPROVISE MIDI TRACK 5 IMPROVISE MIDI TRACK 6 IMPROVISE MIDI TRACK 7 IMPROVISE MIDI TRACK 8 IMPROVISE MIDI OUT 9 UNMUTE MIDI OUT 10 UNMUTE MIDI OUT 11 UNMUTE MIDI OUT 12 UNMUTE MIDI OUT 13 UNMUTE MIDI OUT 14 UNMUTE MIDI OUT 15 UNMUTE MIDI TRACK 9 IMPROVISE MIDI TRACK 10 IMPROVISE MIDI TRACK 11 IMPROVISE MIDI TRACK 12 IMPROVISE MIDI TRACK 13 IMPROVISE MIDI TRACK 14 IMPROVISE MIDI TRACK 15 IMPROVISE MAPPING EXAMPLE 3 (Marc’s original) LAUNCHPAD MINI \u0026 PRO MK3 GLOBAL SPEED 1/2 MIDI OUT 8 UNMUTE MIDI OUT 9 UNMUTE MIDI OUT 10 UNMUTE MIDI OUT 11 UNMUTE MIDI OUT 12 UNMUTE GLOBAL LOOP 5 GLOBAL LOOP 1 GLOBAL SPEED 3/2 MIDI OUT 13 UNMUTE MIDI OUT 14 UNMUTE GLOBAL RESET OCTAVE GLOBAL OCTAVE DOWN GLOBAL OCTAVE UP GLOBAL LOOP 6 GLOBAL LOOP 2 GLOBAL SPEED 2 MIDI OUT 3 UNMUTE MIDI OUT 4 UNMUTE MIDI OUT 5 UNMUTE MIDI OUT 6 UNMUTE MIDI OUT 7 UNMUTE GLOBAL LOOP 7 GLOBAL LOOP 3 GLOBAL SPEED 4 AUDIO OUT 1 UNMUTE AUDIO OUT 2 UNMUTE AUDIO OUT 3 UNMUTE GLOBAL LOOP 8 GLOBAL LOOP 4 INPUT/OUTPUT DEVICES Connect/disconnect a device Presets for Launchpads Grid View Parameter controls The preset editor window Create a preset Select Midi Input Select parameter Select color Edit a preset Save a preset Load a preset Devices tested Launchpad Mini Launchpad Pro MK3 INPUT/OUTPUT DEVICES Connect/disconnect a device Make a new preset Controller presets View presets Save a preset Load a preset Devices Launchpad Pro MK3 Make a new preset Controller presets View presets Chapters and bars ",
     "tags": [],
     "title": "External Controllers",
-    "uri": "/1_manual/6_external-controllers.html"
-  },
-  {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Factor Oracle",
-    "uri": "/3_api/1_abstraction_references/components/factor_oracle.html"
+    "uri": "/djazz_doc_website/1_manual/6_external-controllers.html"
   },
   {
     "breadcrumb": "API",
@@ -453,7 +437,7 @@ var relearn_search_index = [
     "description": "The generator uses the beat number when improvise mode is not on; it uses this to play the next beat or a different beat if one has been selected by the user.",
     "tags": [],
     "title": "Improvisation with the Factor Oracle",
-    "uri": "/3_api/5_improvisation.html"
+    "uri": "/djazz_doc_website/3_api/5_improvisation.html"
   },
   {
     "breadcrumb": "API \u003e Improvisation with the Factor Oracle",
@@ -461,15 +445,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Listener",
-    "uri": "/3_api/5_improvisation/5_listener.html"
+    "uri": "/djazz_doc_website/3_api/5_improvisation/5_listener.html"
   },
   {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Upon receipt of a beat number, label, and tempo, sends data about the next beat to read to the beat reader.\nPattr messages (must be passed via an external pattrhub/pattrstorage):\ntranspose_pitch (int) -255 - +255\ntranspose_octave (int) -255 - +255\nnext_beat (int) 0-255\nend_beat (int) 0-255\nspeed_active (int) 0/1\nspeed_numerator (int) 1-255\nspeed_denominator (int) 1-255\nloop_length (int) 1-8\nloop_section_active (int) 0/1\nloop_section_beats (list: int int)\nimprovise (int) 0/1\npitch_range (int) 0-11\nmax_continuity (int) 0-255\nOUTLETS 0 list (int int int int) 1. beat generator number, 2. track number, 3. start time in ms, 4. end time in ms\nMESSAGES symbol\nright inlet: label for analyzer\nbeat\nleft inlet: (+ int) incoming beat number\nlabel\nleft inlet: (+ symbol) incoming beat label\ntempo\nleft inlet: (+ float) current tempo\nfactor_oracle\nleft inlet: (+ symbol) dict name\nbeat_dict_name\nleft inlet: (+ symbol) dict name\nSEE ALSO djazz.beat_generator\ndjazz.audio.audio_out",
+    "description": "Upon receipt of a beat number, label, and tempo, sends data about the next beat to read to the beat reader.",
     "tags": [],
-    "title": "Factor Oracle Player",
-    "uri": "/3_api/1_abstraction_references/components/factor_oracle_player.html"
+    "title": "djazz.audio.beat_generator",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio.beat_generator.html"
   },
   {
     "breadcrumb": "API",
@@ -477,7 +461,7 @@ var relearn_search_index = [
     "description": "Because Djazz is beat-based, most objects are built to receive and process information at recurring instances.",
     "tags": [],
     "title": "System Architecture",
-    "uri": "/3_api/6_architecture.html"
+    "uri": "/djazz_doc_website/3_api/6_architecture.html"
   },
   {
     "breadcrumb": "Manual",
@@ -485,7 +469,15 @@ var relearn_search_index = [
     "description": "Djazz comes with many preloaded songs, but you can also load your own songs to play and improvise on.",
     "tags": [],
     "title": "Tools",
-    "uri": "/1_manual/7_tools.html"
+    "uri": "/djazz_doc_website/1_manual/7_tools.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Plays back a beat of audio at a time from a buffer, where beats are passed in in a dict.\nUses supervp to playback in tempo and with pitch transposition.\nOUTLETS 0 signal audio out 1\n1 signal audio out 2\nMESSAGES list\nleft inlet: (int float int int) 1. pitch transposition, 2. tempo, 3. start time, 4. end time\naudio_buffer_offset_in_ms\nmiddle inlet: (+ int) adjusts the latency of the audio output. Default is 170 ms.\ncrossfade_time_in_ms\nmiddle inlet: (+ int) adjusts the crossfade time between beats.\naudio_buffer_name\nright inlet: (+ symbol) audio buffer to play from\nSEE ALSO djazz.audio.beat_generator\ndjazz.audio.supervp_player",
+    "description": "Plays back a beat of audio at a time from a buffer, where beats are passed in in a dict.",
+    "tags": [],
+    "title": "djazz.audio.beat_player",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio.beat_player.html"
   },
   {
     "breadcrumb": "API",
@@ -493,15 +485,7 @@ var relearn_search_index = [
     "description": "Dynamic creation and destruction of objects: arrays and dicts Hierarchies Saving and reloading architecture Objects in djazz can be created and destroyed, so you can set up variable numbers of different types of players, and different midi and audio outputs.",
     "tags": [],
     "title": "Going further",
-    "uri": "/3_api/7_going_further.html"
-  },
-  {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
-    "tags": [],
-    "title": "Improviser",
-    "uri": "/3_api/1_abstraction_references/components/improviser.html"
+    "uri": "/djazz_doc_website/3_api/7_going_further.html"
   },
   {
     "breadcrumb": "Manual",
@@ -509,15 +493,15 @@ var relearn_search_index = [
     "description": "AllINeed, 64 164 4 \" 1\";\nAllOfMe, 160 135 4 \" 1 33\";",
     "tags": [],
     "title": "Preloaded Songs",
-    "uri": "/1_manual/8_preloaded_resources.html"
+    "uri": "/djazz_doc_website/1_manual/8_preloaded_resources.html"
   },
   {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Reads the note data at the given beat data and sends it out to the beat player.\nOUTLETS 0 list (int int int) 1. track number, 2. start time in ms 3. end time in ms\n1 int beat count\nMESSAGES list\nleft inlet: (symbol int float) 1. beat dict name, 2. pitch transposition, 3. tempo\nsymbol\nright inlet: beat list dict name\nSEE ALSO ",
+    "description": "Reads the note data at the given beat data and sends it out to the beat player.",
     "tags": [],
-    "title": "Listener",
-    "uri": "/3_api/1_abstraction_references/components/listener.html"
+    "title": "djazz.audio.beat_reader",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio.beat_reader.html"
   },
   {
     "breadcrumb": "API",
@@ -525,15 +509,15 @@ var relearn_search_index = [
     "description": "The goals in rewriting Djazz are as follows.\n•\tprepare the software for distribution as a standalone •\tdesign an architecture that is extensible: ⁃\tChanges can be made in one area without creating bugs in other areas (dependence and modularity) ⁃\tnew functionality can be added without changing the existing code base ⁃\tnew functionality is easy to integrate.",
     "tags": [],
     "title": "Notes on databases in Max",
-    "uri": "/3_api/8_notes_on_rewriting_djazz.html"
+    "uri": "/djazz_doc_website/3_api/8_notes_on_rewriting_djazz.html"
   },
   {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": " flowchart TB; TapIn(( Bang In)) PattrIn(( Pattr In )) SongDataIn((Song Data\\nIn)) GetTempo[Get Tempo] Clock[Beat Clock] GetLabel[Get Label] Out((( ))) TapIn-- bang --\u003eGetTempo PattrIn -- initial tempo --\u003e GetTempo PattrIn -- start beat,\\nend beat,\\nloop-section beats,\\nloop section active --\u003e GetTempo GetTempo-- bang --\u003eClock GetTempo-- Tempo --\u003eOut Clock-- beat number --\u003eGetLabel Clock-- Beat Number --\u003eOut GetLabel-- Label --\u003eOut SongDataIn-- Song Data ----\u003e GetLabel Master Control Master Clock - outputs a beat number when it receives a bang - increments its beat number with each output, but also keeps track of position in a song form and adjusts the beat in accordance if looped. - keeps track of tempo if tempo is manually input and fluctuates. This uses antescofo. - reads from song dict to get label - sends tempo, beat, and chord label, immediately in succession and in that order, to midi and audio generators. This order is important, so that the generators can calculate the correct information to play at the beginning of each beat.",
-    "description": "flowchart TB; TapIn(( Bang In)) PattrIn(( Pattr In )) SongDataIn((Song Data\\nIn)) GetTempo[Get Tempo] Clock[Beat Clock] GetLabel[Get Label] Out((( ))) TapIn-- bang --\u003eGetTempo PattrIn -- initial tempo --\u003e GetTempo PattrIn -- start beat,\\nend beat,\\nloop-section beats,\\nloop section active --\u003e GetTempo GetTempo-- bang --\u003eClock GetTempo-- Tempo --\u003eOut Clock-- beat number --\u003eGetLabel Clock-- Beat Number --\u003eOut GetLabel-- Label --\u003eOut SongDataIn-- Song Data ----\u003e GetLabel Master Control Master Clock - outputs a beat number when it receives a bang - increments its beat number with each output, but also keeps track of position in a song form and adjusts the beat in accordance if looped.",
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Controls which other audio generator(s) a generator will listen to\nPattr messages (must be passed via an external pattrhub/pattrstorage):\ninclude_master (int) 0/1\nlistener_1 (int 1-3) which player listener 1 is listening to\nlistener_2 (int 1-3) which player listener 2 is listening to\nlistener_3 (int 1-3) which player listener 3 is listening to\nOUTLETS 0 symbol label received from player being listened to\nMESSAGES list\nright inlet: (int symbol) listener number and label passed from listener\nlabel\nleft inlet: (symbol) the label passed from the master control. Will be passed through if include_master is set to 1\nSEE ALSO djazz.analyzer",
+    "description": "Controls which other audio generator(s) a generator will listen to",
     "tags": [],
-    "title": "Master Control",
-    "uri": "/3_api/1_abstraction_references/components/master_control.html"
+    "title": "djazz.audio.listeners_router",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio.listeners_router.html"
   },
   {
     "breadcrumb": "Manual",
@@ -541,15 +525,15 @@ var relearn_search_index = [
     "description": "Djazz saves files together in folders.",
     "tags": [],
     "title": "Saving and Loading Files",
-    "uri": "/1_manual/9_saving_and_loading_files.html"
+    "uri": "/djazz_doc_website/1_manual/9_saving_and_loading_files.html"
   },
   {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "MIDI Beat Generator flowchart TB; subgraph MidiBeatGenerator direction TB MidiBeatGeneratorIn(( )) BeatReader[Beat Reader] Looper[Beat Number Looper] BeatReader[MIDI Beat Reader] MidiBeatGeneratorOut((( ))) MidiBeatGeneratorIn --\u003e BeatGenerator --\u003e Looper --\u003e BeatReader --\u003e MidiBeatGeneratorOut end ",
-    "description": "MIDI Beat Generator flowchart TB; subgraph MidiBeatGenerator direction TB MidiBeatGeneratorIn(( )) BeatReader[Beat Reader] Looper[Beat Number Looper] BeatReader[MIDI Beat Reader] MidiBeatGeneratorOut((( ))) MidiBeatGeneratorIn --\u003e BeatGenerator --\u003e Looper --\u003e BeatReader --\u003e MidiBeatGeneratorOut end ",
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Records an audio buffer and a beat list, given the appropriate input.\nOUTLETS 0 repetitions + int sends every time a new repetition is added to beat list\n1 setsize + int, crop 0 + int sets the size of the buffer when recording is started/stopped, with/without clearing it, respectively\nMESSAGES signal\nleft inlet: audio in 1\nsignal\nin1: audio in 2\naudio_buffer_name\nright inlet: (+ symbol) name of audio buffer to record to\naudio_score_dict_name\nright inlet: (+ symbol) name of audio score (+ beat list) to write to\nbeat\nright inlet: (+ int) starts writing a new beat when received\ninitial_tempo\nright inlet: (+ float) bpm by which to calculate next beat and note durations\nloop_section_beats\nright inlet: (+ list: int int) start beat, end beat\nwill begin a new repetition whenever end beat is reached, restarting at start beat\nSEE ALSO djazz.audio",
+    "description": "Records an audio buffer and a beat list, given the appropriate input.",
     "tags": [],
-    "title": "MIDI Beat Generator",
-    "uri": "/3_api/1_abstraction_references/components/midi_beat_generator.html"
+    "title": "djazz.audio.record",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio.record.html"
   },
   {
     "breadcrumb": "Manual",
@@ -557,15 +541,15 @@ var relearn_search_index = [
     "description": "The following messages are sent out of Djazz via its UDP send port:",
     "tags": [],
     "title": "View Messages",
-    "uri": "/1_manual/10_view_messages.html"
+    "uri": "/djazz_doc_website/1_manual/10_view_messages.html"
   },
   {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Wraps the supervp player for audio playback\nOUTLETS 0 signal audio out 1\n1 signal audio out 2\n2 signal position in audio file\nMESSAGES list\nleft inlet: float float float int:1. start time in ms, 2. end time in ms, 3. duration in ms, 4. transposition (in semitones)\nint\nin1: crossfade time between beats in ms\nsymbol\nright inlet: buffer name to play from\nSEE ALSO ",
+    "description": "Wraps the supervp player for audio playback\nOUTLETS 0 signal audio out 1",
     "tags": [],
-    "title": "MIDI Record",
-    "uri": "/3_api/1_abstraction_references/components/midi_record.html"
+    "title": "djazz.audio.supervp_player",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio.supervp_player.html"
   },
   {
     "breadcrumb": "Manual",
@@ -573,7 +557,7 @@ var relearn_search_index = [
     "description": " ",
     "tags": [],
     "title": "Settings",
-    "uri": "/1_manual/11_settings.html"
+    "uri": "/djazz_doc_website/1_manual/11_settings.html"
   },
   {
     "breadcrumb": "API \u003e Index of important abstractions \u003e Main Components",
@@ -581,7 +565,15 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "djazz control",
-    "uri": "/3_api/1_abstraction_references/main_components/djazz_control.html"
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/main_components/djazz_control.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Adjusts message being sent to djaz.audio.beat_player so that the audio will be transposed up the desired number of octaves.\nPattr messages (must be passed via an external pattrhub/pattrstorage):\noctaves (int) -255 to 255\nOUTLETS 0 list (symbol int float) 1. beat dict name, 2. pitch transposition, 3. tempo\nMESSAGES list\nleft inlet: (+ list: symbol int float) 1. beat dict name, 2. pitch transposition 3. tempo\nSEE ALSO ",
+    "description": "Adjusts message being sent to djaz.audio.beat_player so that the audio will be transposed up the desired number of octaves.",
+    "tags": [],
+    "title": "djazz.audio.transpose_octaves",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio.transpose_octaves.html"
   },
   {
     "breadcrumb": "Manual",
@@ -589,23 +581,47 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Improvising with Djazz",
-    "uri": "/1_manual/12_improvising.html"
+    "uri": "/djazz_doc_website/1_manual/12_improvising.html"
   },
   {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Adjusts message being sent to djaz.audio.beat_player so that the audio will be transposed up the desired number of semitones.\nPattr messages (must be passed via an external pattrhub/pattrstorage):\nsemitones (int) -255 to 255\nOUTLETS 0 list symbol int float; 1. beat dict name, 2. pitchtransposition, 3. tempo\nMESSAGES list\nleft inlet: (+ list: symbol int float) 1. beat dict name, 2. pitch transposition, 3. tempo\nSEE ALSO ",
+    "description": "Adjusts message being sent to djaz.audio.beat_player so that the audio will be transposed up the desired number of semitones.",
     "tags": [],
-    "title": "Score Loader",
-    "uri": "/3_api/1_abstraction_references/components/score_loader.html"
+    "title": "djazz.audio.transpose_pitch",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio.transpose_pitch.html"
   },
   {
-    "breadcrumb": "API \u003e Index of important abstractions \u003e Other Components",
-    "content": "",
-    "description": "",
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Handles all the audio portion of djazz.\nOUTLETS 0 signal audio out 1 left\n1 signal audio out 1 right\n2 signal audio out 2 left\n3 signal audio out 2 right\n4 signal audio out 3 left\n5 signal audio out 3 right\nMESSAGES signal\nleft inlet: audio in 1\nsignal\nin1: audio in 2\n-\naudio_buffer_name\nin2: (+ symbol) name of audio buffer to record to and play from\nrecord_active\nin2: (+ 0/1) 1 arms the audio buffer to record; will not start recording until a beat number is received. 0 turns off record state.\ninitial_tempo\nin2: (+ float) bpm by which to calculate next beat and note durations\nloop_section_beats\nin2: (+ list: int int) start beat, end beat\nwill begin a new repetition whenever end beat is reached, restarting at start beat\nmax_repetitions\nin2: (+ int) will stop recording when this number is reached\nin\nright inlet: (+ symbol) folder name audio data to load for audio in subpatcher\nout\nright inlet: (+ symbol) folder name audio data to load for audio out subpatcher\nSEE ALSO djazz.audio.record\ndjazz.audio.supervp_player",
+    "description": "Handles all the audio portion of djazz.\nOUTLETS 0 signal audio out 1 left",
     "tags": [],
-    "title": "UDP Send to VJazz",
-    "uri": "/3_api/1_abstraction_references/components/to_vjazz.html"
+    "title": "djazz.audio",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Passes audio signal through. Control with djazz.view.audio_track.\nPattr messages (must be passed via an external pattrhub/pattrstorage):\nvolume (int) 0-127\nactive (int) 0/1\nsolo (int) 0/1\nmute (int) 0/1\nOUTLETS 0 signal audio signal 1/L\n1 signal audio signal 2/R\nMESSAGES signal\nleft inlet: audio signal 1/L\nright inlet: audio signal 2/R\nSEE ALSO djazz.view.audio_out_track\ndjazz.solo_bank",
+    "description": "Passes audio signal through. Control with djazz.view.audio_track.\nPattr messages (must be passed via an external pattrhub/pattrstorage):",
+    "tags": [],
+    "title": "djazz.audio_out_track",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.audio_out_track.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "When active, will output beats in the polyrhythm given by numerator/denominator. Incoming beats will not be output, except for those that fall in phase with the output beats.\nOUTLETS 0 bang -bangs over time in the polyrhythm determined by numerator and denominator 1 float -tempo using output bangs as beat MESSAGES bang\ndepends on polyrhythm state\nleft inlet: When effect off (active = 0), passed directly through. When effect on (active = 1), triggers a new polyrhythm, or is ignored if a polyrhythm is in course.\nactive\nleft inlet: (+ 0/1) turns effect off or on\nnumerator\nleft inlet: (+ int) number of evenly spaced bangs to output in the space of denominator beats at the given tempo\ndenominator\nleft inlet: (+ int) number of beats to output numerator evenly spaced bangs over\nSEE ALSO ",
+    "description": "When active, will output beats in the polyrhythm given by numerator/denominator.",
+    "tags": [],
+    "title": "djazz.bang_speed",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.bang_speed.html"
+  },
+  {
+    "breadcrumb": "API \u003e Index of important abstractions",
+    "content": "Inputs bangs and outputs a beat number, based on loop, step, start, and end parameters.\nWill not output when end beat is reached or after.\nOUTLETS 0 int next beat\n1 bang bang when loop occurs\n2 bang bang when end is reached\nMESSAGES bang\nleft inlet: bang for next beat\nnext_beat\nright inlet: (+ int) sets the next beat to play when next bang is received\nend\nright inlet: (+ int) sets the end beat; when reached, no more output will occur\nstep\nright inlet: (+ int) how many beats to advance upon receiving a bang; default is 1\nSEE ALSO ",
+    "description": "Inputs bangs and outputs a beat number, based on loop, step, start, and end parameters.",
+    "tags": [],
+    "title": "djazz.beat_clock",
+    "uri": "/djazz_doc_website/3_api/1_abstraction_references/components/djazz.beat_clock.html"
   },
   {
     "breadcrumb": "",
@@ -613,7 +629,7 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Categories",
-    "uri": "/categories.html"
+    "uri": "/djazz_doc_website/categories.html"
   },
   {
     "breadcrumb": "",
@@ -621,7 +637,7 @@ var relearn_search_index = [
     "description": "Software for musical co-creativity.",
     "tags": [],
     "title": "Djazz",
-    "uri": "/index.html"
+    "uri": "/djazz_doc_website/index.html"
   },
   {
     "breadcrumb": "",
@@ -629,6 +645,6 @@ var relearn_search_index = [
     "description": "",
     "tags": [],
     "title": "Tags",
-    "uri": "/tags.html"
+    "uri": "/djazz_doc_website/tags.html"
   }
 ]
